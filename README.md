@@ -1,4 +1,1 @@
-legato-af
-=========
-
-Legato Application Framework
+# HTML readme
