@@ -1,6 +1,6 @@
 var pages =
 [
-    [ "C Language Coding Standards", "_ccoding_stds_main.html", "_ccoding_stds_main" ],
+    [ "C Language Coding Standards", "ccoding_stds_main.html", "ccoding_stds_main" ],
     [ "Configuration Tree API", "api_config.html", null ],
     [ "Modem Services", "c_mdm_apis.html", "c_mdm_apis" ],
     [ "Platform Adapter Modem APIs", "c_pa.html", "c_pa" ],

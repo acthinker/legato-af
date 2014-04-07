@@ -84,7 +84,7 @@
       <topic label="Connect to AirVantage" href="connecting_air_vantage.html">
         <topic label="Installing a Legato application remotely using AirVantage" href="app_install_air_vantage.html">
         </topic>
-        <topic label="AirVantage Agent Connector library" href="_a_v_connect_lib.html">
+        <topic label="AirVantage Agent Connector library" href="a_v_connect_lib.html">
         </topic>
       </topic>
       <topic label="Pushing Data" href="demo_push_data.html">
@@ -107,7 +107,7 @@
     <topic label="Connect to AirVantage" href="connecting_air_vantage.html">
       <topic label="Installing a Legato application remotely using AirVantage" href="app_install_air_vantage.html">
       </topic>
-      <topic label="AirVantage Agent Connector library" href="_a_v_connect_lib.html">
+      <topic label="AirVantage Agent Connector library" href="a_v_connect_lib.html">
       </topic>
     </topic>
     <topic label="Legato Services" href="legato_services.html">
@@ -182,10 +182,10 @@
     </topic>
   </topic>
   <topic label="Related Pages" href="pages.html">
-    <topic label="C Language Coding Standards" href="_ccoding_stds_main.html">
-      <topic label="C Standard Abbreviations" href="_c_standards_abbreviations.html">
+    <topic label="C Language Coding Standards" href="ccoding_stds_main.html">
+      <topic label="C Standard Abbreviations" href="c_standards_abbreviations.html">
       </topic>
-      <topic label="C Standard Parameters" href="_c_standards_parameters.html">
+      <topic label="C Standard Parameters" href="c_standards_parameters.html">
       </topic>
     </topic>
     <topic label="Configuration Tree API" href="api_config.html">

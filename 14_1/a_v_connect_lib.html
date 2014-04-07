@@ -77,7 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('_a_v_connect_lib.html','');
+  initNavTree('a_v_connect_lib.html','');
 </script>
 <div id="doc-content">
 <div class="header">
@@ -87,11 +87,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><p>API info is here: <a class="el" href="swi__airvantage_8h.html">swi_airvantage.h</a></p>
 <p>The info here covers details on data connections with AirVantage.</p>
-<p><a class="el" href="_a_v_connect_lib.html#avConnectOverview">Overview</a> <br/>
- <a class="el" href="_a_v_connect_lib.html#NewInstance">Create a New Asset Instance, Initialize a New Asset</a> <br/>
- <a class="el" href="_a_v_connect_lib.html#SendingData">Sending Data</a> <br/>
- <a class="el" href="_a_v_connect_lib.html#ReceivingData">Receiving Data</a> <br/>
- <a class="el" href="_a_v_connect_lib.html#AgentIntVar">Setting and Getting Agent Internal Variables</a></p>
+<p><a class="el" href="a_v_connect_lib.html#avConnectOverview">Overview</a> <br/>
+ <a class="el" href="a_v_connect_lib.html#NewInstance">Create a New Asset Instance, Initialize a New Asset</a> <br/>
+ <a class="el" href="a_v_connect_lib.html#SendingData">Sending Data</a> <br/>
+ <a class="el" href="a_v_connect_lib.html#ReceivingData">Receiving Data</a> <br/>
+ <a class="el" href="a_v_connect_lib.html#AgentIntVar">Setting and Getting Agent Internal Variables</a></p>
 <h2><a class="anchor" id="avConnectOverview"></a>
 Overview</h2>
 <p>The AirVantage Agent Connector library provides access to the AirVantage M2M platform. The Agent consists of a library and process that communicate through a dedicated IPC channel, most commonly a socket.</p>
@@ -117,13 +117,13 @@ Create a New Asset Instance, Initialize a New Asset</h2>
 </pre></div><p>The asset identifier is the root element of the message path. For instance, if the variable "foo" is written under path "bar" in the asset "myAsset", the complete path as seen by the server is "myAsset.bar.foo".</p>
 <h2><a class="anchor" id="SendingData"></a>
 Sending Data</h2>
-<p><a class="el" href="_a_v_connect_lib.html#SendingEvents">Sending Event</a> <br/>
- <a class="el" href="_a_v_connect_lib.html#SendPolicies">Send Policies</a> <br/>
- <a class="el" href="_a_v_connect_lib.html#PolicyConfigSamples">Policy Config Samples</a> <br/>
- <a class="el" href="_a_v_connect_lib.html#SendingUndeclaredData">Sending Undeclared Data</a> <br/>
- <a class="el" href="_a_v_connect_lib.html#PredeclaredDataTables">Predeclared Data Tables</a> <br/>
- <a class="el" href="_a_v_connect_lib.html#PushingRows">Pushing Rows in a Predeclared Table</a> <br/>
- <a class="el" href="_a_v_connect_lib.html#ForcingPolicyFlush">Forcing a Policy Flush</a></p>
+<p><a class="el" href="a_v_connect_lib.html#SendingEvents">Sending Event</a> <br/>
+ <a class="el" href="a_v_connect_lib.html#SendPolicies">Send Policies</a> <br/>
+ <a class="el" href="a_v_connect_lib.html#PolicyConfigSamples">Policy Config Samples</a> <br/>
+ <a class="el" href="a_v_connect_lib.html#SendingUndeclaredData">Sending Undeclared Data</a> <br/>
+ <a class="el" href="a_v_connect_lib.html#PredeclaredDataTables">Predeclared Data Tables</a> <br/>
+ <a class="el" href="a_v_connect_lib.html#PushingRows">Pushing Rows in a Predeclared Table</a> <br/>
+ <a class="el" href="a_v_connect_lib.html#ForcingPolicyFlush">Forcing a Policy Flush</a></p>
 <p>Data can be sent with two different APIs:</p>
 <ul>
 <li>Through pre-declared tables, where the user can specify the table's persistence mode, columns, serialization options, etc.</li>
@@ -244,11 +244,11 @@ Forcing a Policy Flush</h3>
 </pre></div><p>If `policyPtr` is passed as NULL, the default policy is used. If the special name <code></code>`"*"` is passed, all policies are flushed.</p>
 <h2><a class="anchor" id="ReceivingData"></a>
 Receiving Data</h2>
-<p><a class="el" href="_a_v_connect_lib.html#WritingData">Writing Data</a> <br/>
- <a class="el" href="_a_v_connect_lib.html#RegisteringReceivingFunctions">Registering a Function to handle data reception</a> <br/>
- <a class="el" href="_a_v_connect_lib.html#AcknowledgingReceivedData">Acknowledging Received Data</a> <br/>
- <a class="el" href="_a_v_connect_lib.html#DataReceivedSample">Received Data Sample</a> <br/>
- <a class="el" href="_a_v_connect_lib.html#AgentIntVar">Setting and Getting Agent Internal Variables</a></p>
+<p><a class="el" href="a_v_connect_lib.html#WritingData">Writing Data</a> <br/>
+ <a class="el" href="a_v_connect_lib.html#RegisteringReceivingFunctions">Registering a Function to handle data reception</a> <br/>
+ <a class="el" href="a_v_connect_lib.html#AcknowledgingReceivedData">Acknowledging Received Data</a> <br/>
+ <a class="el" href="a_v_connect_lib.html#DataReceivedSample">Received Data Sample</a> <br/>
+ <a class="el" href="a_v_connect_lib.html#AgentIntVar">Setting and Getting Agent Internal Variables</a></p>
 <h3><a class="anchor" id="WritingData"></a>
 Writing Data</h3>
 <p>AirVantage server is able to send data to a device in order to request some action on it: changing some configuration parameter, trigger some action etc. The data can be addressed to the AirVantage Agent or to another application, in any case the AirVantage Agent will receive the data first and then forward it to the appropriate application.</p>
