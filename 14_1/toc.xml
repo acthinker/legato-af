@@ -37,8 +37,6 @@
       </topic>
       <topic label="Legato Sandboxes" href="sandbox_gen.html">
       </topic>
-      <topic label="Legato Architecture Notes" href="legato_architecture.html">
-      </topic>
     </topic>
     <topic label="Create Applications" href="app_creating.html">
       <topic label="Create helloWorld" href="apphello_world.html">

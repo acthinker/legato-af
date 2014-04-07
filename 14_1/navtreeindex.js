@@ -21,7 +21,6 @@ var NAVTREEINDEX =
 "event_basics.html":[0,1,3],
 "basic_other.html":[0,1,4],
 "sandbox_gen.html":[0,1,5],
-"legato_architecture.html":[0,1,6],
 "app_creating.html":[0,2],
 "apphello_world.html":[0,2,0],
 "appconverting_it_into_an_app.html":[0,2,1],

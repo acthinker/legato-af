@@ -5,6 +5,5 @@ var basic_concepts =
     [ "Legato Interfaces", "basic_interfaces.html", null ],
     [ "Event-driven Programming", "event_basics.html", null ],
     [ "General Legato Basics", "basic_other.html", null ],
-    [ "Legato Sandboxes", "sandbox_gen.html", null ],
-    [ "Legato Architecture Notes", "legato_architecture.html", null ]
+    [ "Legato Sandboxes", "sandbox_gen.html", null ]
 ];
