@@ -1,13 +1,5 @@
 var searchData=
 [
-  ['platform_20adapter_20modem_20apis',['Platform Adapter Modem APIs',['../c_pa.html',1,'']]],
-  ['platform_20adapter_20global_20navigation_20satellite_20system_20api',['Platform Adapter Global Navigation Satellite System API',['../c_pa_gnss.html',1,'']]],
-  ['path_20api',['Path API',['../c_path.html',1,'c_APIs']]],
-  ['positioning_20service',['Positioning Service',['../c_pos.html',1,'legatoServices']]],
-  ['print_20apis',['Print APIs',['../c_print.html',1,'c_APIs']]],
-  ['pushing_20data',['Pushing Data',['../demo_push_data.html',1,'demoApps']]],
-  ['prep_20device_20dev_20kit',['Prep Device Dev Kit',['../getstarted_connect_dev_kit.html',1,'getstartedMain']]],
-  ['prep_20dev_20machine',['Prep Dev Machine',['../getstarted_machine_prep.html',1,'getstartedMain']]],
   ['pa_2eh',['pa.h',['../pa_8h.html',1,'']]],
   ['pa_5fgnss_2eh',['pa_gnss.h',['../pa__gnss_8h.html',1,'']]],
   ['pa_5fgnss_5faddpositiondatahandler',['pa_gnss_AddPositionDataHandler',['../pa__gnss_8h.html#a9ac82825503480e72a9c7c1dff1855b8',1,'pa_gnss.h']]],
@@ -127,7 +119,6 @@ var searchData=
   ['pa_5fsms_5fsmsdeliver_5ft',['pa_sms_SmsDeliver_t',['../structpa__sms___sms_deliver__t.html',1,'']]],
   ['pa_5fsms_5fsmssubmit_5ft',['pa_sms_SmsSubmit_t',['../structpa__sms___sms_submit__t.html',1,'']]],
   ['phonenumber',['phoneNumber',['../structpa__mcc___call_event_data__t.html#a79fe7d779e67eff04f2ef988a3aa0e29',1,'pa_mcc_CallEventData_t']]],
-  ['port_20legacy_20apps_20to_20legato',['Port Legacy Apps to Legato',['../port_legacy_apps.html',1,'appNotes']]],
   ['prevptr',['prevPtr',['../structle__dls___link__t.html#acf978c7d31cf7ab2aa0f7b36603f4a12',1,'le_dls_Link_t']]],
   ['profileindex',['profileIndex',['../structpa__mdc___session_state_data__t.html#a6cd35123192754cb4a335c4fffcbf7bd',1,'pa_mdc_SessionStateData_t']]]
 ];

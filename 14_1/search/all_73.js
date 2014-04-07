@@ -1,15 +1,8 @@
 var searchData=
 [
-  ['safe_20references_20api',['Safe References API',['../c_safe_ref.html',1,'c_APIs']]],
-  ['semaphore_20api',['Semaphore API',['../c_semaphore.html',1,'c_APIs']]],
-  ['signals_20api',['Signals API',['../c_signals.html',1,'c_APIs']]],
-  ['sim_20services',['SIM Services',['../c_sim.html',1,'c_mdm_apis']]],
-  ['singly_20linked_20list_20api',['Singly Linked List API',['../c_singly_linked_list.html',1,'c_APIs']]],
-  ['sms_20services',['SMS Services',['../c_sms.html',1,'c_mdm_apis']]],
   ['scts',['scts',['../structpa__sms___sms_deliver__t.html#a31b04e78ee28e5d01240e17a3e3fcd82',1,'pa_sms_SmsDeliver_t']]],
   ['sec',['sec',['../structle__clk___time__t.html#ae28e527dbd551b3537edc1737611782f',1,'le_clk_Time_t']]],
   ['seconds',['seconds',['../structpa___gnss___time__t.html#ab72e58e36b2c6d227ed24c03937e1cfc',1,'pa_Gnss_Time_t']]],
-  ['sim_20commands',['SIM Commands',['../sim_usage_commands.html',1,'tools']]],
   ['smsdeliver',['smsDeliver',['../structpa__sms___message__t.html#aaa5ecf217cd15b629c75320006f4c55a',1,'pa_sms_Message_t']]],
   ['state',['state',['../structpa__sim___event__t.html#a636ebff9013587a10afcb348b417536c',1,'pa_sim_Event_t']]],
   ['status',['status',['../structpa__sms___sms_deliver__t.html#a847c314446a96a81405aae9967028049',1,'pa_sms_SmsDeliver_t::status()'],['../structpa__sms___sms_submit__t.html#a633feef7a868b1b64c11d289f432a417',1,'pa_sms_SmsSubmit_t::status()'],['../structpa__sms___pdu__t.html#ad7c7be8f3647fc1810dcac7399451f50',1,'pa_sms_Pdu_t::status()']]],

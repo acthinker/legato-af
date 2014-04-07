@@ -1,7 +1,5 @@
 var le__doubly_linked_list_8h =
 [
-    [ "le_dls_Link_t", "structle__dls___link__t.html", "structle__dls___link__t" ],
-    [ "le_dls_List_t", "structle__dls___list__t.html", "structle__dls___list__t" ],
     [ "LE_DLS_LINK_INIT", "le__doubly_linked_list_8h.html#a616b17e10af5ce6dcc49e34b6ab927c2", null ],
     [ "LE_DLS_LIST_INIT", "le__doubly_linked_list_8h.html#a68f28b61cdfd004591f24730b4d5a740", null ],
     [ "le_dls_AddAfter", "le__doubly_linked_list_8h.html#ad93394ff686d2fe93f5f4ce73c7034cd", null ],

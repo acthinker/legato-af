@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['hashmap_20api',['HashMap API',['../c_hashmap.html',1,'c_APIs']]],
-  ['hex_20string_20api',['Hex string API',['../c_hex.html',1,'c_APIs']]],
-  ['hello_20ipc',['Hello IPC',['../componenthello_i_p_c.html',1,'componentWriting']]],
   ['hdop',['hdop',['../structpa___gnss___position__t.html#a6dc8dd0e7fc628c03a4ea0f8e7be174b',1,'pa_Gnss_Position_t']]],
   ['hdopvalid',['hdopValid',['../structpa___gnss___position__t.html#a3ae7d0d6c92f0fd4053b07489b6d227f',1,'pa_Gnss_Position_t']]],
   ['heading',['heading',['../structpa___gnss___position__t.html#a237b9c9795926a4952d56446ced2a466',1,'pa_Gnss_Position_t']]],

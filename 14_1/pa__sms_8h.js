@@ -1,16 +1,7 @@
 var pa__sms_8h =
 [
-    [ "pa_sms_SmsDeliver_t", "structpa__sms___sms_deliver__t.html", "structpa__sms___sms_deliver__t" ],
-    [ "pa_sms_SmsSubmit_t", "structpa__sms___sms_submit__t.html", "structpa__sms___sms_submit__t" ],
-    [ "pa_sms_Pdu_t", "structpa__sms___pdu__t.html", "structpa__sms___pdu__t" ],
-    [ "pa_sms_Message_t", "structpa__sms___message__t.html", "structpa__sms___message__t" ],
     [ "pa_sms_NewMsgHdlrFunc_t", "pa__sms_8h.html#aa87fd870b46b8fe5e3f6aca91a60105f", null ],
-    [ "pa_sms_MsgType_t", "pa__sms_8h.html#a0914a185712b38afe2909d72498adb57", [
-      [ "PA_SMS_SMS_DELIVER", "pa__sms_8h.html#a0914a185712b38afe2909d72498adb57a20482def6202e54c579b6e33f3172b9d", null ],
-      [ "PA_SMS_SMS_SUBMIT", "pa__sms_8h.html#a0914a185712b38afe2909d72498adb57aa56bad9d8d445dab939e94b62ab72117", null ],
-      [ "PA_SMS_SMS_STATUS_REPORT", "pa__sms_8h.html#a0914a185712b38afe2909d72498adb57a11bab5d85d0802891abdfd0c4517fa7b", null ],
-      [ "PA_SMS_PDU", "pa__sms_8h.html#a0914a185712b38afe2909d72498adb57a18c860013325facb64537096de7c9e96", null ]
-    ] ],
+    [ "pa_sms_MsgType_t", "pa__sms_8h.html#a0914a185712b38afe2909d72498adb57", null ],
     [ "pa_sms_ChangeMessageStatus", "pa__sms_8h.html#a17ceaca30372ca95c7de03346fd9366b", null ],
     [ "pa_sms_ClearNewMsgHandler", "pa__sms_8h.html#a6bfc9d9adacb3b6e3d09930bd6b4f229", null ],
     [ "pa_sms_DelAllMsg", "pa__sms_8h.html#a33af3336a1f2081d0c4835a647226c1d", null ],

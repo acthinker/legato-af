@@ -1,6 +1,5 @@
 var le__mem_8h =
 [
-    [ "le_mem_PoolStats_t", "structle__mem___pool_stats__t.html", "structle__mem___pool_stats__t" ],
     [ "le_mem_Destructor_t", "le__mem_8h.html#ac87d53a22fb79fdd759e537c301f8086", null ],
     [ "le_mem_PoolRef_t", "le__mem_8h.html#a44a896f6a0a1a8c733e8038eb332989e", null ],
     [ "le_mem_AddRef", "le__mem_8h.html#a92e869f92a344d61fb44922f99fe679b", null ],

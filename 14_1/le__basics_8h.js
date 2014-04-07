@@ -13,28 +13,6 @@ var le__basics_8h =
     [ "NUM_ARRAY_MEMBERS", "le__basics_8h.html#a8d8f28a045f43b477cafb67a99894c07", null ],
     [ "STRINGIZE", "le__basics_8h.html#a3428692efe6051ef30016ffde1a9f7bb", null ],
     [ "STRINGIZE_EXPAND", "le__basics_8h.html#a323e322ff5c06971560903199f1a4f68", null ],
-    [ "le_onoff_t", "le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da", [
-      [ "LE_OFF", "le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374daa66236546b5af0328d2db0e6970f67e50", null ],
-      [ "LE_ON", "le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374daa73623e8b9450d62517b467b9be2afce8", null ]
-    ] ],
-    [ "le_result_t", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c", [
-      [ "LE_OK", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca5066a4bcec691c6b67843b8f79656422", null ],
-      [ "LE_NOT_FOUND", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca77a7505b0443df2fa1bab375c7267637", null ],
-      [ "LE_NOT_POSSIBLE", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca6bff37e5294d5f5be87549661e30844d", null ],
-      [ "LE_OUT_OF_RANGE", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86caef8ecf11fa8556fd2d3ca8faab697717", null ],
-      [ "LE_NO_MEMORY", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca68b2d1935e287dda88cba448508cfbd7", null ],
-      [ "LE_NOT_PERMITTED", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cac6c0cac62213b786dabd7bf3e73bcec1", null ],
-      [ "LE_FAULT", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cac409634423b6b1ef09643529f6224798", null ],
-      [ "LE_COMM_ERROR", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cae467864059902be006a02328f7079340", null ],
-      [ "LE_TIMEOUT", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca82d9e8dc0ed1d6288003fc2819783655", null ],
-      [ "LE_OVERFLOW", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cae42c9d785827fc3a9c47fb55baca7879", null ],
-      [ "LE_UNDERFLOW", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca1aded6356c11613656177dd39867801c", null ],
-      [ "LE_WOULD_BLOCK", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca5016e2f65890028d6642e010891a113f", null ],
-      [ "LE_DEADLOCK", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86caab24aaac9e6243fa0d7295477de570c4", null ],
-      [ "LE_FORMAT_ERROR", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca556a4bcd649b2cee7145a6f913d77af3", null ],
-      [ "LE_DUPLICATE", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cac26034778a666ee720b110c2fb1647ea", null ],
-      [ "LE_BAD_PARAMETER", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cabe505065132f6e8850da6f476d8fb783", null ],
-      [ "LE_CLOSED", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cab117182636b1a8ff8e912b2653d08f07", null ],
-      [ "LE_BUSY", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca92b0367090993d8b41d1560663d01e8d", null ]
-    ] ]
+    [ "le_onoff_t", "le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da", null ],
+    [ "le_result_t", "le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c", null ]
 ];

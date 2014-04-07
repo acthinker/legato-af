@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['thread_20control_20api',['Thread Control API',['../c_threading.html',1,'c_APIs']]],
-  ['timer_20api',['Timer API',['../c_timer.html',1,'c_APIs']]],
   ['taillinkptr',['tailLinkPtr',['../structle__sls___list__t.html#a696f83142673b69689c6dcf750a09e4a',1,'le_sls_List_t']]],
   ['terminationevent',['TerminationEvent',['../structpa__mcc___call_event_data__t.html#aec2204b6c6ee7d35178c16d184eaad9d',1,'pa_mcc_CallEventData_t']]],
   ['time',['time',['../structpa___gnss___position__t.html#ab256ec83be6d9467259e570862ef93a3',1,'pa_Gnss_Position_t']]],

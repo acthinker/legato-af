@@ -11,14 +11,7 @@ var le__event_loop_8h =
     [ "le_event_HandlerRef_t", "le__event_loop_8h.html#ae7ab96b8e3441b3d484fcf52aa7a9dad", null ],
     [ "le_event_Id_t", "le__event_loop_8h.html#ae6e351b38bc95954f159d16d19d2d55c", null ],
     [ "le_event_LayeredHandlerFunc_t", "le__event_loop_8h.html#a8944d3ef0717ba9f6071d4ba8b03b7ed", null ],
-    [ "le_event_FdEventType_t", "le__event_loop_8h.html#a606fac65f1b43673716f4c354d809045", [
-      [ "LE_EVENT_FD_READABLE", "le__event_loop_8h.html#a606fac65f1b43673716f4c354d809045ab9acca3317832bd35c4a5938e0d5c408", null ],
-      [ "LE_EVENT_FD_READABLE_URGENT", "le__event_loop_8h.html#a606fac65f1b43673716f4c354d809045aa95089411b5240f2aa70d1927ba554d8", null ],
-      [ "LE_EVENT_FD_WRITEABLE", "le__event_loop_8h.html#a606fac65f1b43673716f4c354d809045a0b90f2c336a41f2c84830ff0c9c36378", null ],
-      [ "LE_EVENT_FD_WRITE_HANG_UP", "le__event_loop_8h.html#a606fac65f1b43673716f4c354d809045ac346ec3b4249e6bbbe316dd09e76ac60", null ],
-      [ "LE_EVENT_FD_READ_HANG_UP", "le__event_loop_8h.html#a606fac65f1b43673716f4c354d809045aa51d418d697fa4a0d828b2841c8a1e79", null ],
-      [ "LE_EVENT_FD_ERROR", "le__event_loop_8h.html#a606fac65f1b43673716f4c354d809045a208a314d88a8e942a6869bc3a43bcb48", null ]
-    ] ],
+    [ "le_event_FdEventType_t", "le__event_loop_8h.html#a606fac65f1b43673716f4c354d809045", null ],
     [ "le_event_AddHandler", "le__event_loop_8h.html#ae65a65b4111618f47d7e6d57a48289e5", null ],
     [ "le_event_AddLayeredHandler", "le__event_loop_8h.html#a8b906d38935f64953482f42c745e1c18", null ],
     [ "le_event_ClearFdHandler", "le__event_loop_8h.html#a6a44474e915f91f20c8bd950d50d8e92", null ],

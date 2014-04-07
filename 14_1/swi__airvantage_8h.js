@@ -7,14 +7,8 @@ var swi__airvantage_8h =
     [ "swi_av_DataWriteCB", "swi__airvantage_8h.html#a0ac63a79fedd29aea57c37efea5b720b", null ],
     [ "swi_av_Table_t", "swi__airvantage_8h.html#a96178218cc5e87b6f27a02f50bcaef09", null ],
     [ "swi_av_updateNotificationCB", "swi__airvantage_8h.html#abd3048b29520f300c742de7750ad5037", null ],
-    [ "swi_av_Table_Storage_t", "swi__airvantage_8h.html#a9ecc845c1fbee2853604f3ca964d4cfb", [
-      [ "STORAGE_RAM", "swi__airvantage_8h.html#a9ecc845c1fbee2853604f3ca964d4cfba030cdda3592d2bf014baad7efc6219aa", null ],
-      [ "STORAGE_FLASH", "swi__airvantage_8h.html#a9ecc845c1fbee2853604f3ca964d4cfbad4554cb4e79d8aa9b739772f83cc1145", null ]
-    ] ],
-    [ "swi_av_timestamp_t", "swi__airvantage_8h.html#a3fe9dca31eb83c25303fe42408147e43", [
-      [ "SWI_AV_TSTAMP_NO", "swi__airvantage_8h.html#a3fe9dca31eb83c25303fe42408147e43a6441950bb26b3d017fb092e84412954b", null ],
-      [ "SWI_AV_TSTAMP_AUTO", "swi__airvantage_8h.html#a3fe9dca31eb83c25303fe42408147e43a1af8ff28c4ee7fb0a05213d934aac081", null ]
-    ] ],
+    [ "swi_av_Table_Storage_t", "swi__airvantage_8h.html#a9ecc845c1fbee2853604f3ca964d4cfb", null ],
+    [ "swi_av_timestamp_t", "swi__airvantage_8h.html#a3fe9dca31eb83c25303fe42408147e43", null ],
     [ "swi_av_Acknowledge", "swi__airvantage_8h.html#a82c7ead36e81069db2183419ff2f31fb", null ],
     [ "swi_av_asset_Create", "swi__airvantage_8h.html#a41d12a618696657cb8487316b7139ddd", null ],
     [ "swi_av_asset_Destroy", "swi__airvantage_8h.html#ab2a3a9a8856ce4efa48082c36aa25865", null ],

@@ -1,7 +1,5 @@
 var le__singly_linked_list_8h =
 [
-    [ "le_sls_Link_t", "structle__sls___link__t.html", "structle__sls___link__t" ],
-    [ "le_sls_List_t", "structle__sls___list__t.html", "structle__sls___list__t" ],
     [ "LE_SLS_LINK_INIT", "le__singly_linked_list_8h.html#aa8375976bebc74107b4d026dfcf3e94a", null ],
     [ "LE_SLS_LIST_INIT", "le__singly_linked_list_8h.html#a2e1013c24e2c826dbba37a761c5d9f44", null ],
     [ "le_sls_AddAfter", "le__singly_linked_list_8h.html#a69f5c789a64d372bb61b173c4418b14b", null ],

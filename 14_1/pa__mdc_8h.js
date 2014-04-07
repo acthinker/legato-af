@@ -1,15 +1,10 @@
 var pa__mdc_8h =
 [
-    [ "pa_mdc_ProfileData_t", "structpa__mdc___profile_data__t.html", "structpa__mdc___profile_data__t" ],
-    [ "pa_mdc_SessionStateData_t", "structpa__mdc___session_state_data__t.html", "structpa__mdc___session_state_data__t" ],
     [ "PA_MDC_APN_MAX_BYTES", "pa__mdc_8h.html#a1d502fe139e71614c1da3ce86b77845b", null ],
     [ "PA_MDC_APN_MAX_LEN", "pa__mdc_8h.html#acd55db6349f5835c76681394bd12b6cb", null ],
     [ "PA_MDC_MAX_PROFILE", "pa__mdc_8h.html#aba413d25bc77f318c8727ddd3c8311ea", null ],
     [ "pa_mdc_SessionStateHandler_t", "pa__mdc_8h.html#a6622d6d614058e238c7a11fc67227a5a", null ],
-    [ "pa_mdc_SessionState_t", "pa__mdc_8h.html#ace2fd5d4e402c009647e04861ab9955c", [
-      [ "PA_MDC_CONNECTED", "pa__mdc_8h.html#ace2fd5d4e402c009647e04861ab9955ca354cc40fab039f755b80a85e830e43ef", null ],
-      [ "PA_MDC_DISCONNECTED", "pa__mdc_8h.html#ace2fd5d4e402c009647e04861ab9955ca78dd6f01c9efa188c3677d0750afcd11", null ]
-    ] ],
+    [ "pa_mdc_SessionState_t", "pa__mdc_8h.html#ace2fd5d4e402c009647e04861ab9955c", null ],
     [ "pa_mdc_GetDNSAddresses", "pa__mdc_8h.html#a7fc6193788700251c5ad686562aeeab2", null ],
     [ "pa_mdc_GetGatewayAddress", "pa__mdc_8h.html#a9cbf5ca521ffff57ad35e876b8e08021", null ],
     [ "pa_mdc_GetInterfaceName", "pa__mdc_8h.html#a153b2028394dcf3f565e323369242ea9", null ],

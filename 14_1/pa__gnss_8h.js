@@ -1,8 +1,5 @@
 var pa__gnss_8h =
 [
-    [ "pa_Gnss_Time_t", "structpa___gnss___time__t.html", "structpa___gnss___time__t" ],
-    [ "pa_Gnss_Date_t", "structpa___gnss___date__t.html", "structpa___gnss___date__t" ],
-    [ "pa_Gnss_Position_t", "structpa___gnss___position__t.html", "structpa___gnss___position__t" ],
     [ "pa_Gnss_Position_Ref_t", "pa__gnss_8h.html#a79c0fa14380c1fa2de0585d37cc17469", null ],
     [ "pa_gnss_PositionDataHandlerFunc_t", "pa__gnss_8h.html#ae91dcaeb8e22e8bbcfe96e47a1be135f", null ],
     [ "pa_gnss_AddPositionDataHandler", "pa__gnss_8h.html#a9ac82825503480e72a9c7c1dff1855b8", null ],

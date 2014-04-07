@@ -19,14 +19,7 @@ var le__log_8h =
     [ "LE_TRACE", "le__log_8h.html#a331fb6c78ccddeafc455ad9c64e42008", null ],
     [ "LE_WARN", "le__log_8h.html#a0201b2f60ee0e945479f91e181bf04b6", null ],
     [ "LE_WARN_IF", "le__log_8h.html#a8d8f204806cd5fc0455fe3caacf1d251", null ],
-    [ "le_log_Level_t", "le__log_8h.html#aa3de78c088c398afb23c0b582deabc0a", [
-      [ "LE_LOG_DEBUG", "le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa1a5c0e9f9bcf857faad0cc4187002479", null ],
-      [ "LE_LOG_INFO", "le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa83ea376539849ee701096fdb022e74b3", null ],
-      [ "LE_LOG_WARN", "le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aae0f565809442f7de555d36f76c36627c", null ],
-      [ "LE_LOG_ERR", "le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aaf1203f512370bfec7a05f8adae13c7d9", null ],
-      [ "LE_LOG_CRIT", "le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa298894fe77b90cb9b28f25817a620df8", null ],
-      [ "LE_LOG_EMERG", "le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa6843cc8d9fb10d02cad1834b236dd5cb", null ]
-    ] ],
+    [ "le_log_Level_t", "le__log_8h.html#aa3de78c088c398afb23c0b582deabc0a", null ],
     [ "_le_log_GetResultCodeString", "le__log_8h.html#a9402d78fa0ea7040ec3574b227b639ca", null ],
     [ "le_log_DisableTrace", "le__log_8h.html#a15495177d8e9bf1fe4603cbc6bade8fc", null ],
     [ "le_log_EnableTrace", "le__log_8h.html#a7dfe7c6d02a68b473d94d83ae71ff2b3", null ],

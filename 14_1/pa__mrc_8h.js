@@ -1,11 +1,7 @@
 var pa__mrc_8h =
 [
     [ "pa_mrc_NetworkRegHdlrFunc_t", "pa__mrc_8h.html#a7a1f7791a181057aaefc557738426baa", null ],
-    [ "pa_mrc_NetworkRegSetting_t", "pa__mrc_8h.html#a2bb6c7905368af34dd5679be41ed040e", [
-      [ "PA_MRC_DISABLE_REG_NOTIFICATION", "pa__mrc_8h.html#a2bb6c7905368af34dd5679be41ed040eaeb4d86c4f94bcc6849a8eefc1c266a0f", null ],
-      [ "PA_MRC_ENABLE_REG_NOTIFICATION", "pa__mrc_8h.html#a2bb6c7905368af34dd5679be41ed040eaa5a286d7ccb08658557e02787d339b27", null ],
-      [ "PA_MRC_ENABLE_REG_LOC_NOTIFICATION", "pa__mrc_8h.html#a2bb6c7905368af34dd5679be41ed040ea91321e5a8af2c2aa294ae35a849b85fe", null ]
-    ] ],
+    [ "pa_mrc_NetworkRegSetting_t", "pa__mrc_8h.html#a2bb6c7905368af34dd5679be41ed040e", null ],
     [ "pa_mrc_AddNetworkRegHandler", "pa__mrc_8h.html#ae11384c8248ff0659d743470855f7d97", null ],
     [ "pa_mrc_ConfigureNetworkReg", "pa__mrc_8h.html#aa3496f65866e47d2166b3d32a1259219", null ],
     [ "pa_mrc_GetNetworkRegConfig", "pa__mrc_8h.html#aec645f26f19165f20e6280f28885c4de", null ],

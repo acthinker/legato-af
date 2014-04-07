@@ -1,8 +1,5 @@
 var index =
 [
-    [ "Overview", "index.html#Overview", null ],
-    [ "Start developing with Legato", "index.html#gettingStarted", null ],
-    [ "Legato APIs", "index.html#legatoAPIs", null ],
     [ "Get Started", "getstarted_main.html", "getstarted_main" ],
     [ "Basic Concepts", "basic_concepts.html", "basic_concepts" ],
     [ "Create Applications", "app_creating.html", "app_creating" ],

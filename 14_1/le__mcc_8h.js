@@ -6,13 +6,7 @@ var le__mcc_8h =
     [ "le_mcc_profile_Ref_t", "le__mcc_8h.html#a39d1c1707c1bca34cd73e16bfa10ac81", null ],
     [ "le_mcc_profile_StateChangeHandlerFunc_t", "le__mcc_8h.html#a5651915d4156059de54473d9d6155aa3", null ],
     [ "le_mcc_profile_StateChangeHandlerRef_t", "le__mcc_8h.html#a05b4cd55e57ad801a597de0c59b984a4", null ],
-    [ "le_mcc_profile_State_t", "le__mcc_8h.html#aa1a56df1f670e55c3e9b6385c52fdee9", [
-      [ "LE_MCC_PROFILE_NOT_AVAILABLE", "le__mcc_8h.html#aa1a56df1f670e55c3e9b6385c52fdee9a8e7102eb385289350e7f006821f82064", null ],
-      [ "LE_MCC_PROFILE_IDLE", "le__mcc_8h.html#aa1a56df1f670e55c3e9b6385c52fdee9ad0d0c5f27160c4a8ef5b77a5b22bac5f", null ],
-      [ "LE_MCC_PROFILE_FORWARDED", "le__mcc_8h.html#aa1a56df1f670e55c3e9b6385c52fdee9aecd0a36c68f5567e84e12809642b4717", null ],
-      [ "LE_MCC_PROFILE_DND", "le__mcc_8h.html#aa1a56df1f670e55c3e9b6385c52fdee9a3910b854120c416bb64a04c7897e413b", null ],
-      [ "LE_MCC_PROFILE_IN_USE", "le__mcc_8h.html#aa1a56df1f670e55c3e9b6385c52fdee9aba342afa472ff84c89c24c24caedb7de", null ]
-    ] ],
+    [ "le_mcc_profile_State_t", "le__mcc_8h.html#aa1a56df1f670e55c3e9b6385c52fdee9", null ],
     [ "le_mcc_call_Answer", "le__mcc_8h.html#ac52db9513af1486e7ee5020e3128fb0d", null ],
     [ "le_mcc_call_Delete", "le__mcc_8h.html#a91b1ccae151f59126317ae89cd5e10e0", null ],
     [ "le_mcc_call_GetRemoteTel", "le__mcc_8h.html#a491f336e36008f821564d16acc7e0daf", null ],

@@ -1,15 +1,5 @@
 var searchData=
 [
-  ['legato_20components',['Legato Components',['../basic_components.html',1,'basicConcepts']]],
-  ['legato_20interfaces',['Legato Interfaces',['../basic_interfaces.html',1,'basicConcepts']]],
-  ['logging_20api',['Logging API',['../c_logging.html',1,'c_APIs']]],
-  ['low_2dlevel_20messaging_20api',['Low-Level Messaging API',['../c_messaging.html',1,'c_APIs']]],
-  ['legato_20definition_20files',['Legato Definition Files',['../def_files.html',1,'index']]],
-  ['legato_20adef_20files',['Legato adef Files',['../def_files_adef.html',1,'defFiles']]],
-  ['legato_20cdef_20files',['Legato cdef Files',['../def_files_cdef.html',1,'defFiles']]],
-  ['legato_20demo_20applications',['Legato Demo Applications',['../demo_apps.html',1,'index']]],
-  ['linux_20android_20sdk',['Linux Android SDK',['../getstarted_linux_android.html',1,'getstartedRestore']]],
-  ['language_20independent',['Language Independent',['../language_independent_a_p_is.html',1,'index']]],
   ['latitude',['latitude',['../structpa___gnss___position__t.html#a0544257c9cb5080b7e85cfd8547347d8',1,'pa_Gnss_Position_t']]],
   ['latitudevalid',['latitudeValid',['../structpa___gnss___position__t.html#a82987bddbfd0e90d1b11cdc513c170ed',1,'pa_Gnss_Position_t']]],
   ['le_5farg_5fgetarg',['le_arg_GetArg',['../le__args_8h.html#a89b9e1ffd1401e17ceb818f3293db335',1,'le_args.h']]],
@@ -669,11 +659,6 @@ var searchData=
   ['le_5fwarn_5fif',['LE_WARN_IF',['../le__log_8h.html#a8d8f204806cd5fc0455fe3caacf1d251',1,'le_log.h']]],
   ['le_5fwould_5fblock',['LE_WOULD_BLOCK',['../le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca5016e2f65890028d6642e010891a113f',1,'le_basics.h']]],
   ['legato_2eh',['legato.h',['../legato_8h.html',1,'']]],
-  ['legato_20services',['Legato Services',['../legato_services.html',1,'index']]],
-  ['legato_20logging',['Legato Logging',['../logging_basics.html',1,'tools']]],
-  ['legato_20logging_20commands',['Legato Logging Commands',['../logging_cmds.html',1,'loggingBasics']]],
   ['longitude',['longitude',['../structpa___gnss___position__t.html#a71da4b8299b17e53c26e4add73ac40e4',1,'pa_Gnss_Position_t']]],
-  ['longitudevalid',['longitudeValid',['../structpa___gnss___position__t.html#a8a4538a3d728cc302f03ff4dae916f6f',1,'pa_Gnss_Position_t']]],
-  ['legato_20sandboxes',['Legato Sandboxes',['../sandbox_gen.html',1,'basicConcepts']]],
-  ['legato_20device_20tools',['Legato Device Tools',['../tools.html',1,'index']]]
+  ['longitudevalid',['longitudeValid',['../structpa___gnss___position__t.html#a8a4538a3d728cc302f03ff4dae916f6f',1,'pa_Gnss_Position_t']]]
 ];

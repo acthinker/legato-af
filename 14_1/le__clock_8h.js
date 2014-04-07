@@ -1,6 +1,5 @@
 var le__clock_8h =
 [
-    [ "le_clk_Time_t", "structle__clk___time__t.html", "structle__clk___time__t" ],
     [ "LE_CLK_STRING_FORMAT_DATE", "le__clock_8h.html#aff1e2aba0e4cf5d71a6a5cf50d13063a", null ],
     [ "LE_CLK_STRING_FORMAT_DATE_TIME", "le__clock_8h.html#af9a6489508554d27a4f927227e2eeb7c", null ],
     [ "LE_CLK_STRING_FORMAT_TIME", "le__clock_8h.html#a175eba3b01c5e3985ab04bea854dd491", null ],
