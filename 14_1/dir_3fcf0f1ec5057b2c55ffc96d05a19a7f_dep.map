@@ -1,9 +1,0 @@
-<map id="interfaces/modemServices/c" name="interfaces/modemServices/c">
-<area shape="rect" id="node2" href="dir_3fcf0f1ec5057b2c55ffc96d05a19a7f.html" title="c" alt="" coords="41,55,113,103"/>
-<area shape="rect" id="node3" href="dir_74153f8b9a1cee9fdf6e8d0f56759ce0.html" title="audio" alt="" coords="5,151,77,199"/>
-<area shape="rect" id="edge5" href="dir_000021_000014.html" title="1" alt="" coords="61,127,69,145"/>
-<area shape="rect" id="node4" href="dir_644e041c3a6521da7b27eba0e4eb2b95.html" title="framework" alt="" coords="37,247,117,295"/>
-<area shape="rect" id="edge7" href="dir_000021_000009.html" title="14" alt="" coords="87,221,101,238"/>
-<area shape="rect" id="edge3" href="dir_000014_000009.html" title="2" alt="" coords="66,218,74,235"/>
-<area shape="rect" id="graph2" href="dir_8a60c2bf9ec46a2a23800c8048598a9b.html" title="modemServices" alt="" coords="20,16,135,113"/>
-</map>
