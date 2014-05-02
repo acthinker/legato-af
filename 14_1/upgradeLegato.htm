@@ -84,7 +84,7 @@ Ensure parameters are saved and run <font face="courier">!RESET command AT!RESET
 
 <p>If needed, set modem file system partitioning.</p>
  
- <p>Run with these values: <br>
+ <p>Execute the following: <br>
  <font face="courier">AT!UNLOCK="A710" <br>
 AT!APPPARTCHG=768,50,19000,384,80000,300,38000,2560,120440,384 <br>
 AT!RESET </font><br>
@@ -133,16 +133,15 @@ Delete it configDB from /opt/legato.</p>
 <h2><a id="3">Update Firmware</a></h2>
 <p>
 
-<p>New firmware is included in the .CWE file that must be loaded onto the device. </p>
+<p>New firmware is included in the .EXE file that downloads it onto the device. </p>
  <p>You'll need to download a few files depending on your device:</p>
  
- <p>Extract the appropriate .CWE file:</p>
- <ul><li>SWI9X15W_06.03.00.00 for WP7100 and WP7102 modules</li>
-<li>SWI9X15W_06.02.14.00 for the WP7104 module</li>
-<li>Drivers_Package.zip - Follow instructions in: <a href="http://www.legato.io/legato-af/14_04/getstarted_windows_host.html#instSWdrivers">install drivers topic</a>.</li></ul>
+ <p>Copy the appropriate .exe file to your PC:</p>
+ <ul><li>SWI9X15W_06.03.00.00-wp-yocto-cwe.exe - for WP7100 and WP7102 modules</li>
+<li>SWI9X15W_06.02.14.00-wp-yocto-cwe.exe - for the WP7104 module</li></ul>
+<br>
 
-<p>Files are available from <a href="http://developer.sierrawireless.com/landing/legato.aspx">HERE</a> 
-? OR <a href="http://developer.sierrawireless.com/Resources/Resources/Legato/Distribution.aspx">Dev Zone</a>.</p>
+<p>Files are available from <a href="http://developer.sierrawireless.com/landing/legato.aspx">here</a>. </p>
 
 <p>Note: the firmware file also includes Yocto software. Older devices might need to be partitioned before completing the firmware update.</p>
 <br>
@@ -153,7 +152,7 @@ Delete it configDB from /opt/legato.</p>
 <p>Run <font face="courier">SWI9X15W_06.xx.xx.00.exe</font>. (check above for versions). Wait until the firmware download process is complete and the app reports that it is resetting the device.</p>
 
 <p>Disconnect power from your device and turn your BOOT switch to 'ON' (or 'HIGH'). Reconnect power to your device; 
- it should enumerate with other devices per AT Ports manager list).  </p>
+ it should enumerate with other devices per AT Ports manager list.  </p>
 
 <p>Connect to the device (through HyperTerminal or Tera Term), and verify the following settings to 
 ensure the firmware has been updated successfully:
@@ -163,7 +162,7 @@ ensure the firmware has been updated successfully:
 <br>
 <font face="courier">Manufacturer: Sierra Wireless, Incorporated <br>
 Model: WP7102 <br>
-Revision: SWI9X15W_06.02.15.00 r21134 CNSHZ-AR-BUILD 2014/03/25 00:04:10 (version should match the file above) <br> 
+Revision: SWI9X15W_06.02.15.00 r21134 CNSHZ-AR-BUILD 2014/03/25 00:04:10 (version should match the file above) <br>
 IMEI: 355603050001488 <br>
 IMEI SV: 0 <br>
 +GCAP: +CGSM,+DS,+ES <br>
