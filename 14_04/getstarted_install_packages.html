@@ -136,11 +136,15 @@ Setup Target Device</h2>
 Copy startup scripts to target</h3>
 <p>Using ssh, access the device:</p>
 <div class="fragment"><pre class="fragment"> ssh root@&lt;device ip addr&gt; 
-</pre></div><p>Then create the startup directory: </p>
+</pre></div><p> When prompted for a password, just press enter.</p>
+<p>Then create the startup directory: </p>
 <div class="fragment"><pre class="fragment"> mkdir -p  /mnt/flash/startup 
 </pre></div><p> When prompted for a password, just press enter.</p>
-<p>Then copy the startup files to the device: </p>
-<div class="fragment"><pre class="fragment">scp /targetFiles/mdm-9x15/startup/fg_* /mnt/flash/startup
+<p>Go back to your development PC and: </p>
+<div class="fragment"><pre class="fragment"> exit 
+</pre></div><p>Then copy the startup files to the device: </p>
+<div class="fragment"><pre class="fragment">scp targetFiles/mdm-9x15/startup/fg_* root@&lt;target ip addr&gt;:/mnt/flash/startup
+</pre></div><p> When prompted for a password, just press enter.</p>
 </pre></div><p>Scripts beginning with <code>fg_</code> are started first, and then everything else is runs in the background. You can add more scripts to customize your target. <code>fg_</code> scripts must have executable permissions or they will not run.</p>
 <p>See <a class="el" href="getstarted_install_notes.html">Yocto Install Notes</a> for helpful device setup tips.</p>
 <dl class="note"><dt><b>Note:</b></dt><dd>In the rare case you need to stop a start up script, run <div class="fragment"><pre class="fragment"> touch /mnt/flash/startup/stoplegato 
