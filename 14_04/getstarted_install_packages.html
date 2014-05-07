@@ -110,7 +110,7 @@ Install Legato</h2>
 </pre></div><p> You'll be prompted for your GitHub credentials.</p>
 <p><b> . bin/configlegatoenv </b> </p>
 <dl class="warning"><dt><b>Warning:</b></dt><dd>You must configure your bash shell's environment for the Legato application build tools every time you open a new shell.</dd></dl>
-<p>Run this every time you open a new shell: </p>
+<p>Run this every time you open a new shell (or add to your .profile): </p>
 <div class="fragment"><pre class="fragment"> $ . bin/configlegatoenv 
 </pre></div><p><b>cd</b> to your Legato directory</p>
 <p><b>Run</b> <code>make</code>.</p>
@@ -138,20 +138,21 @@ Copy startup scripts to target</h3>
 <div class="fragment"><pre class="fragment"> ssh root@&lt;device ip addr&gt; 
 </pre></div><p> When prompted for a password, just press enter.</p>
 <p>Then create the startup directory: </p>
-<div class="fragment"><pre class="fragment"> mkdir -p  /mnt/flash/startup 
-</pre></div><p> When prompted for a password, just press enter.</p>
-<p>Go back to your development PC and: </p>
-<div class="fragment"><pre class="fragment"> exit 
-</pre></div><p>Then copy the startup files to the device: </p>
+<div class="fragment"><pre class="fragment"> mkdir -p  /mnt/flash/startup </p>
+</pre></div><p>Then copy the startup files to the device by running the following from your PC: </p>
 <div class="fragment"><pre class="fragment">scp targetFiles/mdm-9x15/startup/fg_* root@&lt;target ip addr&gt;:/mnt/flash/startup
 </pre></div><p> When prompted for a password, just press enter.</p>
-</pre></div><p>Scripts beginning with <code>fg_</code> are started first, and then everything else is runs in the background. You can add more scripts to customize your target. <code>fg_</code> scripts must have executable permissions or they will not run.</p>
+</pre></div><p>Scripts beginning with <code>fg_</code> are run first during startup, and then 
+everything else is runs in the background. You can add more scripts to customize your target. <code>fg_</code> scripts 
+must have executable permissions or they will not run.</p>
 <p>See <a class="el" href="getstarted_install_notes.html">Yocto Install Notes</a> for helpful device setup tips.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>In the rare case you need to stop a start up script, run <div class="fragment"><pre class="fragment"> touch /mnt/flash/startup/stoplegato 
+<dl class="note"><dt><b>Note:</b></dt><dd>In the rare case you need to prevent Legato starting automatically, run 
+<div class="fragment"><pre class="fragment"> touch /mnt/flash/startup/stoplegato 
 </pre></div></dd></dl>
 <h3><a class="anchor" id="rebootTarget"></a>
 Reboot target device</h3>
-<p>Wait for the target to fully reboot. The device IP address may have changed. Check it using ifconfig on the serial console before proceeding.</p>
+<p>Wait for the target to fully reboot. The device IP address may have changed. Check it using ifconfig on the serial 
+console before proceeding.</p>
 <h3><a class="anchor" id="copyLibExe"></a>
 Copy libraries and executables</h3>
 <p>Run this to copy the Legato framework libraries and executables onto the device, and start the Legato runtime components:</p>
@@ -160,7 +161,8 @@ Copy libraries and executables</h3>
 Directories</h2>
 <p>Here's the top level Legato directory structure:</p>
 <p><b> ./apps </b> - sample applications: airvantageDemo, helloWorld, modeDemo.</p>
-<p><b> ./bin </b> - created by build system and populated with executable files run on the development host that ran the build. Contains files like <code>mkapp</code> and <code>mkexe</code>.</p>
+<p><b> ./bin </b> - created by build system and populated with executable files run on the development host that ran the build. 
+Contains files like <code>mkapp</code> and <code>mkexe</code>.</p>
 <p><b>./build</b> - results of a framework build. Created by the build system.</p>
 <p><b>./build/tools</b> - tools built and then used by the build system to build other things.</p>
 <p><b> ./build/[target] </b> - output of a build for a specific target (e.g., ./build/wp7).</p>
