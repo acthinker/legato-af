@@ -74,11 +74,13 @@ ul
 
 <p>Use a Windows host (with something like HyperTerminal) to upgrade the device modem.</p>
 
-<p>First install the Sierra Wireless drivers from Drivers_Package.zip - Follow instructions in: <a href="http://www.legato.io/legato-af/14_04/getstarted_windows_host.html#instSWdrivers">install drivers topic</a>.</p>
+<p>First install the Sierra Wireless drivers from Drivers_Package.zip - Follow instructions in:
+<a href="http://www.legato.io/legato-af/14_04/getstarted_windows_host.html#instSWdrivers">install drivers topic</a>.</p>
 
 <p>If needed, backup NV parameters of the modem.</p>
 
-<p>Connect USB cable between AR7 and host.  Connect to the port "Sierra Wireless AT Command Port" with Hyperterminal. <br>
+<p>Connect USB cable between the device and host.  These instructions apply to AR7 and WP7 modules. </p>
+<p>Connect to the port "Sierra Wireless AT Command Port" with Hyperterminal. <br>
 Run <font face="courier">AT!NVBACKUP=0/1/2/3</font>. <br>
 Ensure parameters are saved and run <font face="courier">!RESET command AT!RESET</font>.</p>
 
@@ -93,12 +95,16 @@ AT!RESET </font><br>
 
 <p>Ensure the <a href="#3"> firmware is updated</a>.</p>
 
-<p>Wait for the AR7 to completely reset. After it's enumerated again, open an AT command port and run 
+<p>Wait for the device to completely reset.</p>
+<p>After it's enumerated again, open an AT command port and run:<br> 
 <font face="courier">AT!NVRESTORE=0/1/2/3 </font></p>
+<p>Ensure nvrestore runs successfully; if it fails or you skip it, you won't be able to continue upgrading. 	
+</p>
 
 
 <h3> Legato toolchain Upgrade </h3>
-<p>General instructions for Legato toolchain installation available at <a href="http://www.legato.io/legato-af/14_04/getstarted_install_packages.html">Install Packages</a>.</p>
+<p>General instructions for Legato toolchain installation available at 
+<a href="http://www.legato.io/legato-af/14_04/getstarted_install_packages.html">Install Packages</a>.</p>
 
 <p>For Alpha-B customers, on Linux host machine, install python-jinja2 package:</p>
 
@@ -111,7 +117,8 @@ $ sudo -s <br>
 # exit <br></font>
 </p>
 
-<p>Installation packages are available at the <a href="http://developer.sierrawireless.com/Resources/Resources/Legato/Distribution.aspx">Dev Zone</a>.</p>
+<p>Installation packages are available at the 
+<a href="http://developer.sierrawireless.com/Resources/Resources/Legato/Distribution.aspx">Dev Zone</a>.</p>
 
 <p>Select toolchain for Linux PC x86 64bits and copy it to /opt/swi <br>
 
@@ -141,15 +148,18 @@ Delete it configDB from /opt/legato.</p>
 <li>SWI9X15W_06.02.14.00-wp-yocto-cwe.exe - for the WP7104 module</li></ul>
 <br>
 
-<p>Files are available from <a href="http://developer.sierrawireless.com/landing/legato.aspx">here</a>. </p>
+<p>Download toolchain, distribution, firmware, and drivers from the from the 
+<a href="http://developer.sierrawireless.com/Resources/Resources/Legato/Distribution.aspx">Dev Zone</a>.</p>
 
-<p>Note: the firmware file also includes Yocto software. Older devices might need to be partitioned before completing the firmware update.</p>
+<p>Note: the firmware file also includes Yocto software. 
+Older devices might need to be partitioned before completing the firmware update.</p>
 <br>
 <p>Turn the board BOOT switch to 'OFF' (Recovery mode). Depending on your dev kit, 'LOW' is the same as 'OFF'.   </p>
 
 <p>Connect the device. It will display in a Device Manager list as 'Sierra DM Port' located under Ports.  </p>
 
-<p>Run <font face="courier">SWI9X15W_06.xx.xx.00.exe</font>. (check above for versions). Wait until the firmware download process is complete and the app reports that it is resetting the device.</p>
+<p>Run <font face="courier">SWI9X15W_06.xx.xx.00.exe</font>. (check above for versions). 
+Wait until the firmware download process is complete and the app reports that it is resetting the device.</p>
 
 <p>Disconnect power from your device and turn your BOOT switch to 'ON' (or 'HIGH'). Reconnect power to your device; 
  it should enumerate with other devices per AT Ports manager list.  </p>
