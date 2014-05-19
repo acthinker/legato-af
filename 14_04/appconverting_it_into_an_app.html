@@ -111,7 +111,8 @@ $ mkapp -t wp7 helloWorld.adef
 <div class="fragment"><pre class="fragment">
 $ instapp helloWorld.wp7 &lt;ip addr&gt;
 </pre></div><p>The second argument tells the target device host address from where to run the application. This will connect to the target, upload the application, and start it.</p>
-<p>Your installed application output will display in /var/log/messages in the target device, not on the terminal you used to install the application.</p>
+<p>Your installed application output will display in <em>logread</em> on the target device, not on the terminal you used to install the application. <br/>
+ Run <code>logread</code> <code></code>-f to get logs. Logread displays messages from <code>syslogd</code> using .adef process settings: LE_LOG_LEVEL = DEBUG and LE_LOG_LOCATION = "stderr + syslog".</p>
 <p>Use "rmapp" to uninstall your application.</p>
 <div class="fragment"><pre class="fragment">
 $ rmapp helloWorld.wp7 &lt;ip addr&gt;
