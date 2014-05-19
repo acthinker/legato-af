@@ -137,7 +137,9 @@ $ mkapp hi.adef -t wp7
 </pre></div><p>And install on target like this:</p>
 <div class="fragment"><pre class="fragment">
 $ instapp hi.wp7 192.168.1.2
-</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>Your installed application output will display in /var/log/messages in the target device, not on the terminal you used to install the application. <hr/>
+</pre></div>
+<dl class="section note"><dt>Note</dt><dd>Your installed application output will display in <em>logread</em> on the target device, not on the terminal you used to install the application. <br/>
+ Run <code>logread</code> <code></code>-f to get logs. Logread displays messages from <code>syslogd</code> using .adef process settings: LE_LOG_LEVEL = DEBUG and LE_LOG_LOCATION = "stderr + syslog". <hr/>
 </dd></dl>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->
