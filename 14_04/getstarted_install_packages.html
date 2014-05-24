@@ -141,14 +141,10 @@ Copy startup scripts to target</h3>
 <div class="fragment"><pre class="fragment"> mkdir -p  /mnt/flash/startup 
 </pre></div><p>Then copy the startup files to the target by running the following from the dev host: </p>
 <div class="fragment"><pre class="fragment">scp targetFiles/mdm-9x15/startup/fg_* root@&lt;target ip addr&gt;:/mnt/flash/startup
-</pre></div><p> When prompted for a password, press enter.</p>
-<p>Scripts beginning with <code>fg_</code> are run first during startup, and then 
-everything else is runs in the background. You can add more scripts to customize your target. <code>fg_</code> scripts 
-must have executable permissions or they will not run.</p>
+<p>Scripts beginning with <code>fg_</code> are run first during startup, and then everything else is runs in the background. You can add more scripts to customize your target. <code>fg_</code> scripts must have executable permissions or they will not run.</p>
 <p>See <a class="el" href="getstarted_install_notes.html">Yocto Install Notes</a> for helpful target setup tips.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>In the rare case you need to prevent Legato starting automatically, run 
-<div class="fragment"><pre class="fragment"> touch /mnt/flash/startup/stoplegato 
-</pre></div></dd></dl>
+<dl class="section note"><dt>Note</dt><dd>In the rare case you need to prevent legato starting automatically, run <div class="fragment"><div class="line">touch /mnt/flash/startup/stoplegato </div>
+</div><!-- fragment --></dd></dl>
 <h3><a class="anchor" id="rebootTarget"></a>
 Reboot target </h3>
 <p>Wait for the target to fully reboot. The target IP address may have changed. Check it using ifconfig on the serial 
