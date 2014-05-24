@@ -88,10 +88,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><p><a class="el" href="getstarted_machine_prep.html">Prep Dev Machine</a> before installing Legato packages.</p>
 <p><a class="el" href="getstarted_install_packages.html#instToolchain">Install Legato Toolchain</a> <br/>
  <a class="el" href="getstarted_install_packages.html#instLegato">Install Legato</a> <br/>
+ <a class="el" href="getstarted_install_packages.html#setupTarget">Setup Target</a> <br/>
  <a class="el" href="getstarted_install_packages.html#instPkgWhatsNext">What's Next?</a></p>
-<p>Download the latest Legato packages through <a href="http://developer.sierrawireless.com/landing/legato.aspx">http://developer.sierrawireless.com/landing/legato.aspx</a></p>
-<p>To access the Legato application framework, you'll need a GitHub account.</p>
-<p>Then <a class="el" href="getstarted_install_packages.html#setupTarget">Setup Target Device</a>.</p>
+<p><a class="el" href="getstarted_machine_prep.html">Prep Dev Host</a> before installing Legato packages.</p>
+<p>Ensure you have everything you need downloaded. Check <a class="el" href="getstarted_main.html#inLegato">Legato Installation Packages</a>.</p>
+<p>To access the Legato application framework, you'll need a GitHub account <a href="http://www.legato.io/">http://www.legato.io/</a></p>
+<p>Then <a class="el" href="getstarted_install_packages.html#setupTarget">Setup Target</a>.</p>
 <p>Here are the <a class="el" href="getstarted_install_packages.html#dirStruct">Directories</a> created.</p>
 <h2><a class="anchor" id="instToolchain"></a>
 Install Legato Toolchain</h2>
@@ -108,40 +110,39 @@ Install Legato</h2>
 <p>Then run: </p>
 <div class="fragment"><pre class="fragment">git clone https:<span class="comment">//github.com/legatoproject/legato-af.git</span>
 </pre></div><p> You'll be prompted for your GitHub credentials.</p>
-<p><b> . bin/configlegatoenv </b> </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>You must configure your bash shell's environment for the Legato application build tools every time you open a new shell.</dd></dl>
-<p>Run this every time you open a new shell (or add to your .profile): </p>
-<div class="fragment"><pre class="fragment"> $ . bin/configlegatoenv 
-</pre></div><p><b>cd</b> to your Legato directory</p>
 <p><b>Run</b> <code>make</code>.</p>
+<p><b>$ . bin/legs </b></p>
+<p>Run this every time you open a new shell: </p>
+<div class="fragment"><div class="line">$ . bin/legs </div>
+<p><b>cd</b> to your Legato directory</p>
 <p><b>Build</b> the framework on the target device by running: </p>
 <div class="fragment"><pre class="fragment"> $ make wp7 
 </pre></div><dl class="note"><dt><b>Note:</b></dt><dd>If you're building an AR7 device, substitute <code>ar7</code> for <code>wp7</code>.</dd></dl>
 <p>Or to include the AirVantage agent: </p>
 <div class="fragment"><pre class="fragment"> $ make wp7 INCLUDE_AIRVANTAGE=1 
 </pre></div><h2><a class="anchor" id="setupTarget"></a>
-Setup Target Device</h2>
-<p>Here's how to setup your target device:</p>
+Setup Target </h2>
+<p>Here's how to set up your target:</p>
 <p><a class="el" href="getstarted_install_packages.html#copyStartScripts">Copy startup scripts to target</a> <br/>
- <a class="el" href="getstarted_install_packages.html#rebootTarget">Reboot target device</a> <br/>
+ <a class="el" href="getstarted_install_packages.html#rebootTarget">Reboot target </a> <br/>
  <a class="el" href="getstarted_install_packages.html#copyLibExe">Copy libraries and executables</a></p>
 <p>You need to setup a few things on the target device before you can start developing Legato applications:</p>
 <ul>
-<li>install a serial commmunication program to access the device and obtain an IP address.</li>
-<li>create startup directory on the device and copy startup scripts to the device.</li>
-<li>copy Legato libraries and executables to the device.</li>
-<li>install Legato on the device.</li>
+<li>install a serial communication program to access the target and obtain an IP address.</li>
+<li>create startup directory on the target and copy startup scripts to it.</li>
+<li>copy Legato libraries and executables to the target.</li>
+<li>install Legato on the target.</li>
 </ul>
 <h3><a class="anchor" id="copyStartScripts"></a>
 Copy startup scripts to target</h3>
-<p>Using ssh, access the device:</p>
+<p>Using ssh, access the target:</p>
 <div class="fragment"><pre class="fragment"> ssh root@&lt;device ip addr&gt; 
-</pre></div><p> When prompted for a password, just press enter.</p>
+</pre></div><p> When prompted for a password, press enter.</p>
 <p>Then create the startup directory: </p>
 <div class="fragment"><pre class="fragment"> mkdir -p  /mnt/flash/startup 
-</pre></div><p>Then copy the startup files to the device by running the following from your PC: </p>
+</pre></div><p>Then copy the startup files to the target by running the following from your PC: </p>
 <div class="fragment"><pre class="fragment">scp targetFiles/mdm-9x15/startup/fg_* root@&lt;target ip addr&gt;:/mnt/flash/startup
-</pre></div><p> When prompted for a password, just press enter.</p>
+</pre></div><p> When prompted for a password, press enter.</p>
 </pre></div><p>Scripts beginning with <code>fg_</code> are run first during startup, and then 
 everything else is runs in the background. You can add more scripts to customize your target. <code>fg_</code> scripts 
 must have executable permissions or they will not run.</p>
@@ -150,8 +151,8 @@ must have executable permissions or they will not run.</p>
 <div class="fragment"><pre class="fragment"> touch /mnt/flash/startup/stoplegato 
 </pre></div></dd></dl>
 <h3><a class="anchor" id="rebootTarget"></a>
-Reboot target device</h3>
-<p>Wait for the target to fully reboot. The device IP address may have changed. Check it using ifconfig on the serial 
+Reboot target </h3>
+<p>Wait for the target to fully reboot. The target IP address may have changed. Check it using ifconfig on the serial 
 console before proceeding.</p>
 <h3><a class="anchor" id="copyLibExe"></a>
 Copy libraries and executables</h3>
