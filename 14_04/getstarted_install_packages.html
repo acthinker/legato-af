@@ -108,16 +108,16 @@ Install Legato</h2>
 <p>Install the Legato application framework on your development host PC.</p>
 <p>First, create a directory where you'll run Legato (e.g., mkdir Legato).</p>
 <p>Then run: </p>
-<div class="fragment"><pre class="fragment">git clone https:<span class="comment">//github.com/legatoproject/legato-af.git</span>
-</pre></div><p> You'll be prompted for your GitHub credentials.</p>
+<pre class="fragment">git clone https://github.com/legatoproject/legato-af.git
+</pre><p>You'll be prompted for your GitHub credentials.</p>
+<p><b>cd</b> to your Legato directory</p>
 <p><b>Run</b> <code>make</code>.</p>
 <p><b>$ . bin/legs </b></p>
 <p>Run this every time you open a new shell: </p>
 <div class="fragment"><div class="line">$ . bin/legs </div>
-<p><b>cd</b> to your Legato directory</p>
-<p><b>Build</b> the framework on the target device by running: </p>
-<div class="fragment"><pre class="fragment"> $ make wp7 
-</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>If you're building an AR7 device, substitute <code>ar7</code> for <code>wp7</code>.</dd></dl>
+</div><!-- fragment --><p><b>Build</b> the framework on the target device by running: </p>
+<div class="fragment"><div class="line">$ make wp7 </div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>If you're building an AR7 device, substitute <code>ar7</code> for <code>wp7</code>.</dd></dl>
 <p>Or to include the AirVantage agent: </p>
 <div class="fragment"><pre class="fragment"> $ make wp7 INCLUDE_AIRVANTAGE=1 
 </pre></div><h2><a class="anchor" id="setupTarget"></a>
