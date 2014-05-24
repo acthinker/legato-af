@@ -90,30 +90,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a class="el" href="getstarted_main.html#getstartWhatsNext">What's Next?</a></p>
 <h2><a class="anchor" id="inLegato"></a>
 Legato Installation Packages</h2>
-<p>Go to <a href="http://developer.sierrawireless.com/landing/legato.aspx">http://developer.sierrawireless.com/landing/legato.aspx</a> for access to the latest Legato package downloads including:</p>
+<p>Legato application framework and sample applications (with open source code) can be downloaded from GitHub <a href="http://www.legato.io/">http://www.legato.io/</a></p>
+<p>Legato Packages can be downloaded from <a href="http://developer.sierrawireless.com/Resources/Resources/Legato/Distribution.aspx">http://developer.sierrawireless.com/Resources/Resources/Legato/Distribution.aspx</a></p>
+<p>The following packages are available:</p>
+<p>Download Legato Linux distribution for Sierra Wireless modules:</p>
 <ul>
-<li>Legato application framework and sample applications with open source code, and Yocto recipes and kernel source to build Legato Linux images for AR7 and WP7 devices (available on GitHub).</li>
+<li>WP7 series pre-built distribution -&gt; Legato-Dist-PreBuilt-mdm9x15-14.04.tar.bz2</li>
+<li>Sources package -&gt; Legato-Dist-Source-mdm9x15-14.04.tar.bz2</li>
 </ul>
+<p>Download Legato toolchain for Sierra Wireless modules for Linux:</p>
 <ul>
-<li>complete cross toolchains to compile Legato applications on a 64-bit and 32-bit Linux hosts.</li>
+<li>toolchain for Linux PC i686 -&gt; Legato-Toolchain-mdm9x15-14.1-i686.tar.bz2</li>
+<li>toolchain for Linux PC x86 64bits -&gt; Legato-Toolchain-mdm9x15-14.1-x86_64.tar.bz2</li>
 </ul>
+<p>Sierra Wireless WP7 modules upgrade:</p>
 <ul>
-<li>prebuilt images of the Linux kernel and rootfs that match the image on the device (can be flashed using the fastboot tool).</li>
+<li>Windows drivers needed to upgrade WP7 Series firmware -&gt; Drivers_Package.zip</li>
+<li>WP7104 firmware package -&gt; SWI9X15W_06.02.14.00-wp_yocto-cwe.exe</li>
+<li>WP7100/7102 firmware package -&gt; SWI9X15W_06.03.00.00-wp_yocto-cwe.exe</li>
 </ul>
-<ul>
-<li>firmware packages to reinstall software from the factory onto dev kit devices.</li>
-</ul>
-<ul>
-<li>drivers needed for Windows to restore devices.</li>
-</ul>
+<p>Legato Developer Zone has some links you might find helpful <a href="http://developer.sierrawireless.com/landing/legato.aspx">http://developer.sierrawireless.com/landing/legato.aspx</a></p>
 <p><b>Quick start </b>:</p>
+<p>Follow these steps for a quick start:</p>
 <p><a class="el" href="getstarted_machine_prep.html">Prep Dev Machine</a> <br/>
  <a class="el" href="getstarted_connect_dev_kit.html">Prep Device Dev Kit</a> <br/>
  <a class="el" href="getstarted_install_packages.html">Install Packages</a> <br/>
  <a class="el" href="apphello_world.html">Create helloWorld</a></p>
 <h2><a class="anchor" id="envHost"></a>
-Environment Host Requirements</h2>
-<p>Different options are available for host PCs depending on needs. You can build, install, and work with Legato entirely from a Linux PC, but device recovery is only possible from Windows at this time. See the topic Set up Window host PC.</p>
+Dev Host Requirements</h2>
+<p>Different options are available for development host PCs depending on needs. You can build, install, and work with Legato entirely from a Linux PC, but device recovery is only possible from Windows at this time. See <a class="el" href="getstarted_windows_host.html">Windows Host</a>.</p>
 <p><b>Linux vs Windows tasks</b></p>
 <p>Linux Host is used to:</p>
 <ul>
