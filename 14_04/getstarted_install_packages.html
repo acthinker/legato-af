@@ -114,7 +114,7 @@ Install Legato</h2>
 <p><b>$ . bin/legs </b></p>
 <p>Run this every time you open a new shell: </p>
 <div class="fragment"><div class="line">$ . bin/legs </div>
-</div><!-- fragment --><p><b>Build</b> the framework on the target device by running: </p>
+</div><!-- fragment --><p><b>Build</b> the framework on the target by running: </p>
 <div class="fragment"><div class="line">$ make wp7 </div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>If you're building an AR7 device, substitute <code>ar7</code> for <code>wp7</code>.</dd></dl>
 <p>Or to include the AirVantage agent: </p>
@@ -125,7 +125,7 @@ Setup Target </h2>
 <p><a class="el" href="getstarted_install_packages.html#copyStartScripts">Copy startup scripts to target</a> <br/>
  <a class="el" href="getstarted_install_packages.html#rebootTarget">Reboot target </a> <br/>
  <a class="el" href="getstarted_install_packages.html#copyLibExe">Copy libraries and executables</a></p>
-<p>You need to setup a few things on the target device before you can start developing Legato applications:</p>
+<p>You need to setup a few things on the target before you can start developing Legato applications:</p>
 <ul>
 <li>install a serial communication program to access the target and obtain an IP address.</li>
 <li>create startup directory on the target and copy startup scripts to it.</li>
@@ -135,17 +135,17 @@ Setup Target </h2>
 <h3><a class="anchor" id="copyStartScripts"></a>
 Copy startup scripts to target</h3>
 <p>Using ssh, access the target:</p>
-<div class="fragment"><pre class="fragment"> ssh root@&lt;device ip addr&gt; 
+<div class="fragment"><pre class="fragment"> ssh root@&lt;target ip addr&gt; 
 </pre></div><p> When prompted for a password, press enter.</p>
 <p>Then create the startup directory: </p>
 <div class="fragment"><pre class="fragment"> mkdir -p  /mnt/flash/startup 
-</pre></div><p>Then copy the startup files to the target by running the following from your PC: </p>
+</pre></div><p>Then copy the startup files to the target by running the following from the dev host: </p>
 <div class="fragment"><pre class="fragment">scp targetFiles/mdm-9x15/startup/fg_* root@&lt;target ip addr&gt;:/mnt/flash/startup
 </pre></div><p> When prompted for a password, press enter.</p>
-</pre></div><p>Scripts beginning with <code>fg_</code> are run first during startup, and then 
+<p>Scripts beginning with <code>fg_</code> are run first during startup, and then 
 everything else is runs in the background. You can add more scripts to customize your target. <code>fg_</code> scripts 
 must have executable permissions or they will not run.</p>
-<p>See <a class="el" href="getstarted_install_notes.html">Yocto Install Notes</a> for helpful device setup tips.</p>
+<p>See <a class="el" href="getstarted_install_notes.html">Yocto Install Notes</a> for helpful target setup tips.</p>
 <dl class="note"><dt><b>Note:</b></dt><dd>In the rare case you need to prevent Legato starting automatically, run 
 <div class="fragment"><pre class="fragment"> touch /mnt/flash/startup/stoplegato 
 </pre></div></dd></dl>
@@ -155,7 +155,7 @@ Reboot target </h3>
 console before proceeding.</p>
 <h3><a class="anchor" id="copyLibExe"></a>
 Copy libraries and executables</h3>
-<p>Run this to copy the Legato framework libraries and executables onto the device, and start the Legato runtime components:</p>
+<p>Run this to copy the Legato framework libraries and executables onto the target, and start the Legato runtime components:</p>
 <div class="fragment"><pre class="fragment">$ instlegato build/wp7 &lt;target ip address&gt;  
 </pre></div><h2><a class="anchor" id="dirStruct"></a>
 Directories</h2>
