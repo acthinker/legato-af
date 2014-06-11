@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Create Applications</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('app_creating.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,47 +86,34 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Create Applications </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
+<div class="textblock"><p><a class="el" href="app_creating.html#appOverview">Overview</a> <br/>
+ <a class="el" href="app_creating.html#appCreatingWhatsNext">What's Next?</a> <br/>
+</p>
+<h1><a class="anchor" id="appOverview"></a>
 Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
+<p>An application is a collection of one or more processes running one or more executables. Each executables can make use of libraries and other resource files bundled into the application.</p>
+<p>Legato applications automatically run inside a secure sandbox, and don't require any configuration. You just build an application, install it, and it automatically runs in a sandbox.</p>
+<p>Legato applications can automatically start at boot, and are monitored by the Supervisor daemon. If an application fails in the field, the Supervisor can perform autonomous fault-recovery actions like restarting a process or rebooting.</p>
+<p>Just like any embedded Linux platform, you can install individual executables, libraries, resource files, etc., you can write init scripts, and you can implement security sandboxes, fault monitoring, and fault recovery. But Legato provides the platform to do all that so you can focus on your business' unique value-add instead.</p>
+<p>The next topics will show you how to:</p>
 <ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
+<li>create a simple executable</li>
+<li>convert it into an application</li>
+<li>build and run it on the build host,</li>
+<li>cross-build it and run it on a target device, and</li>
+<li>add third-party binaries and other resource files into an application.</li>
 </ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<h1><a class="anchor" id="appCreatingWhatsNext"></a>
+What's Next?</h1>
+<p>Other creating apps topics:</p>
+<p><a class="el" href="apphello_world.html">Create helloWorld</a> <br/>
+ <a class="el" href="appconverting_it_into_an_app.html">Converting to an App</a> <br/>
+ <a class="el" href="appadding_other_things.html">Adding Things to Apps</a> <br/>
+ <a class="el" href="app_notes.html">Application Notes</a></p>
+<p>Or move to the <b>next level</b>: <a class="el" href="component_writing.html">Write Components</a>.</p>
 <hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->

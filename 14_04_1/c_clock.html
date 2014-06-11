@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Real-time Clock API</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('c_clock.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,47 +86,43 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Real-time Clock API </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
+<div class="textblock"><p><a class="el" href="le__clock_8h.html">Click here for the API Reference documentation.</a></p>
+<hr/>
+<p><a class="el" href="c_clock.html#clk_time">Getting/Setting Time</a> <br/>
+ <a class="el" href="c_clock.html#clk_values">Operations on Time Values</a> <br/>
+ <a class="el" href="c_clock.html#clk_convert">Converting Time to Other Formats</a> <br/>
+</p>
+<p>This module provides an API for getting/setting date and/or time values, and performing conversions between these values.</p>
+<h1><a class="anchor" id="clk_time"></a>
+Getting/Setting Time</h1>
+<p>Time values can either be absolute or relative. Time is expressed in seconds plus microseconds, and does not stop when the system is suspended (i.e., the clock continues to run even when the system is suspended).</p>
+<p>Absolute time is given as time since the Epoch, 1970-01-01 00:00:00 +0000 (UTC) and is provided by <a class="el" href="le__clock_8h.html#a33197dbd676a37b8c4d5de8f93edc1ee">le_clk_GetAbsoluteTime()</a>. By definition, it is UTC time. The absolute time may jump forward or backward if a new value is set for the absolute time.</p>
+<p>Relative time is a monotonic time from a fixed but unspecified starting point and is provided by <a class="el" href="le__clock_8h.html#a298619d8c1d8f107cb03b8600f09a42b">le_clk_GetRelativeTime()</a>. The relative time is independent of the absolute time. The starting point is fixed during system boot, and cannot be changed, but is reset on each system boot. Since the relative time is monotonic, it is guaranteed to never go backwards. With these characteristics, the relative time is useful for measuring the time between two or more events. For example, at event 1, relative time A is stored, and at some later event 2, relative time B is stored. The relative time between these two events can always be calculated as B-A, and will always be an accurate measure of the relative time between these two events.</p>
+<h1><a class="anchor" id="clk_values"></a>
+Operations on Time Values</h1>
+<p>These operations can be performed on time values:</p>
 <ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
+<li><a class="el" href="le__clock_8h.html#a6f4bda0268cd9349b6eb81ae350575fc">le_clk_Add</a></li>
+<li><a class="el" href="le__clock_8h.html#ac4a550ee8aa5fad9c81a33024946660a">le_clk_GreaterThan</a></li>
+<li><a class="el" href="le__clock_8h.html#ac5b5ec6f462d598f4e5aa081224725ac">le_clk_Sub</a></li>
+<li><a class="el" href="le__clock_8h.html#a77961175ee422b1418a18eece5192c9c">le_clk_Multiply</a></li>
 </ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<p>The functions use these assumptions:</p>
+<ul>
+<li>All input time values are normalized (i.e., the usec value is less than 1 sec). All time values returned are normalized.</li>
+<li>All input time values or scale factors are positive; a negative time value will not be returned.</li>
+<li>All input time values or scale factors are expected to have reasonable values (i.e., they will not be so large as to cause an overflow of the time value structure).</li>
+</ul>
+<h1><a class="anchor" id="clk_convert"></a>
+Converting Time to Other Formats</h1>
+<p>The current absolute time can be converted to a formatted string in either UTC time or local time, using <a class="el" href="le__clock_8h.html#a5392b8eb7d45ce86c0842a0a69975059">le_clk_GetUTCDateTimeString()</a> or <a class="el" href="le__clock_8h.html#a6f37c2a2171eac23ddc306de1fd55f5c">le_clk_GetLocalDateTimeString()</a> respectively. These functions use the format specification defined for strftime(), with the following additional conversion specifications:</p>
+<ul>
+<li>%J : milliseconds, as a 3 digit zero-padded string, e.g. "015"</li>
+<li>%K : microseconds, as a 6 digit zero-padded string, e.g. "001015"</li>
+</ul>
 <hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->

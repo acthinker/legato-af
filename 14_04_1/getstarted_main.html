@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Get Started</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('getstarted_main.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,47 +86,43 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Get Started </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
+<div class="textblock"><p>Get Started info is organized for a Quick Start and for Advanced Users.</p>
+<p>Quick Start has two options:</p>
 <ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
+<li>bootable USB stick to get up and running fast.</li>
+<li>dev host installation for those needing a permanent installation on a Linux host.</li>
 </ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<p>Advanced topics give power users info to tinker under the hood of the target device (e.g. flash or customize the Yocto image).</p>
+<p><a class="el" href="getstarted_quick.html">Quick Start</a> <br/>
+ <a class="el" href="getstarted_advanced.html">Advanced</a> <br/>
+</p>
+<p>See <a class="el" href="legato_rel_notes_beta.html">Release Notes</a> for release-specific information.</p>
+<p>See <a class="el" href="legato_upgrade_beta.html">Upgrade</a> if you need to upgrade from a previous version.</p>
+<p>See Legato Developer Zone <a href="http://developer.sierrawireless.com/landing/legato.aspx">http://developer.sierrawireless.com/landing/legato.aspx</a></p>
+<hr/>
+<p><a class="el" href="getstarted_main.html#sysReqs">System Requirements</a> <br/>
+ <a class="el" href="getstarted_main.html#devHostReqs">Dev Host Requirements</a> <br/>
+ <a class="el" href="getstarted_main.html#targetReqs">Target Requirements</a> <br/>
+</p>
+<h1><a class="anchor" id="sysReqs"></a>
+System Requirements</h1>
+<p>If you’re running from the bootable USB stick, a minimum of 2GB RAM is suggested.</p>
+<p>If you’re installing the development environment and application framework on a development host, recommended system requirements for the Ubuntu desktop is at least 768 MB of RAM and 5 GB of disk space.</p>
+<p>Ubuntu version 12.04 is officially supported, although you can try others (e.g., 14.04).</p>
+<p>If you’re downloading Legato source and toolchain files, you’ll need a minimum Internet connection speed of 4 Mpbs.</p>
+<h1><a class="anchor" id="devHostReqs"></a>
+Dev Host Requirements</h1>
+<p>Different options are available for development host PCs depending on needs. You can build, install, and work with Legato entirely from a Linux dev host, but target device recovery is only possible from Windows at this time. See <a class="el" href="getstarted_windows_host.html">Windows Dev Host</a>.</p>
+<p><b>Linux vs Windows tasks</b></p>
+<p>Linux dev host is used to compile system software, flash Linux images, develop and debug applications.</p>
+<p>Windows Host is used to flash Linux images, flash new modem firmware, recover device.</p>
+<h1><a class="anchor" id="targetReqs"></a>
+Target Requirements</h1>
+<p>Legato uses the AirPrime – AR and WP Series-Development Kit. <br/>
+</p>
 <hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->

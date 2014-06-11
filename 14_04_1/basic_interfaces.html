@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Legato Interfaces</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('basic_interfaces.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,47 +86,25 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Legato Interfaces </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
-<ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
-</ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<div class="textblock"><p><a class="el" href="basic_interfaces.html#functionCallAPIs">Function Call APIs</a> <br/>
+ <a class="el" href="basic_interfaces.html#intWhatsNext">What's Next?</a></p>
+<p>To maximize component reuse, it's vital components be designed for reuse. Reusability partly depends on portability, which the Legato framework provides, but it also depends largely on interoperability. Reusable components must be designed for interoperability with as many other things as possible, including things that don't exist <em>- yet! </em></p>
+<p>Interface design is the most important factor to make something interoperable. Standardized data types and interaction methods must be used, and the simpler the interfaces, the better.</p>
+<p>Legato embraces the philosophy that developers should always be allowed to choose the implementation language best suited to the task at hand, regardless of the components used. Some developers are better at programming in certain languages, and some languages are better suited to solving certain problems. That's why Legato provides developers with an easy way to interface components with each other, even if they have been written in different languages.</p>
+<p>A common example of a programming-language-independent interface is a networking protocol. But networking protocols come with pitfalls and overhead, things like endian issues, race conditions, protocol stack framing overheads and poor processing time. Networking protocols also tend to require a lot of hand coding specific to the protocol implementation.</p>
+<p>Legato supports networking, if that's what's needed, but it also has tools to implement much lighter-weight, language-independent communication between components that exist on the same host device or even running within the same process.</p>
+<h1><a class="anchor" id="functionCallAPIs"></a>
+Function Call APIs</h1>
+<p>Virtually all programmers are familiar with function calls. While Legato allows normal libraries to use their specific programming-language function call interfaces, Legato also supports language-independent function call interfaces.</p>
+<p>Using a simple interface definition language (IDL), you can create a function call API implemented in one language and called from another.</p>
+<p>The implementation code (the server) can run in a different process, or even in a different application (in a different sandbox), than the client code that uses that implementation. The Legato build system automatically generates the code needed to marshall parameters and return codes into messages, and send them over the IPC system.</p>
+<p>See <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> for more information.</p>
+<h1><a class="anchor" id="intWhatsNext"></a>
+What's Next?</h1>
+<p><a class="el" href="event_basics.html">Event-driven Programming</a></p>
 <hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->

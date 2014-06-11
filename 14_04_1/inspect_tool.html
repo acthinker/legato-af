@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Legato Inspect Tool</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('inspect_tool.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,48 +86,52 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Legato Inspect Tool </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
-<ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
-</ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
-<hr/>
+<div class="textblock"><p>Legato comes with an inspection diagnostic tool that can examine the memory of a running Legato process. This initial version can only see memory pools; later versions will add more capabilities.</p>
+<p>Prints memory pools' usage to stdout for the specified process.</p>
+<p>Usage: </p>
+<div class="fragment"><div class="line">inspect [OPTIONS] PID</div>
+</div><!-- fragment --><p>Options:</p>
+<p><code>-f</code> </p>
+<p>Periodically prints updated memory usage for the process.</p>
+<p><code>&ndash;help</code> </p>
+<p>Display help and exit.</p>
+<p>Output sample:</p>
+<pre class="fragment">Legato Memory Pools Inspector
+Inspecting process 759
+TOTAL BLKS  USED BLKS   MAX USED  OVERFLOWS     ALLOCS  MEMORY POOL
+         8          0          0          0          0  SubPools
+        10          5          5          0          5  TraceKeys
+        10          2          2          0          2  LogSession
+         0          0          0          0          0  SigMonitor
+         0          0          0          0          0  SigHandler
+        10          7          7          0          7  SafeRef-Map
+         0          0          0          0          0  PathIteratorPool
+         8          0          0          0          0  safeRefPathIteratorMap
+         4          0          0          0          0  mutex
+         4          0          0          0          0  semaphore
+         4          1          1          0          1  Thread Pool
+         4          1          1          0          1  safeRefThreadRef
+         0          0          0          0          0  DestructorObjs
+        10          0          1          0       1568  QueuedFunction
+        10          0          0          0          0  EventHandler
+         5          0          0          0          0  Events
+         4          0          0          0          0  safeRefEvents
+         8          0          0          0          0  safeRefEventHandlers
+        10          2          2          0          2  FdMonitor
+         8          2          2          0          2  safeRefFdMonitors
+        64          5          5          0          5  safeRefFdEventHandlers
+         1          1          1          0          1  Default Timer Pool
+         5          1          1          0          1  Protocol
+        32          1          1          0          1  MessagingServices
+        32          1          1          0          1  MessagingServices
+        10          1          1          0          1  Session
+        32          0          1          0          2  safeRefMsgTxnIDs
+        10          0          2          0          4  LogControlProtocol-Msgs
+      1567       1567       1567       1567       1567  EmployeePool
+</pre><hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Path API</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('c_path.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,49 +86,25 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Path API </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
-<ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
-</ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<div class="textblock"><p><a class="el" href="le__path_8h.html">Click here for the API reference documentation.</a></p>
 <hr/>
-<p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
+<p><a class="el" href="c_path.html#c_path_dirAndBasename">Directory and Basename</a> <br/>
+ <a class="el" href="c_path.html#c_path_threads">Thread Safety</a> <br/>
+</p>
+<p>Paths are text strings that contain nodes separated by character separators. Paths are used in many common applications like file system addressing, URLs, etc. so being able to parse them is quite important.</p>
+<p>The Path API is intended for general purpose use and supports UTF-8 null-terminated strings and multi-character separators.</p>
+<h1><a class="anchor" id="c_path_dirAndBasename"></a>
+Directory and Basename</h1>
+<p>The function <code><a class="el" href="le__path_8h.html#a0b0ff4c06db44de9bf4f40b9f5388785">le_path_GetDir()</a></code> is a convenient way to get the path's directory without having to create an iterator. The directory is the portion of the path up to and including the last separator. <a class="el" href="le__path_8h.html#a0b0ff4c06db44de9bf4f40b9f5388785">le_path_GetDir()</a> does not modify the path in anyway (i.e., consecutive paths are left as is), except to drop the node after the last separator.</p>
+<p>The function <a class="el" href="le__path_8h.html#aa58d208512dd5b9b2dc0ea6d5c963c25">le_path_GetBasenamePtr()</a> is an efficient and convenient function for accessing the last node in the path without having to create an iterator. The returned pointer points to the character following the last separator in the path. Because the basename is actually a portion of the path string, not a copy, any changes to the returned basename will also affect the original path string.</p>
+<h1><a class="anchor" id="c_path_threads"></a>
+Thread Safety</h1>
+<p>All the functions in this API are thread safe and reentrant unless of course the path iterators or the buffers passed into the functions are shared between threads. If the path iterators or buffers are shared by multiple threads then some other mechanism must be used to ensure these functions are thread safe.</p>
+<hr/>
+<p>Copyright (C) Sierra Wireless, Inc. 2013. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
    <div class="footer">

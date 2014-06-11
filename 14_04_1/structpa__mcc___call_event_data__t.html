@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: pa_mcc_CallEventData_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('structpa__mcc___call_event_data__t.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -85,51 +85,47 @@ $(document).ready(function(){initNavTree('index.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">pa_mcc_CallEventData_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
-<ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
+
+<p><code>#include &lt;<a class="el" href="pa__mcc_8h_source.html">pa_mcc.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for pa_mcc_CallEventData_t:</div>
+<div class="dyncontent">
+<div class="center"><img src="structpa__mcc___call_event_data__t__coll__graph.png" border="0" usemap="#pa__mcc___call_event_data__t_coll__map" alt="Collaboration graph"/></div>
+<map name="pa__mcc___call_event_data__t_coll__map" id="pa__mcc___call_event_data__t_coll__map">
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a88613e6f82b16ff79d1aa7f2682e064b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88613e6f82b16ff79d1aa7f2682e064b"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpa__mcc___call_event_data__t.html#a88613e6f82b16ff79d1aa7f2682e064b">callId</a></td></tr>
+<tr class="memdesc:a88613e6f82b16ff79d1aa7f2682e064b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outgoing call Id. <br/></td></tr>
+<tr class="separator:a88613e6f82b16ff79d1aa7f2682e064b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8119ef661c99bf561b67e389145bd592"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8119ef661c99bf561b67e389145bd592"></a>
+<a class="el" href="le__mdm__defs_8h.html#adcb2920422915a863a7ea52fe592d64d">le_mcc_call_Event_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpa__mcc___call_event_data__t.html#a8119ef661c99bf561b67e389145bd592">event</a></td></tr>
+<tr class="memdesc:a8119ef661c99bf561b67e389145bd592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event generated. <br/></td></tr>
+<tr class="separator:a8119ef661c99bf561b67e389145bd592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79fe7d779e67eff04f2ef988a3aa0e29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79fe7d779e67eff04f2ef988a3aa0e29"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpa__mcc___call_event_data__t.html#a79fe7d779e67eff04f2ef988a3aa0e29">phoneNumber</a> [<a class="el" href="le__mdm__defs_8h.html#ae8ade945283aa2536178b4528d8545df">LE_SMS_TEL_NMBR_MAX_LEN</a>]</td></tr>
+<tr class="memdesc:a79fe7d779e67eff04f2ef988a3aa0e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">the phone number <br/></td></tr>
+<tr class="separator:a79fe7d779e67eff04f2ef988a3aa0e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2204b6c6ee7d35178c16d184eaad9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec2204b6c6ee7d35178c16d184eaad9d"></a>
+<a class="el" href="le__mdm__defs_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45">le_mcc_call_TerminationReason_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpa__mcc___call_event_data__t.html#aec2204b6c6ee7d35178c16d184eaad9d">TerminationEvent</a></td></tr>
+<tr class="memdesc:aec2204b6c6ee7d35178c16d184eaad9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">the termination reason <br/></td></tr>
+<tr class="separator:aec2204b6c6ee7d35178c16d184eaad9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Structure provided to session state handler </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>components/modemServices/platformAdaptor/interfaces/inc/<a class="el" href="pa__mcc_8h_source.html">pa_mcc.h</a></li>
 </ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
-<hr/>
-<p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
-</div></div><!-- contents -->
+</div><!-- contents -->
 </div><!-- doc-content -->
    <div class="footer">
         <div>

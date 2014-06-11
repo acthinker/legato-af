@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Converting to an App</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('appconverting_it_into_an_app.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,48 +86,55 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Converting to an App </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
-<ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
-</ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
-<hr/>
+<div class="textblock"><p><a class="el" href="appconverting_it_into_an_app.html#convertingItIntoAnApp">Converting to an App</a> <br/>
+ <a class="el" href="appconverting_it_into_an_app.html#buildApp">Build App</a> <br/>
+ <a class="el" href="appconverting_it_into_an_app.html#instApp">Install App</a> <br/>
+ <a class="el" href="appconverting_it_into_an_app.html#runLogs">Run Logs</a> <br/>
+ <a class="el" href="appconverting_it_into_an_app.html#rmApp">Remove App</a> <br/>
+ <a class="el" href="appconverting_it_into_an_app.html#lsApp">List Apps</a></p>
+<h1><a class="anchor" id="convertingItIntoAnApp"></a>
+Converting to an App</h1>
+<p>Now take the source code file (hello.c) and make an application out of it.</p>
+<p>Applications are described by an "application definition" text file ending with the suffix ".adef". The format is intended to be easy to read and write.</p>
+<p>To turn hello.c into an application, create an application definition file called "helloWorld.adef" that looks like this:</p>
+<pre class="fragment">executables:
+
+    helloWorld ( hello.c )
+
+
+processes:
+
+    run: (helloWorld)
+</pre><p>This defines one executable called helloWorld implemented by hello.c, and then starts one instance of the helloWorld executable.</p>
+<p>If your executable has multiple source files, add more files inside the parentheses after the executable name: "helloWorld ( hello.c foo.c )".</p>
+<h1><a class="anchor" id="buildApp"></a>
+Build App</h1>
+<p>Run <code>mkapp</code> to build the executable and bundle it into an application.</p>
+<p>Use the "-t" option to build a target other than the default "localhost" target.</p>
+<p>This is how to build the helloWorld application for a device running the Sierra Wireless WP7 module:</p>
+<pre class="fragment">$ mkapp -t wp7 helloWorld.adef
+</pre><dl class="section note"><dt>Note</dt><dd>If you're building an AR7 app, substitute <code>ar7</code> for <code>wp7</code> in the mkapp run command.</dd></dl>
+<h1><a class="anchor" id="instApp"></a>
+Install App</h1>
+<p>Use <code>instapp</code> to install it on your target so it can be started automatically by the Supervisor when the device boots up.</p>
+<pre class="fragment">$ instapp helloWorld.wp7 &lt;ip addr&gt;
+</pre><p>The second argument tells the target device host address from where to run the application. This will connect to the target, upload the application, and start it.</p>
+<h1><a class="anchor" id="runLogs"></a>
+Run Logs</h1>
+<p>Your installed application output will display in <em>logread</em> on the target device.</p>
+<p>Run <code>logread</code> (use the -f option to dipslay only the last log)</p>
+<h1><a class="anchor" id="rmApp"></a>
+Remove App</h1>
+<p>Use "rmapp" to uninstall your application.</p>
+<pre class="fragment">$ rmapp helloWorld.wp7 &lt;ip addr&gt;
+</pre><h1><a class="anchor" id="lsApp"></a>
+List Apps</h1>
+<p>Use "lsapp" to list the applications installed on a target.</p>
+<pre class="fragment">$ lsapp &lt;ip addr&gt;
+</pre><hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

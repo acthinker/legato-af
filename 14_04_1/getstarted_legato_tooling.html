@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Developer Studio</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('getstarted_legato_tooling.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,47 +86,43 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Developer Studio </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
+<div class="textblock"><p>Developer studio is an integrated development environment built on Eclipse™ with tools for coding, debugging, target download, and target monitoring.</p>
+<p>It’s recommended that you read the Developer Studio help. Open Developer Studio, go to Help-&gt; Help Contents-&gt; Developer Studio User Guide.</p>
+<hr/>
+<p>Complete the procedures in this section to install, configure, and run Developer Studio on a dev host.</p>
+<p><a class="el" href="getstarted_legato_tooling.html#devStudBoot">Run from Bootable USB</a> <br/>
+ <a class="el" href="getstarted_legato_tooling.html#instDevStud">Install on Dev Host</a> <br/>
+ <a class="el" href="getstarted_legato_tooling.html#configDevStud">Configure Dev Studio toolchain</a> <br/>
+ <a class="el" href="getstarted_legato_tooling.html#usingDevStud">Use Developer Studio</a></p>
+<h1><a class="anchor" id="devStudBoot"></a>
+Run from Bootable USB</h1>
+<p>If you’re running the bootable USB stick, you'll find a desktop icon that starts Dev Studio. It comes installed and configured ready to use.</p>
+<p>A Developer Studio cheat sheet is available from Dev Studio's online help. Choose the Help menu-&gt;Cheat Sheets to display guidance for some tasks.</p>
+<h1><a class="anchor" id="instDevStud"></a>
+Install on Dev Host</h1>
+<p>See Developer Studio installation: <a href="http://developer.sierrawireless.com/developerstudio">http://developer.sierrawireless.com/developerstudio</a></p>
+<dl class="section note"><dt>Note</dt><dd>You’ll need to install the IDE for Legato Application Framework feature to develop Legato applications and connect to Legato devices.</dd></dl>
+<h1><a class="anchor" id="configDevStud"></a>
+Configure Dev Studio toolchain</h1>
+<p>Legato Linux GCC path has to be configured in Developer Studio so it can build Legato applications. Dev Studio needs to find the <code>arm-poky-linux-gnueabi-gcc</code> compiler. It's done in the Window &gt; Preferences dialog, at Developer Studio &gt; Tools preferences &gt; GCC/GDB paths preferences location.</p>
+<p>Here's the path:</p>
+<pre class="fragment">/opt/swi/y14-ext/tmp/sysroots/x86_64-linux/usr/bin/armv7a-vfp-neon-poky-linux-gnueabi
+</pre><p>See <a class="el" href="getstarted_install_packages.html">Install Packages</a> for toolchain installation info.</p>
+<p><b>Configure Legato package</b></p>
+<p>Developer Studio needs the location of the Legato Framework package build directory so it can use it. In the Package Manager perspective, click on the Add Repository button of the Available Packages view. You’ll need to point on the Legato Package directory. Click on <em>Folder</em> and browse to where you copied Legato Application Framework (e.g., /home/mylogin/legato-af-master).</p>
+<dl class="section note"><dt>Note</dt><dd>Build the Legato Framework before installing Developer Studio.</dd></dl>
+<p>As soon as the path is set, Developer Studio will detect the Legato package. Then, you can select it, and click the Install action in order to configure the package.</p>
+<h1><a class="anchor" id="usingDevStud"></a>
+Use Developer Studio</h1>
+<p>You can use Developer Studio features like these with Legato applications and devices:</p>
 <ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
+<li>In the Applications perspective, create, develop and build applications.</li>
+<li>In the Remote System Explorer perspective, connect and interact with Legato devices.</li>
+<li>In the Debug perspective, perform step-by-step debugging sessions in a running Legato application.</li>
 </ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
 <hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->

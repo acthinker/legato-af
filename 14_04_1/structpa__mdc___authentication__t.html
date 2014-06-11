@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: pa_mdc_Authentication_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('structpa__mdc___authentication__t.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -85,51 +85,43 @@ $(document).ready(function(){initNavTree('index.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">pa_mdc_Authentication_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
-<ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
+
+<p><code>#include &lt;<a class="el" href="pa__mdc_8h_source.html">pa_mdc.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for pa_mdc_Authentication_t:</div>
+<div class="dyncontent">
+<div class="center"><img src="structpa__mdc___authentication__t__coll__graph.png" border="0" usemap="#pa__mdc___authentication__t_coll__map" alt="Collaboration graph"/></div>
+<map name="pa__mdc___authentication__t_coll__map" id="pa__mdc___authentication__t_coll__map">
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:ac56f64747712e88bf7c327883a2ecced"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac56f64747712e88bf7c327883a2ecced"></a>
+<a class="el" href="pa__mdc_8h.html#a164fc8aad8dd6947dd3cce8909a1ad6a">pa_mdc_AuthType_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpa__mdc___authentication__t.html#ac56f64747712e88bf7c327883a2ecced">type</a></td></tr>
+<tr class="memdesc:ac56f64747712e88bf7c327883a2ecced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Authentication using PAP. <br/></td></tr>
+<tr class="separator:ac56f64747712e88bf7c327883a2ecced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c1bf69d2864d11f5dc20a1033bf0508"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c1bf69d2864d11f5dc20a1033bf0508"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpa__mdc___authentication__t.html#a5c1bf69d2864d11f5dc20a1033bf0508">userName</a> [<a class="el" href="pa__mdc_8h.html#ab3ce12ea70b612b2496626323a848009">PA_MDC_USERNAME_MAX_BYTES</a>]</td></tr>
+<tr class="memdesc:a5c1bf69d2864d11f5dc20a1033bf0508"><td class="mdescLeft">&#160;</td><td class="mdescRight">UserName used by authentication. <br/></td></tr>
+<tr class="separator:a5c1bf69d2864d11f5dc20a1033bf0508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95cc56a00e89b453cff6377362823f52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95cc56a00e89b453cff6377362823f52"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpa__mdc___authentication__t.html#a95cc56a00e89b453cff6377362823f52">password</a> [<a class="el" href="pa__mdc_8h.html#a1d502fe139e71614c1da3ce86b77845b">PA_MDC_APN_MAX_BYTES</a>]</td></tr>
+<tr class="memdesc:a95cc56a00e89b453cff6377362823f52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Password used by authentication. <br/></td></tr>
+<tr class="separator:a95cc56a00e89b453cff6377362823f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Data Control Profile structure that contains modem specific profile data </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>components/modemServices/platformAdaptor/interfaces/inc/<a class="el" href="pa__mdc_8h_source.html">pa_mdc.h</a></li>
 </ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
-<hr/>
-<p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
-</div></div><!-- contents -->
+</div><!-- contents -->
 </div><!-- doc-content -->
    <div class="footer">
         <div>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: pa_mdc_PktStatistics_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('structpa__mdc___pkt_statistics__t.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -85,51 +85,39 @@ $(document).ready(function(){initNavTree('index.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">pa_mdc_PktStatistics_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
-<ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
+
+<p><code>#include &lt;<a class="el" href="pa__mdc_8h_source.html">pa_mdc.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for pa_mdc_PktStatistics_t:</div>
+<div class="dyncontent">
+<div class="center"><img src="structpa__mdc___pkt_statistics__t__coll__graph.png" border="0" usemap="#pa__mdc___pkt_statistics__t_coll__map" alt="Collaboration graph"/></div>
+<map name="pa__mdc___pkt_statistics__t_coll__map" id="pa__mdc___pkt_statistics__t_coll__map">
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:aaf16be86f6d023de1e9a85089f0974d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf16be86f6d023de1e9a85089f0974d8"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpa__mdc___pkt_statistics__t.html#aaf16be86f6d023de1e9a85089f0974d8">transmittedBytesCount</a></td></tr>
+<tr class="memdesc:aaf16be86f6d023de1e9a85089f0974d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bytes transmitted without error. <br/></td></tr>
+<tr class="separator:aaf16be86f6d023de1e9a85089f0974d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca7d816486c7c6ba12087fcc7c3c284"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ca7d816486c7c6ba12087fcc7c3c284"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpa__mdc___pkt_statistics__t.html#a7ca7d816486c7c6ba12087fcc7c3c284">receivedBytesCount</a></td></tr>
+<tr class="memdesc:a7ca7d816486c7c6ba12087fcc7c3c284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bytes received without error. <br/></td></tr>
+<tr class="separator:a7ca7d816486c7c6ba12087fcc7c3c284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Packet statistics structure </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>components/modemServices/platformAdaptor/interfaces/inc/<a class="el" href="pa__mdc_8h_source.html">pa_mdc.h</a></li>
 </ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
-<hr/>
-<p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
-</div></div><!-- contents -->
+</div><!-- contents -->
 </div><!-- doc-content -->
    <div class="footer">
         <div>

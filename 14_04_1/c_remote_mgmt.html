@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: AirVantage Modem Remote Management Services</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('c_remote_mgmt.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,49 +86,26 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">AirVantage Modem Remote Management Services </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
-<ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
-</ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<div class="textblock"><p><a class="el" href="c_remote_mgmt.html#le_remoteMgmt_wakeupindic">Wake-Up signaling</a> <br/>
+ <a class="el" href="c_remote_mgmt.html#le_remoteMgmt_dontdisturb">Do Not Disturb Signs</a> <br/>
+</p>
+<p>The Modem platform embeds a client for wake up message requests from the Air Vantage server.</p>
+<p>To implement Air Vantage Management Services (AVMS) features, when the embedded client receives a wake up message, an indication must be sent to the Air Vantage Connector allowing it to contact Air Vantage server so it can perform any pending jobs.</p>
+<p>Any User Space software components need to indicate when they are busy doing something critical, and should not be interrupted by a firmware update (which generally results in a reboot cycle).</p>
+<h1><a class="anchor" id="le_remoteMgmt_wakeupindic"></a>
+Wake-Up signaling</h1>
+<p>The Air Vantage Connector can register a handler function to notify when a wake up message is received by the Modem. The wake up notification advises Air Vantage wants to talk to the Air Vantage Connector. A pending indicator can be maintained until the Air Vantage Connector comes alive and asks for wake up registration.</p>
+<p>Use <code><a class="el" href="le__remote_mgmt_8h.html#aeff9f266b5841bb8c25707b3cecb9b64">le_remoteMgmt_AddWakeUpIndicHandler()</a></code> to register the handler function.</p>
+<p>Use <code><a class="el" href="le__remote_mgmt_8h.html#a3cbbfd03c0c0cb5aaf47a42fac113be5">le_remoteMgmt_RemoveWakeUpIndicHandler()</a></code> to uninstall the handler function.</p>
+<h1><a class="anchor" id="le_remoteMgmt_dontdisturb"></a>
+Do Not Disturb Signs</h1>
+<p><code><a class="el" href="le__remote_mgmt_8h.html#a4f3a837945686c8963a8e8164b3a7aea">le_remoteMgmt_SetDoNotDisturbSign()</a></code> allows callers to indicate they are busy doing something critical and can't be interrupted by a firmware update.</p>
+<p><code><a class="el" href="le__remote_mgmt_8h.html#a3ed93d6bb5ced5df0c126e3513842719">le_remoteMgmt_ClearDoNotDisturbSign()</a></code> clears a 'Do Not Disturb' sign: when no more signs are still set, the modem has permission to apply a firmware update.</p>
 <hr/>
-<p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
+<p>Copyright (C) Sierra Wireless, Inc. 2013. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
    <div class="footer">

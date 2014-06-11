@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Event-driven Programming</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('event_basics.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,47 +86,37 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Event-driven Programming </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
+<div class="textblock"><p><a class="el" href="event_basics.html#eventBackground">Background</a> <br/>
+ <a class="el" href="event_basics.html">Event-driven Programming</a> <br/>
+ <a class="el" href="event_basics.html#eventBasicsWhatsNext">What's Next?</a></p>
+<p>Also see <a class="el" href="c_event_loop.html">Event Loop API</a></p>
+<h1><a class="anchor" id="eventBackground"></a>
+Background</h1>
+<p>In event-drivent programming, the flow of a program is determined by events triggered through a defined interaction (e.g., user interaction, exceeding threshold limit, etc. ). Usually, a main loop listens for events, and then triggers a callback function when an event is detected.</p>
+<p>Overall, Legato components are written using an event-driven model. Callback functions are attached to specific events, and when events occur, the thread's event loop triggers the appropriate callbacks. Legato components can also start other threads that run their own Legato event loops.</p>
+<p>Every component implements an initialization function called at process start-up by the main thread. That function does whatever initialization is required for that component (e.g., initializes data structures, registers callbacks, starts threads, etc.) and returns. After all initialization functions have run to completion and returned, the main thread enters the Legato event loop and begins reacting to events and calling registered callbacks.</p>
+<p>This allows multiple components to be deployed to the same process and even share a single thread within that process, without having to know anything about each other. This reduces the risk of multi-threaded race conditions and saves stack memory space.</p>
+<p>Beware one drawback is that if a component blocks a shared thread, it blocks every component sharing that thread.</p>
+<p>Sometimes, the <em>judicious</em> use of threads can considerably simplify a program, so multi-threading is also supported by Legato along with the usual thread synchronization constructs (mutexes, semaphores, etc.).</p>
+<h1><a class="anchor" id="eventBasics"></a>
+Event-driven Programming</h1>
+<p>Legato's Event Loop API uses a central <b> event loop </b> that calls <b> event handler </b> functions in response to <b>event reports</b>.</p>
+<p>Software components register their event handler functions with the event system (either directly through the Event Loop API or indirectly through other APIs that use the Event Loop API) so the central event loop knows the functions to call in response to defined events.</p>
+<p>Every event loop has an <b>event queue</b>, which is a queue of events waiting to be handled by that event loop.</p>
+<p>The following different usage patterns are supported by the Event Loop API:</p>
 <ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
+<li><a class="el" href="c_event_loop.html#c_event_deferredFunctionCalls">Deferred Function Calls</a></li>
+<li><a class="el" href="c_event_loop.html#c_event_publishSubscribe">Publish-Subscribe Events</a></li>
+<li><a class="el" href="c_event_loop.html#c_event_layeredPublishSubscribe">Layered Publish-Subscribe Handlers</a></li>
+<li><a class="el" href="c_event_loop.html#c_event_files">Working with File Descriptors</a></li>
+<li><a class="el" href="c_event_loop.html#c_event_dispatchingToOtherThreads">Dispatching Function Execution to Other Threads</a></li>
 </ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<h1><a class="anchor" id="eventBasicsWhatsNext"></a>
+What's Next?</h1>
+<p><a class="el" href="sandbox_gen.html">Legato Sandboxes</a></p>
 <hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->

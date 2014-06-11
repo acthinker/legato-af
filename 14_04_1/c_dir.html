@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Directory API</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('c_dir.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,49 +86,28 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Directory API </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
-<ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
-</ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<div class="textblock"><p><a class="el" href="le__dir_8h.html">Click here for the API reference documentation.</a></p>
 <hr/>
-<p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
+<p><a class="el" href="c_dir.html#c_dir_create">Creating Directories</a> <br/>
+ <a class="el" href="c_dir.html#c_dir_delete">Removing Directories</a> <br/>
+ <a class="el" href="c_dir.html#c_dir_read">Reading Directories</a> <br/>
+</p>
+<h1><a class="anchor" id="c_dir_create"></a>
+Creating Directories</h1>
+<p>To create a directory at a specific location, call <code><a class="el" href="le__dir_8h.html#a7ac7d25b67f2e47127084677626d5344">le_dir_Make()</a></code> passing in the path name of the directory to create. All directories in the path name except the last directory (the directory to be created) must exist prior to calling <a class="el" href="le__dir_8h.html#a7ac7d25b67f2e47127084677626d5344">le_dir_Make()</a>.</p>
+<p>To create all directories in a specified path use <code><a class="el" href="le__dir_8h.html#a41fc915e2a21ea91dabe335f1316df74">le_dir_MakePath()</a></code>.</p>
+<p>With both <a class="el" href="le__dir_8h.html#a7ac7d25b67f2e47127084677626d5344">le_dir_Make()</a> and <a class="el" href="le__dir_8h.html#a41fc915e2a21ea91dabe335f1316df74">le_dir_MakePath()</a> the calling process must have write and search permissions on all directories in the path.</p>
+<h1><a class="anchor" id="c_dir_delete"></a>
+Removing Directories</h1>
+<p>To remove a directory and everything in the directory (including all files and sub-directories) use <code><a class="el" href="le__dir_8h.html#a9eca51d0e3031f9dee7b875a62c8b1e0">le_dir_RemoveRecursive()</a></code>.</p>
+<h1><a class="anchor" id="c_dir_read"></a>
+Reading Directories</h1>
+<p>To read the contents of a directory use the POSIX function <code>openDir()</code>.</p>
+<hr/>
+<p>Copyright (C) Sierra Wireless, Inc. 2013. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
    <div class="footer">

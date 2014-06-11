@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Semaphore API</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('c_semaphore.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,47 +86,56 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Semaphore API </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
+<div class="textblock"><p><a class="el" href="le__semaphore_8h.html">Click here for the API Reference documentation.</a></p>
+<hr/>
+<p><a class="el" href="c_semaphore.html#create_semaphore">Creating a Semaphore</a> <br/>
+ <a class="el" href="c_semaphore.html#use_semaphore">Using a Semaphore</a> <br/>
+ <a class="el" href="c_semaphore.html#delete_semaphore">Deleting a Semaphore</a> <br/>
+ <a class="el" href="c_semaphore.html#diagnostics_semaphore">Diagnostics</a> <br/>
+</p>
+<p>This API provides standard semaphore functionality, but with added diagnostic capabilities. These semaphores can only be shared by threads within the same process.</p>
+<p>Two kinds of semaphore are supported by Legato:</p>
 <ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
+<li><b>Normal</b> </li>
+<li><b>Traceable</b> </li>
 </ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<p>Normal semaphores are faster than traceable semaphores and consume less memory, but still offer some diagnosic capabilities. Traceable semaphores generally behave the same as Normal sempahores, but can also log their activities.</p>
+<p>All semaphores can wait (decrease value by one) and post (increase value by one). The same wait, post, and delete functions work for all the semaphores, regardless of what type they are. This means that a semaphore can be changed from Normal to Traceable or vice versa just by changing the function you use to create it. This helps when troubleshooting race conditions or deadlocks because it's easy to switch one semaphore or a select few semaphores to Traceable, without suffering the runtime cost of switching <em>all</em> semaphores to the slower Traceable semaphores.</p>
+<h1><a class="anchor" id="create_semaphore"></a>
+Creating a Semaphore</h1>
+<p>In Legato, semaphores are dynamically allocated objects. Functions that create them return references to them (of type le_sem_Ref_t). The functions for creating semaphores are:</p>
+<ul>
+<li><a class="el" href="le__semaphore_8h.html#add9fab5440abcff5a8bc3b8bd1126d99">le_sem_Create()</a> - creates a <b>normal</b>, <b>semaphore</b>.</li>
+<li><a class="el" href="le__semaphore_8h.html#a27f805b9351bb5bb4a5fd6db6cbff982">le_sem_CreateTraceable()</a> - creates a <b>traceable</b>, <b>semaphore</b>.</li>
+</ul>
+<p>Note that all semaphores have names. This is required for diagnostic purposes. See <a class="el" href="c_semaphore.html#diagnostics_semaphore">Diagnostics</a> below.</p>
+<h1><a class="anchor" id="use_semaphore"></a>
+Using a Semaphore</h1>
+<p>Functions to increase and decrease semaphores are:</p>
+<ul>
+<li><code><a class="el" href="le__semaphore_8h.html#abb859411cc58fbcc576c986ef52083b2">le_sem_Post()</a></code> </li>
+<li><code><a class="el" href="le__semaphore_8h.html#aecdf87fe330dd008771b7530edbb1f2b">le_sem_Wait()</a></code> </li>
+<li><code><a class="el" href="le__semaphore_8h.html#a6a6c435042dd37a3c78ebbab6ec72689">le_sem_TryWait()</a></code> </li>
+<li><code><a class="el" href="le__semaphore_8h.html#a14475f0c2f5483427279d39220f55eaa">le_sem_WaitWithTimeOut()</a></code> </li>
+</ul>
+<p>Function to get semaphores values is:</p>
+<ul>
+<li><code><a class="el" href="le__semaphore_8h.html#ac4858ccb0ba748ca463bb29807b75c05">le_sem_GetValue()</a></code> </li>
+</ul>
+<p>It doesn't matter what type of semaphore you are using, you still use the same functions for increasing, decreasing, getting value your semaphore.</p>
+<h1><a class="anchor" id="delete_semaphore"></a>
+Deleting a Semaphore</h1>
+<p>When you are finished with a semaphore, you must delete it by calling <a class="el" href="le__semaphore_8h.html#a96361b126f59934354ca17bf8b74b8f6">le_sem_Delete()</a>.</p>
+<p>There must not be anything using the semaphore when it is deleted (i.e., no one can be waiting on it).</p>
+<h1><a class="anchor" id="diagnostics_semaphore"></a>
+Diagnostics</h1>
+<p>Both Normal and Traceable semaphores have some diagnostics capabilities.</p>
+<p>The command-line diagnostic tool lssemaphore can be used to list the semaphores that currently exist inside a given process. The state of each semaphore can be seen, including a list of any threads that might be waiting for that semaphore.</p>
+<p>The tool threadlook will show if a given thread is currently waiting for a semaphore, and will name that semaphore.</p>
+<p>If there are Traceable semaphores in a process, then it will be possible to use the log tool to enable or disable tracing on that semaphore. The trace keyword name is the name of the process, the name of the component, and the name of the semaphore, separated by slashes (e.g., "process/component/semaphore").</p>
 <hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Device Config Tool</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('config_d_b_commands.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,48 +86,96 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Device Config Tool </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
-<ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
-</ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
-<hr/>
+<div class="textblock"><p>Use the <code>config</code> command line tool to change a device's configuration database. Functions supported include: inspect a tree, read/write values, and import/export enitre tree sections.</p>
+<p>The command line argument help generates this:</p>
+<pre class="fragment">$ config help
+Usage:
+
+To read a value:
+  config get &lt;tree path&gt;
+
+To write a value:
+  config set &lt;tree path&gt; &lt;new value&gt; [&lt;type&gt;]
+
+To delete a node:
+  config delete &lt;tree path&gt;
+
+To import config data:
+  config import &lt;tree path&gt; &lt;file path&gt;
+
+To export config data:
+  config export &lt;tree path&gt; &lt;file path&gt;
+
+To list all config trees:
+    config list
+
+Where:
+  &lt;tree path&gt;: Path to the tree and node to configure.
+  &lt;file path&gt;: Path to the file for import/export.
+  &lt;new value&gt;: String value to write to the config tree.
+  &lt;type&gt;:      Optional, must be bool, int, float, or string.
+               If type is bool, value must be true or false.
+               If unspecified, default type is string.
+
+  A tree path is specified similar to a *nix path. With the beginning slash
+  being optional.
+
+  For example:\n"
+
+      /a/path/to/somewhere
+  or
+      a/path/to/somewhere
+
+The configTree supports multiple trees: a default tree is assigned per user.
+If the config tool is run as root, then alternative trees can be specified
+in the path by entering a tree name, then a colon and the value path.
+
+Here's an example using the tree named 'foo' instead of the default tree:
+
+      foo:/a/path/to/somewhere
+</pre><p>The trees themselves are stored in the file system at:</p>
+<div class="fragment"><div class="line">/opt/legato/configTree</div>
+</div><!-- fragment --><p>The configTree cycles through the extensions, .rock, .paper, and .scissors to differentiate between versions of the tree file. The base file name is the same as the tree.</p>
+<p>A listing for /opt/legato/configTree where the system tree and the user trees are foo and bar looks like this:</p>
+<div class="fragment"><div class="line">$ ls /opt/legato/configTree/ -l</div>
+<div class="line">total 32</div>
+<div class="line">-rw------- 1 user user  3456 May 12 11:02 bar.rock</div>
+<div class="line">-rw------- 1 user user  3456 May  9 11:04 foo.scissors</div>
+<div class="line">-rw------- 1 user user 21037 May  9 11:04 system.paper</div>
+</div><!-- fragment --><p>The system, or root user, has its own tree; each application has a separate tree.</p>
+<p>To dump a tree, run this to get the default tree for the current user:</p>
+<div class="fragment"><div class="line">config <span class="keyword">get</span> / </div>
+</div><!-- fragment --><p>Or to get a specific tree:</p>
+<div class="fragment"><div class="line">$ config <span class="keyword">get</span> foo:/</div>
+<div class="line">/</div>
+<div class="line">  helloWorld/</div>
+<div class="line">    greeted&lt;bool&gt; == <span class="keyword">true</span></div>
+<div class="line">    ignored&lt;bool&gt; == <span class="keyword">false</span></div>
+</div><!-- fragment --><p>The  tool can also read and write individual values. You can read the value of greeted like this:</p>
+<div class="fragment"><div class="line">$ config <span class="keyword">get</span> /helloWorld/greeted</div>
+<div class="line"><span class="keyword">true</span></div>
+</div><!-- fragment --><p> If you want to see everything under helloWorld: </p>
+<div class="fragment"><div class="line">$ config <span class="keyword">get</span> /helloWorld</div>
+<div class="line">helloWorld/</div>
+<div class="line">  greeted&lt;bool&gt; == <span class="keyword">true</span></div>
+<div class="line">  ignored&lt;bool&gt; == <span class="keyword">false</span></div>
+</div><!-- fragment --><p> If you want to change the value of ignored: </p>
+<div class="fragment"><div class="line">$ config set /helloWorld/ignored <span class="keyword">true</span> <span class="keywordtype">bool</span></div>
+</div><!-- fragment --><p> You can check it by running: </p>
+<div class="fragment"><div class="line">$ config <span class="keyword">get</span> /helloWorld/ignored</div>
+<div class="line"><span class="keyword">true</span></div>
+</div><!-- fragment --><p>If the config tool is listing a tree it will display the node name and a / if the current node has children. (Except for the root node, as the root node does not have a name.)</p>
+<p>For leaf nodes, the config tool will display the value type in angle brackets, &lt;&gt;, as well as its name and actual value:</p>
+<div class="fragment"><div class="line">/</div>
+<div class="line">  testValues/</div>
+<div class="line">    aBoolValue&lt;bool&gt; == <span class="keyword">true</span></div>
+<div class="line">    aStringValue&lt;string&gt; == This is some text I saved.</div>
+<div class="line">    anIntValue&lt;int&gt; == 1024</div>
+<div class="line">    afloatValue&lt;float&gt; == 10.24</div>
+</div><!-- fragment --><hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

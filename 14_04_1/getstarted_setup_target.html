@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Setup Target</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('getstarted_setup_target.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,47 +86,63 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Setup Target </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
+<div class="textblock"><p>Here's how to set up and run your target:</p>
+<p><a class="el" href="getstarted_setup_target.html#serialCmn">Setup Serial Communication to Target</a> <br/>
+ <a class="el" href="getstarted_setup_target.html#copyStartScripts">Copy Startup Scripts to Target</a> <br/>
+ <a class="el" href="getstarted_setup_target.html#rebootTarget">Reboot Target</a> <br/>
+ <a class="el" href="getstarted_setup_target.html#copyLibExe">Copy Libraries and Executables</a> <br/>
+ <a class="el" href="getstarted_setup_target.html#startApps">Start Apps</a> <br/>
+ <a class="el" href="getstarted_setup_target.html#newSessions">New Sessions</a></p>
+<h1><a class="anchor" id="serialCmn"></a>
+Setup Serial Communication to Target</h1>
+<p>You need to install a serial commmunication program (e.g., Minicom) to access the target and obtain an IP address.</p>
+<p>Check the <a class="el" href="getstarted_connect_dev_kit.html#devBoardCables">Dev Kit Cables</a> UART1 settings are correct. If you're using Minicom, you access the config and initialize menus through CTRL+A Z. Run <code>ifconfig</code> to display the IP address values.</p>
+<p>Once you have IP addresses for the dev host and target, you can complete the target setup.</p>
+<h1><a class="anchor" id="copyStartScripts"></a>
+Copy Startup Scripts to Target</h1>
+<p>Using ssh, access the target:</p>
+<div class="fragment"><div class="line">ssh root@&lt;target ip address&gt; </div>
+</div><!-- fragment --><p> When prompted for a password, press enter.</p>
+<p>Then create the startup directory: </p>
+<div class="fragment"><div class="line">mkdir -p  /mnt/flash/startup </div>
+</div><!-- fragment --><p>Then copy the startup files to the target by running the following from the dev host: </p>
+<div class="fragment"><div class="line">scp targetFiles/mdm-9x15/startup/fg_* root@&lt;device ip addr&gt;:/mnt/flash/startup</div>
+</div><!-- fragment --><p>Scripts beginning with <code>fg_</code> are run first during startup, and then everything else is runs in the background. You can add more scripts to customize your target. <code>fg_</code> scripts must have executable permissions or they will not run.</p>
+<p>See <a class="el" href="getstarted_install_notes.html">Yocto Install Notes</a> for helpful target setup tips.</p>
+<dl class="section note"><dt>Note</dt><dd>In the rare case you need to prevent legato starting automatically, run <div class="fragment"><div class="line">touch /mnt/flash/startup/stoplegato </div>
+</div><!-- fragment --></dd></dl>
+<h1><a class="anchor" id="rebootTarget"></a>
+Reboot Target</h1>
+<p>Wait for the target to fully reboot. The target IP address may have changed. Check it using <code>ifconfig</code> through the serial console before proceeding.</p>
+<h1><a class="anchor" id="copyLibExe"></a>
+Copy Libraries and Executables</h1>
+<p><b>Run</b> this to copy the Legato framework libraries and executables onto the target, and start the Legato runtime components:</p>
+<div class="fragment"><div class="line">$ instlegato build/wp7 &lt;target ip address&gt;  </div>
+</div><!-- fragment --><h1><a class="anchor" id="startApps"></a>
+Start Apps</h1>
+<p>To start an app on the target, run:</p>
+<pre class="fragment">root@swi-mdm9x15:~# app start
+</pre><p>To stop an app on the target, run: </p>
+<pre class="fragment">root@swi-mdm9x15:~# app stop
+</pre><p>Run <code>app</code> <code>help</code> for options.</p>
+<h1><a class="anchor" id="newSessions"></a>
+New Sessions</h1>
+<p>Any time you start a new session, you might find these steps helpful to ensure your dev host can communicate with your target:</p>
 <ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
+<li>Open a terminal; go to your Legato directory.</li>
+<li>Run <code>bin/legs</code> </li>
+<li>Plug-in and power-up the target.</li>
+<li>Open a second terminal; go to your Legato directory.</li>
+<li>Run <code>bin/legs</code> </li>
+<li>Start target by running something like: <pre class="fragment">minicom –D /dev/ttyUSB0 </pre></li>
+<li>Press enter when Minicom boot screen displays. Check IP address using <code>ifconfig</code>.</li>
+<li>Go back to the first terminal window and ensure IP address is configured correctly by running (where the subnet of the dev host and target match): <pre class="fragment"> sudo ifconfig usb0 &lt;ip address&gt; up </pre></li>
 </ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<p>Dev host should now be able to ping target IP address.</p>
+<p>If errors occur (e.g., can’t find network), re-run the ifconfig up command (sometimes, it just doesn’t take) and/or reboot the target.</p>
 <hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->

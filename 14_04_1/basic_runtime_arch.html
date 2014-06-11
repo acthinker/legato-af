@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Runtime Architecture</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('basic_runtime_arch.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,47 +86,49 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Runtime Architecture </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
+<div class="textblock"><p><a class="el" href="basic_runtime_arch.html#supervisor">Supervisor</a> <br/>
+ <a class="el" href="basic_runtime_arch.html#logControlDaemon">Log Control Daemon</a> <br/>
+ <a class="el" href="basic_runtime_arch.html#serviceDirectory">Service Directory</a> <br/>
+ <a class="el" href="basic_runtime_arch.html#configTree">Configuration Tree</a> <br/>
+ <a class="el" href="basic_runtime_arch.html#applications">Applications</a> <br/>
+ <a class="el" href="basic_runtime_arch.html#runtimeWhatsNext">What's Next?</a></p>
+<p>Legato's runtime architecture manages each application in its own sandbox.</p>
+<div class="image">
+<img src="LayeredArchitecture.png" alt="LayeredArchitecture.png"/>
+</div>
+<p>Applications communicate with each other using access-controlled message-passing services. The Supervisor automatically creates sandboxes.</p>
+<h1><a class="anchor" id="supervisor"></a>
+Supervisor</h1>
+<p>The Supervisor is a privileged process running on the target device that:</p>
 <ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
+<li>creates and destroys sandboxes for applications</li>
+<li>starts and stops applications</li>
+<li>acts as an application watchdog</li>
+<li>performs fault recovery actions when applications fail (such as restarting the app).</li>
 </ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<h1><a class="anchor" id="logControlDaemon"></a>
+Log Control Daemon</h1>
+<p>The Log Control Daemon provides a user-friendly way to control log message filtering for running Legato application processes.</p>
+<p>See <a class="el" href="c_logging.html">Logging API</a></p>
+<h1><a class="anchor" id="serviceDirectory"></a>
+Service Directory</h1>
+<p>The Service Directory provides a secure way for client processes to find servers that offer the services they need. The Service Directory ensures that only authorized connections are established.</p>
+<p>See <a class="el" href="legato_services.html">Legato Services</a></p>
+<h1><a class="anchor" id="configTree"></a>
+Configuration Tree</h1>
+<p>The Configuration Tree provides persistent configuration data storage organized in a tree structure.</p>
+<p>See <a class="el" href="basic_other.html#Configuration">Configuration</a> and <a class="el" href="api_config.html">Configuration Tree API</a></p>
+<h1><a class="anchor" id="applications"></a>
+Applications</h1>
+<p>An application is a collection of executable files, libraries, and/or other resource files (e.g., audio files, web pages) that can be deployed to a target device. Once installed on a device, an application can be started and stopped.</p>
+<p>By default, each application runs in its own sandbox. When an application is constructed, all the files and IPC services it needs to access are declared (these should be examined and approved before installed on the target). At runtime, the Supervisor and the Service Directory enforce that only those approved files and IPC services are accessed by that application.</p>
+<p>Applications are assembled from components.</p>
+<h1><a class="anchor" id="runtimeWhatsNext"></a>
+What's Next?</h1>
+<p><a class="el" href="basic_components.html">Legato Components</a></p>
 <hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->

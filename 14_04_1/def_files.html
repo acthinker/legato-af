@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Legato Definition Files</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('def_files.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,47 +86,52 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Legato Definition Files </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
+<div class="textblock"><p><a class="el" href="def_files.html#defBackground">.adef and .cdef files</a> <br/>
+ <a class="el" href="def_files.html#defBuild">Tool Search Paths</a> <br/>
+ <a class="el" href="def_files.html#defConfiguration">Configuration</a> <br/>
+ <a class="el" href="def_files.html#defWhatsNext">What's Next?</a></p>
+<h1><a class="anchor" id="defBackground"></a>
+.adef and .cdef files</h1>
+<p>The Application .adef and Component.cdef files are used to define components, applications, and collections of interacting applications ("systems") in a way that's easy to read and hand-code using a plain text viewer/editor. This design works well with collaborative source code management tools (e.g., Gerrit) and standard revision control systems (e.g., Subversion and Git). The design also ensures definition files are easy to parse so syntax highlighters, build tools, and IDEs also work well.</p>
+<p>Application .adef and Component.cdef files have the same basic format; they're divided into sections with content specific to each section.</p>
+<p>Comments can use C++ style one-line syntax, like this: </p>
+<pre class="fragment">//  starts with "//" and runs to the end of this line </pre><p>C-style multi-line comments can also be used, like this: </p>
+<pre class="fragment">/* starts with "/*" and runs until it ends with "*/" */ </pre><p>Except for the sources: section in the Component.cdef (at least one source file must exist for any component), all sections in the .adef and Component.cdef are optional (they can be empty).</p>
+<p>Sections can be in any order, multiple occurrences are permitted, and some sections have sub-sections. Line-terminating characters (e.g., new-line and carriage-return) are treated like spaces and tabs; the choice of formatting within these files is relatively unrestricted (e.g., hard tabs or spaces can be used for indentation).</p>
+<div class="fragment"><div class="line">files:</div>
+<div class="line">    htdocs/index.html   /var/www/</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">import</span> :  <span class="comment">// Note that space is allowed between the section name and the colon.</span></div>
+<div class="line">    ...</div>
+</div><!-- fragment --><h1><a class="anchor" id="defBuild"></a>
+Tool Search Paths</h1>
+<p>Two are used:</p>
 <ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
+<li><b>source</b> search path - lists file system directories where the build tools look for source code files and components.</li>
+<li><b>interface</b> search path - lists file system directories where the build tools look for interface definition files (.h files and .api files).</li>
 </ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<p>The default search path “.” is the current working directory where the build tool ran.</p>
+<p>Search paths can be changed through command-line options:</p>
+<ul>
+<li>‘-i’ sets the interface search path</li>
+<li>‘-c’ sets the source search paths</li>
+</ul>
+<h1><a class="anchor" id="defConfiguration"></a>
+Configuration</h1>
+<p>Most settings in the Component.cdef file become configuration settings for that component.</p>
+<p>Many settings in the .adef file are also configuration settings, and inherit settings from Component.cdef files.</p>
+<p>If the same setting appears in an .adef and a Component.cdef, the .adef setting overrides the .cdef file.</p>
+<p>All configuration settings can be overridden on the target device at runtime, but they may not take effect until the app is restarted.</p>
+<h1><a class="anchor" id="defWhatsNext"></a>
+What's Next?</h1>
+<p><a class="el" href="def_files_adef.html">Legato adef Files</a> <br/>
+ <a class="el" href="def_files_cdef.html">Legato cdef Files</a></p>
+<p>Or move to the <b>next level</b>:</p>
+<p><a class="el" href="build_tools.html">Build Tools</a> <br/>
+ <a class="el" href="demo_apps.html">Legato Demo Applications</a></p>
 <hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->

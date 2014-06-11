@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Install Packages</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('getstarted_install_packages.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,48 +86,55 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Install Packages </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
-<ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
-</ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<div class="textblock"><p>Ensure you’ve completed all the steps in <a class="el" href="getstarted_machine_prep.html">Prep Dev Host</a> before installing Legato packages.</p>
+<p>Ensure you have everything you need downloaded. Check <a class="el" href="getstarted_dev_host_install.html#legatoPkgs">Legato Packages</a>.</p>
+<p>To access the Legato application framework, you'll need a GitHub account <a href="http://www.legato.io/">http://www.legato.io/</a></p>
+<p>Then <a class="el" href="getstarted_setup_target.html">Setup Target</a>.</p>
+<p>Here are the <a class="el" href="getstarted_directories.html">Directories Installed</a> installed.</p>
+<p>Go to <a class="el" href="getstarted_advanced.html">Advanced</a> topics if you need to rebuild your Yocto target.</p>
+<p>If you’re using the bootable USB, you can move on to developing and running <a class="el" href="getstarted_legato_apps.html">Legato Apps</a>.</p>
 <hr/>
+<p><a class="el" href="getstarted_install_packages.html#instToolchain">Install Legato Toolchain</a> <br/>
+ <a class="el" href="getstarted_install_packages.html#instLegato">Install and Make Legato</a> <br/>
+ <a class="el" href="getstarted_install_packages.html#buildLegato">Build Legato Target</a> <br/>
+ <a class="el" href="getstarted_install_packages.html#startLegato">Start Legato</a></p>
+<h1><a class="anchor" id="instToolchain"></a>
+Install Legato Toolchain</h1>
+<p>You'll need to install the cross-toolchain for building ARM applications. Copy the either the 64-bit or 32-bit [Legato-Toolchain-file] to /opt/swi and then extract it.</p>
+<p>You may need to use sudo:</p>
+<div class="fragment"><div class="line">$ mkdir –p /opt/swi</div>
+<div class="line">$ cp [Legato-Toolchain-file-name]  /opt/swi </div>
+<div class="line">$ cd /opt/swi </div>
+<div class="line">$ sudo tar xvjf [Legato-Toolchain-file-name]</div>
+</div><!-- fragment --><h1><a class="anchor" id="instLegato"></a>
+Install and Make Legato</h1>
+<p>Install the Legato application framework on your dev host.</p>
+<p>First, create a directory where you'll run Legato (e.g., mkdir Legato).</p>
+<p>Then run: </p>
+<pre class="fragment">git clone https://github.com/legatoproject/legato-af.git
+</pre><p>You'll be prompted for your GitHub credentials.</p>
+<p><b>cd</b> to your Legato directory</p>
+<p><b>Run</b> <code>make</code>.</p>
+<p><b>Run</b> <code>$ bin/legs </code></p>
+<dl class="section note"><dt>Note</dt><dd>You must run this <em>every</em> time you open a new shell: <div class="fragment"><div class="line">$ bin/legs </div>
+</div><!-- fragment --></dd></dl>
+<h1><a class="anchor" id="buildLegato"></a>
+Build Legato Target</h1>
+<p><b>Run</b> this to build the framework for the target (substitute <code>ar7</code> for <code>wp7</code> if building an AR7 target): </p>
+<div class="fragment"><div class="line">$ make wp7 </div>
+</div><!-- fragment --><p>Or run this to build the framework on the target with the AirVantage agent: </p>
+<div class="fragment"><div class="line">$ make wp7 INCLUDE_AIRVANTAGE=1 </div>
+</div><!-- fragment --><h1><a class="anchor" id="startLegato"></a>
+Start Legato</h1>
+<p>Here are the start/stop commands.</p>
+<p>To start Legato, run: </p>
+<pre class="fragment">$ startlegato 
+</pre><p>To stop Legato, run: </p>
+<pre class="fragment">$ stoplegato 
+</pre><hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Assemble Device Dev Kit</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('getstarted_assy_dev_kit.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,47 +86,71 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Assemble Device Dev Kit </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
-<ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
-</ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<div class="textblock"><p><a class="el" href="getstarted_assy_dev_kit.html#assyOverview">Assembly Overview</a> <br/>
+ <a class="el" href="getstarted_assy_dev_kit.html#devkitAssyWhatsNext">What's Next?</a></p>
+<h1><a class="anchor" id="assyOverview"></a>
+Assembly Overview</h1>
+<p>Dev Kit contents are similar to this:</p>
+<div class="image">
+<img src="AirPrime_WP7_dev_kit_estore.jpg" alt="AirPrime_WP7_dev_kit_estore.jpg"/>
+</div>
+<p>See the AirPrime – AR and WP Series-Development Kit User Guide-Re2.2.pdf for complete information about the development kit boards (available on the USB flashdrive provided with the kit.)</p>
+<p>These instructions and photos are for an AirPrime WP7 module. Assembly for an AR7 module would be similar.</p>
+<p><b>Quick start to set up a Legato development kit device </b></p>
+<p>Socket module parts (in the clear plastic box):</p>
+<div class="image">
+<img src="modulesocketcontents.jpg" alt="modulesocketcontents.jpg"/>
+</div>
+<p>Socket board module base (base socket index on instructions from supplier) and spring loaded cap: </p>
+<div class="image">
+<img src="baseandcap2.jpg" alt="baseandcap2.jpg"/>
+</div>
+<p>Other items - WP7 base insert and M2-18 socket board screws and nuts: </p>
+<div class="image">
+<img src="partsused.jpg" alt="partsused.jpg"/>
+</div>
+<p>Small socket board with one microUSB port only (under main board in kit): </p>
+<div class="image">
+<img src="socketboard.jpg" alt="socketboard.jpg"/>
+</div>
+<p>Attach module base to socket board:</p>
+<ol type="1">
+<li>Fit posts into aligned holes.</li>
+<li>Fasten the base to the board using 4 x M2-18 screws and nuts (screws down).</li>
+</ol>
+<div class="image">
+<img src="socketboardwithbaseside.jpg" alt="socketboardwithbaseside.jpg"/>
+</div>
+<p>Insert ‘interposer index’ (base insert) into the center of the base socket. Press firmly to ensure the insert is completely depressed (the insert isn’t as thick as the base; it should sit lower than the base):</p>
+<div class="image">
+<img src="socketwithbaseandinsertnotinstalled.jpg" alt="socketwithbaseandinsertnotinstalled.jpg"/>
+</div>
+<div class="image">
+<img src="socketwithbaseandinsert.jpg" alt="socketwithbaseandinsert.jpg"/>
+</div>
+<p>Insert WP7 module into socket assembly (fit is <em>not</em> tight): </p>
+<div class="image">
+<img src="socketboardwithmodule.jpg" alt="socketboardwithmodule.jpg"/>
+</div>
+<p><b>Gently</b> press the spring loaded cap into place. Be careful to align one side at a time: the cap posts only fit one way (logo will be on bottom right corner). Press down the first side at the spring-loaded hinge. Then align the second side, and press and gently hook hinge into place.</p>
+<div class="image">
+<img src="socketboardwithcap.jpg" alt="socketboardwithcap.jpg"/>
+</div>
+ <dl class="section warning"><dt>Warning</dt><dd>Don’t force the cap straight down as this could break the sides where the hinges attach to the cap. Ensure you align one side first, then the other side. <div class="image">
+<img src="socketboardwithcapsideview.jpg" alt="socketboardwithcapsideview.jpg"/>
+</div>
+</dd></dl>
+<p>Attach the socket board to the main dev kit board using the J100/J101 board connectors: press firmly into place. </p>
+<div class="image">
+<img src="devkit_board_pic.jpg" alt="devkit_board_pic.jpg"/>
+</div>
+<h1><a class="anchor" id="devkitAssyWhatsNext"></a>
+What's Next?</h1>
+<p><a class="el" href="getstarted_connect_dev_kit.html#devBoardSwitches">Board Switches</a> <br/>
+ <a class="el" href="getstarted_install_packages.html">Install Packages</a></p>
 <hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->

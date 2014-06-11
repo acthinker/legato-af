@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Adding Things to Apps</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('appadding_other_things.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,47 +86,37 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Adding Things to Apps </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
+<div class="textblock"><p>Sometimes you need other stuff in your applications like a third-party library, some data files, a script or a legacy program built on another system.</p>
+<p>To add other files to applications, you add other sections to your application's ".adef" file.</p>
+<p>Here's a sample of how to add an audio file and a third-party library:</p>
+<div class="fragment"><div class="line">files:</div>
+<div class="line"></div>
+<div class="line">    [r]     audio/alert.wav     /usr/share/sounds/</div>
+<div class="line"></div>
+<div class="line">    [r]     third-party/foo/lib/foo.so.1 /lib</div>
+</div><!-- fragment --><p>The "files:" section will get the file ./audio/alert.wav from the build host's file system (relative to the current working directory in which <code>mkapp</code> is run), and list it under /usr/share/sounds (from the application's point-of-view when it runs on the target).</p>
+<p>The letter inside the square brackets (e.g., [r]) contain the permissions flags for the file on the target:</p>
 <ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
+<li>'r' = <b>readable</b> </li>
+<li>'w' = <b>writeable</b> but changes will be discarded on reset</li>
+<li>'x' = <b>executable</b> </li>
 </ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<p>If you want to have a script or other executable run when the application starts, add that file to</p>
+<ul>
+<li>the "files:" section (with the executable flag [x] set), and</li>
+<li>the list of executables in the processes section, "run:" subsection.</li>
+</ul>
+<div class="fragment"><div class="line">files:</div>
+<div class="line"></div>
+<div class="line">    [x]     otherProject/bin/bar    /usr/bin/bar</div>
+<div class="line"></div>
+<div class="line">processes:</div>
+<div class="line"></div>
+<div class="line">run: (/usr/bin/bar)</div>
+</div><!-- fragment --><p>This grabs ./otherProject/bin/bar (relative to the directory where <code>mkapp</code> is run), displays it in the application sandbox's /usr/bin/bar directory, and starts one instance of it when the application starts.</p>
 <hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->

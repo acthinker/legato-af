@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Legato cdef Files</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('def_files_cdef.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,48 +86,53 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Legato cdef Files </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
-<ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
-</ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
-<hr/>
+<div class="textblock"><p><a class="el" href="def_files_cdef.html#defsources">sources</a> <br/>
+ <a class="el" href="def_files_cdef.html#defimport">import</a> <br/>
+ <a class="el" href="def_files_cdef.html#defexport">export</a> <br/>
+ <a class="el" href="def_files_cdef.html#deffiles">files</a> <br/>
+</p>
+<p>These sections are available in the Component.cdef :</p>
+<h1><a class="anchor" id="defsources"></a>
+sources</h1>
+<p>Contains a list of source code files.</p>
+<p>One source file must implement a COMPONENT_INIT function called at start-up.</p>
+<div class="fragment"><div class="line">sources:</div>
+<div class="line"></div>
+<div class="line">    foo.c</div>
+<div class="line">    bar.c</div>
+<div class="line">    init.c      <span class="comment">// This one implements the COMPONENT_INIT</span></div>
+</div><!-- fragment --><h1><a class="anchor" id="defimport"></a>
+import</h1>
+<p>Lists IPC services required by this component from other components.</p>
+<p>Consists of a service instance name and interface definition (.api) file path separated by an equals sign (‘=’).</p>
+<div class="fragment"><div class="line"><span class="keyword">import</span>:</div>
+<div class="line"></div>
+<div class="line">    hello = sample/greet.api   <span class="comment">// We need to use the Greet API to say “hello” to the world.</span></div>
+</div><!-- fragment --><p>The build tools search for the interface definition (.api) file based on the interface search path.</p>
+<p>Inside the component’s source code, you can call API functions defined inside the .api files service instance name prepended.</p>
+<p>If sample/greet.api defines a function called <code>Greet()</code> , the source code for the component can call it as <code>hello_Greet()</code> . In C, source code must #include “interfaces.h” to use the auto-generated function definition.</p>
+<p>Multiple instances of the same API listed in the “import” section must have unique instance names, and will appear as separate functions with different prefixes.</p>
+<div class="fragment"><div class="line"><span class="keyword">import</span>:</div>
+<div class="line"></div>
+<div class="line">    heat = digitalOutput.api   <span class="comment">// This is what we use to turn on and off the heater.</span></div>
+<div class="line">    cool = digitalOutput.api   <span class="comment">// This is what we use to turn on and off the cooling (A/C). </span></div>
+</div><!-- fragment --><p>If digitalOutput.api defines two functions On() and Off(), then the component’s source code would have four functions available to it: heat_On(), heat_Off(), cool_On(), and cool_Off().</p>
+<h1><a class="anchor" id="defexport"></a>
+export</h1>
+<p>Lists IPC services provided by this component to other components. Contents use the same syntax as the the “import” section.</p>
+<div class="fragment"><div class="line">export:</div>
+<div class="line"></div>
+<div class="line">    hello = sample/greet.api   <span class="comment">// We offer the Greet API to others so they can say “hello” to the world. </span></div>
+</div><!-- fragment --><p>The component’s source code implements the API functions defined inside the .api files, with the service instance name prepended. If</p>
+<pre class="fragment">sample/greet.api</pre><p> defines a function called</p>
+<pre class="fragment">“Greet()”</pre><p>, the source code for the component must implement a function called</p>
+<pre class="fragment">“hello_Greet()”</pre><p>. In C, the source code must #include “interfaces.h” to get the function prototype definition.</p>
+<h1><a class="anchor" id="deffiles"></a>
+files</h1>
+<p>The same as the <a class="el" href="def_files_adef.html#filesAdef">files</a> section in .adef files.</p>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

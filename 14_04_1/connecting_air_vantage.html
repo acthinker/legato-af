@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: Connect to AirVantage</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('connecting_air_vantage.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,47 +86,46 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">Connect to AirVantage </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
+<div class="textblock"><p>Detailed info: <br/>
+ <a class="el" href="app_install_air_vantage.html">Installing a Legato application remotely using AirVantage</a> <br/>
+ <a class="el" href="air_vantage_connect_lib.html">AirVantage Agent Connector library</a> <br/>
+</p>
+<p>API info is here: <a class="el" href="swi__airvantage_8h.html">swi_airvantage.h</a></p>
+<p>Complete AirVantage documentation: <a href="https://doc.airvantage.net/display/USERGUIDE/Getting+Started">https://doc.airvantage.net/display/USERGUIDE/Getting+Started</a></p>
+<h1><a class="anchor" id="overviewAVIConnect"></a>
+Overview Info</h1>
+<p>These are the high-level steps to connect a Legato device to AirVantage:</p>
+<p>You'll need an account on AirVantage Server, you can check with your Sierra Wireless contact.</p>
+<p>Once you are connected to your AirVantage account, you can do the following steps:</p>
+<p>Create a new System in AirVantage Server:</p>
 <ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
+<li>From the <code>Inventory menu</code>, choose <code>Systems</code>.</li>
+<li>Click the Create button (+ symbol): enter a Name (used for retrieval).</li>
+<li>In the <code>Gateway</code> tab, click Create a New Gateway (+ symbol), a new windows will appear: enter the IMEI of your device.</li>
+<li>Click <code>Create</code>.</li>
+<li>Once you got back on system creation window, Click on the <code>Application</code> field select 'Legato_Beta'.</li>
+<li>Select "I want to activate my system after creating it".</li>
+<li>Click <code>Create</code>.</li>
 </ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<p>Force a connection using the Agent Shell:</p>
+<ul>
+<li>Connect to the device using ssh</li>
+<li>Telnet to the agent shell using "telnet localhost 2000"</li>
+<li>In the agent shell, check the server URL: ":agent.config.server.url".</li>
+<li>Verify that the URL is set to "tcp://na.airvantage.net:44900"</li>
+<li>then request a connection ":agent.srvcon.connect()"</li>
+</ul>
+<p>This manually forces a connection to the server. You can also set up automatic connections or make user applications to trigger connections.</p>
+<p>Check device status on the AirVantage Server:</p>
+<ul>
+<li>From the <code>Monitor</code> menu, choose <code>Systems</code></li>
+<li>Browse to your device (by the name you created or the IMEI).</li>
+<li>Click Details.</li>
+</ul>
+<p>The <code>Last seen</code> field should be updated with a recent date. You can also see the initial data exchange in the Timeline screen.</p>
 <hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->

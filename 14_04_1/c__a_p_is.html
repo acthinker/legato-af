@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Legato: Welcome</title>
+<title>Legato: C APIs</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('c__a_p_is.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -86,47 +86,56 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Welcome </div>  </div>
+<div class="title">C APIs </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Legato is an open source embedded platform built on Linux designed to simplify embedded M2M development.</p>
-<p><a class="el" href="index.html#Overview">Overview</a> <br/>
- <a class="el" href="getstarted_main.html">Get Started</a> <br/>
- <a class="el" href="index.html#summaryMain">Docs Summary</a> <br/>
- <a class="el" href="index.html#legatoAPIs">Legato APIs</a></p>
-<h1><a class="anchor" id="Overview"></a>
-Overview</h1>
-<p>Legato has everything you need to connect M2M fast:</p>
-<ul>
-<li>programming language APIs</li>
-<li>target runtime environment</li>
-<li>development and build tools</li>
-<li>automated tests.</li>
-</ul>
-<p>Legato's APIs and development tools let you easily write new software components and specify how applications will use those components.</p>
-<p>Legato's runtime environment has a set of daemon processes that cooperatively implement execution sandboxes, secure IPC, fault monitoring, and autonomous recovery on your target devices operating in the field.</p>
-<p>Legato's build tools turn new code into applications ready packaged for deployment to target devices. And there are other development tools that ease things like testing, troubleshooting, and installing your new software on your devices.</p>
-<p>Legato comes with a raft of documentation in a no nonsense format to show you what to do, and automated tests ready to use in your development environment.</p>
-<h1><a class="anchor" id="summaryMain"></a>
-Docs Summary</h1>
-<p><a class="el" href="getstarted_main.html">Get Started</a> installation and setup information.</p>
-<p><a class="el" href="basic_concepts.html">Basic Concepts</a> to learn the basics.</p>
-<p>After that, move on to:</p>
-<p><a class="el" href="app_creating.html">Create Applications</a> <br/>
- <a class="el" href="component_writing.html">Write Components</a> <br/>
- <a class="el" href="language_independent_a_p_is.html">Language Independent Interfaces</a> <br/>
- <a class="el" href="def_files.html">Legato Definition Files</a> <br/>
- <a class="el" href="build_tools.html">Build Tools</a> <br/>
- <a class="el" href="demo_apps.html">Legato Demo Applications</a> <br/>
- <a class="el" href="tools.html">Legato Tools</a> <br/>
- <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a> <br/>
- <a class="el" href="legato_services.html">Legato Services</a></p>
-<h1><a class="anchor" id="legatoAPIs"></a>
-Legato APIs</h1>
-<p>The C Programming Language is directly supported by Legato.</p>
-<p>Legato <a class="el" href="c__a_p_is.html">C APIs</a>.</p>
-<p>Support for other languages like Python, Java, and others will be added in the future.</p>
-<p>Other APIs: <a class="el" href="legato_services.html">Legato Services</a></p>
+<div class="textblock"><p><a class="el" href="c__a_p_is.html#apiList">Legato C APIs</a> <br/>
+ <a class="el" href="c__a_p_is.html#OOD">Object-Oriented Design</a> <br/>
+ <a class="el" href="c__a_p_is.html#opaqueTypes">Opaque Types</a> <br/>
+ <a class="el" href="ccoding_stds_main.html">C Language Coding Standards</a> <br/>
+</p>
+<h1><a class="anchor" id="apiList"></a>
+Legato C APIs</h1>
+<p>Legato has these C language APIs:</p>
+<p><a class="el" href="c_basics.html">Basic Type and Constant Definitions</a> <br/>
+ <a class="el" href="c_args.html">Command Line Arguments API</a> <br/>
+ <a class="el" href="c_dir.html">Directory API</a> <br/>
+ <a class="el" href="c_doubly_linked_list.html">Doubly Linked List API</a> <br/>
+ <a class="el" href="c_memory.html">Dynamic Memory Allocation API</a> <br/>
+ <a class="el" href="c_event_loop.html">Event Loop API</a> <br/>
+ <a class="el" href="c_flock.html">File Locking API</a> <br/>
+ <a class="el" href="c_hashmap.html">HashMap API</a> <br/>
+ <a class="el" href="c_hex.html">Hex string API</a> <br/>
+ <a class="el" href="c_logging.html">Logging API</a> <br/>
+ <a class="el" href="c_messaging.html">Low-Level Messaging API</a> <br/>
+ <a class="el" href="c_mutex.html">Mutex API</a> <br/>
+ <a class="el" href="c_path.html">Path API</a> <br/>
+ <a class="el" href="c_path_iter.html">Path Iterator API</a> <br/>
+ <a class="el" href="c_print.html">Print APIs</a> <br/>
+ <a class="el" href="c_clock.html">Real-time Clock API</a> <br/>
+ <a class="el" href="c_safe_ref.html">Safe References API</a> <br/>
+ <a class="el" href="c_semaphore.html">Semaphore API</a> <br/>
+ <a class="el" href="c_signals.html">Signals API</a> <br/>
+ <a class="el" href="c_singly_linked_list.html">Singly Linked List API</a> <br/>
+ <a class="el" href="c_threading.html">Thread Control API</a> <br/>
+ <a class="el" href="c_timer.html">Timer API</a> <br/>
+ <a class="el" href="c_test.html">Unit Testing API</a> <br/>
+ <a class="el" href="c_utf8.html">UTF-8 String Handling API</a> <br/>
+</p>
+<h1><a class="anchor" id="OOD"></a>
+Object-Oriented Design</h1>
+<p>The Legato framework is constructed in an object-oriented manner.</p>
+<p>The C programming language was created before object-oriented programming became popular so it has no native support for OOP features like inheritance, private object members, member functions, and overloading. Object-oriented designs can still be implemented in C, though.</p>
+<p>In the Legato C APIs, classes are hidden behind opaque "reference" data types. You can get references to objects created behind the scenes in Legato, but you can never see the structure of those objects. The implementation is hidden from view. Access to object properties is made available through accessor functions.</p>
+<h1><a class="anchor" id="opaqueTypes"></a>
+Opaque Types</h1>
+<p>The basic "opaque data type" offered by the C programming language is the "void pointer" (void *). The idea is that a pointer to an object of type <em>T</em> can be cast to point to a void type before being passed outside of the module that implements <em>T</em>.</p>
+<p>This makes it impossible for anyone outside of the module that implements <em>T</em> to dereference the pointer or access anything about the implementation of <em>T</em>. This way, the module that implements <em>T</em> is free to change the implementation of <em>T</em> in any way needed without worrying about breaking code outside of that module.</p>
+<p>The problem with the void pointer type is that it throws away type information. At compile time, this makes it impossible to detect that a variable with opaque type <em>T</em> has been passed into a function with some other pointer type <em>P</em>.</p>
+<p>To overcome this, Legato uses incomplete types to implement its opaque types. For example, there are declarations similar to the following in Legato C API header files:</p>
+<div class="fragment"><div class="line"><span class="comment">// Declare a reference type for referring to Foo objects.</span></div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>le_foo* le_foo_Ref_t;</div>
+</div><!-- fragment --><p>However, "struct le_foo" would <em>not</em> be defined in the API header or <em>anywhere</em> outside of the hypothetical Foo API's implementation files. This makes "struct le_foo" an "incomplete type" for all code outside of the Foo API implementation files. Incomplete types can't be used because the compiler doesn't have enough information about them to generate any code that uses them. But <em>pointers</em> to incomplete types <em>can</em> be passed around because the compiler always knows the pointer size. The compiler knows that one incomplete type is <em>not</em> necessarily interchangeable with another. It won't allow a pointer to an incomplete type to be used where a pointer to another type is expected.</p>
 <hr/>
 <p>Copyright (C) Sierra Wireless, Inc. 2014. All rights reserved. Use of this work is subject to license. </p>
 </div></div><!-- contents -->
