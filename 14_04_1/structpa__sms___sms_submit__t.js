@@ -1,7 +1,7 @@
 var structpa__sms___sms_submit__t =
 [
-    [ "da", "structpa__sms___sms_submit__t.html#af1fe215d38fae1f309a4d0a19a7587fa", null ],
+    [ "da", "structpa__sms___sms_submit__t.html#a8f6016c36dbcf99d14a72037cc3da20b", null ],
     [ "data", "structpa__sms___sms_submit__t.html#a67c17299897f72830484b8256add24de", null ],
     [ "dataLen", "structpa__sms___sms_submit__t.html#a6b85d3ecd777af094c3dc7b088fd6b8e", null ],
-    [ "status", "structpa__sms___sms_submit__t.html#a633feef7a868b1b64c11d289f432a417", null ]
+    [ "status", "structpa__sms___sms_submit__t.html#aa642c8f0f829e50df4112cec04ce7a9b", null ]
 ];

@@ -1,6 +1,7 @@
 var le__event_loop_8h =
 [
     [ "COMPONENT_INIT", "le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec", null ],
+    [ "LE_CI_LINKAGE", "le__event_loop_8h.html#a3973e227dd6ff4e79b2f97c42b105662", null ],
     [ "LE_EVENT_INIT_HANDLER", "le__event_loop_8h.html#a47faa85db57fa5243f12a4a1e55fbfec", null ],
     [ "LE_EVENT_NUM_FD_EVENT_TYPES", "le__event_loop_8h.html#a132c64abe6d2d236b2e5397a3b37c6a9", null ],
     [ "le_event_DeferredFunc_t", "le__event_loop_8h.html#ae838df51ccf62658e2f9ef544869fc95", null ],

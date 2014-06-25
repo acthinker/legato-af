@@ -6,7 +6,13 @@ var getstarted_advanced =
       [ "Configure Dev Studio toolchain", "getstarted_legato_tooling.html#configDevStud", null ],
       [ "Use Developer Studio", "getstarted_legato_tooling.html#usingDevStud", null ]
     ] ],
-    [ "Yocto Linux", "getstarted_yocto_linux.html", "getstarted_yocto_linux" ],
+    [ "Yocto Linux", "getstarted_yocto_linux.html", [
+      [ "Yocto Linux Directories", "getstarted_yocto_linux.html#yoctoDirectories", null ],
+      [ "Pre-built Yocto Image", "getstarted_yocto_linux.html#prebuiltYoctoImages", null ],
+      [ "Rebuild Yocto Image", "getstarted_yocto_linux.html#rebuildYoctoImages", null ],
+      [ "Flash Yocto Image", "getstarted_yocto_linux.html#flashYoctoImages", null ],
+      [ "Custom Yocto Image", "getstarted_yocto_linux.html#custYoctoImages", null ]
+    ] ],
     [ "Yocto Install Notes", "getstarted_install_notes.html", [
       [ "Log on Without Password", "getstarted_install_notes.html#yoctoNoPwd", null ],
       [ "Use nfs root", "getstarted_install_notes.html#yoctoNFSRoot", null ],

@@ -2,18 +2,6 @@ var NAVTREE =
 [
   [ "Legato", "index.html", [
     [ "Welcome", "index.html", "index" ],
-    [ "C Language Coding Standards", "ccoding_stds_main.html", "ccoding_stds_main" ],
-    [ "Sample codes", "c_sample_codes.html", "c_sample_codes" ],
-    [ "Configuration Tree API", "api_config.html", [
-      [ "A Transactional Approach", "api_config.html#cfg_transaction", null ],
-      [ "Iterating the Tree", "api_config.html#cfg_iteration", null ],
-      [ "Writing Configuration Data, using a write transaction.", "api_config.html#cfg_transactWrite", null ],
-      [ "Reading configuration data with a read transaction.", "api_config.html#cfg_transactRead", null ],
-      [ "Working without Transactions", "api_config.html#cfg_quick", null ]
-    ] ],
-    [ "Modem Services", "c_mdm_apis.html", "c_mdm_apis" ],
-    [ "Platform Adapter Modem APIs", "c_pa.html", "c_pa" ],
-    [ "Platform Adapter Global Navigation Satellite System API", "c_pa_gnss.html", null ],
     [ "Data Structures", null, [
       [ "Data Structures", "annotated.html", "annotated" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -39,16 +27,18 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "air_vantage_connect_lib.html",
-"c_messaging.html#c_messagingClientMultithreading",
-"def_files_adef.html",
-"le__audio__interface_8h.html#a74f1ef979329f6c2bd56ea622f4d05b2",
-"le__info_8h.html#a316a3404f5b47cf766d9eadfd96bef17",
-"le__mdm__defs_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45ad33c3e71bdfd7513392f28bf2a7e9c9b",
-"le__sim_8h.html#a4965e5346ff67093f41f858341cbaf41",
-"mrc__interface_8h.html#a78bd27d92337e2122320f41bcaa5480f",
-"sms__interface_8h.html#a3cac8ea6334ec7843261a85f9b54e3fc"
+"c_messaging.html#c_messagingServerExample",
+"demo_apps.html#demoWhatsNext",
+"le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cae42c9d785827fc3a9c47fb55baca7879",
+"le__log_8h.html#a8d8f204806cd5fc0455fe3caacf1d251",
+"le__mrc_8h.html#a81a19324a130d1965975131c282867d8",
+"le__singly_linked_list_8h.html#afb5e8ffc3fb5c0d86eb47d0885a6f546",
+"mrc__interface_8h.html#af4fa2d3f3c9a664b8e46478dba048f2e",
+"sms__interface_8h.html#ab7dee7d2c74cfcadd9ea0d5fe1786dfc"
 ];
 
+var SYNCONMSG = 'click to disable panel synchronisation';
+var SYNCOFFMSG = 'click to enable panel synchronisation';
 var SYNCONMSG = 'click to disable panel synchronisation';
 var SYNCOFFMSG = 'click to enable panel synchronisation';
 var navTreeSubIndices = new Array();
@@ -131,12 +121,12 @@ function createIndent(o,domNode,node,level)
   var level=-1;
   var n = node;
   while (n.parentNode) { level++; n=n.parentNode; }
-  var imgNode = document.createElement("img");
-  imgNode.style.paddingLeft=(16*level).toString()+'px';
-  imgNode.width  = 16;
-  imgNode.height = 22;
-  imgNode.border = 0;
   if (node.childrenData) {
+    var imgNode = document.createElement("img");
+    imgNode.style.paddingLeft=(16*level).toString()+'px';
+    imgNode.width  = 16;
+    imgNode.height = 22;
+    imgNode.border = 0;
     node.plus_img = imgNode;
     node.expandToggle = document.createElement("a");
     node.expandToggle.href = "javascript:void(0)";
@@ -153,8 +143,12 @@ function createIndent(o,domNode,node,level)
     domNode.appendChild(node.expandToggle);
     imgNode.src = node.relpath+"ftv2pnode.png";
   } else {
-    imgNode.src = node.relpath+"ftv2node.png";
-    domNode.appendChild(imgNode);
+    var span = document.createElement("span");
+    span.style.display = 'inline-block';
+    span.style.width   = 16*(level+1)+'px';
+    span.style.height  = '22px';
+    span.innerHTML = '&#160;';
+    domNode.appendChild(span);
   } 
 }
 
@@ -373,7 +367,7 @@ function showNode(o, node, index, hash)
       if (!node.childrenVisited) {
         getNode(o, node);
       }
-      $(node.getChildrenUL()).show();
+      $(node.getChildrenUL()).css({'display':'block'});
       if (node.isLast) {
         node.plus_img.src = node.relpath+"ftv2mlastnode.png";
       } else {
@@ -405,8 +399,22 @@ function showNode(o, node, index, hash)
   }
 }
 
+function removeToInsertLater(element) {
+  var parentNode = element.parentNode;
+  var nextSibling = element.nextSibling;
+  parentNode.removeChild(element);
+  return function() {
+    if (nextSibling) {
+      parentNode.insertBefore(element, nextSibling);
+    } else {
+      parentNode.appendChild(element);
+    }
+  };
+}
+
 function getNode(o, po)
 {
+  var insertFunction = removeToInsertLater(po.li);
   po.childrenVisited = true;
   var l = po.childrenData.length-1;
   for (var i in po.childrenData) {
@@ -414,6 +422,7 @@ function getNode(o, po)
     po.children[i] = newNode(o, po, nodeData[0], nodeData[1], nodeData[2],
       i==l);
   }
+  insertFunction();
 }
 
 function gotoNode(o,subIndex,root,hash,relpath)
@@ -517,7 +526,10 @@ function initNavTree(toroot,relpath)
     navSync.click(function(){ toggleSyncButton(relpath); });
   }
 
-  navTo(o,toroot,window.location.hash,relpath);
+  $(window).load(function(){
+    navTo(o,toroot,window.location.hash,relpath);
+    showRoot();
+  });
 
   $(window).bind('hashchange', function(){
      if (window.location.hash && window.location.hash.length>1){
@@ -540,7 +552,5 @@ function initNavTree(toroot,relpath)
        navTo(o,toroot,window.location.hash,relpath);
      }
   })
-
-  $(window).load(showRoot);
 }
 
