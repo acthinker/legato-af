@@ -14,5 +14,6 @@ var index =
     [ "Legato Tools", "tools.html", "tools" ],
     [ "Connect to AirVantage", "connecting_air_vantage.html", "connecting_air_vantage" ],
     [ "Legato Services", "legato_services.html", "legato_services" ],
-    [ "C APIs", "c__a_p_is.html", "c__a_p_is" ]
+    [ "C APIs", "c__a_p_is.html", "c__a_p_is" ],
+    [ "Related Info", "related_info.html", "related_info" ]
 ];

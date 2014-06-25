@@ -17,6 +17,8 @@ var le__audio__interface_8h =
     [ "le_audio_GetFormat", "le__audio__interface_8h.html#a7e50add53e328c1dc6b680188990ebbb", null ],
     [ "le_audio_GetGain", "le__audio__interface_8h.html#a51a86829cdd6f27234f482e5dbb6c933", null ],
     [ "le_audio_Mute", "le__audio__interface_8h.html#a147e97c49dbc003f63df78f97d5fca32", null ],
+    [ "le_audio_OpenFilePlayback", "le__audio__interface_8h.html#a34f3ed7c0885b2a1a29bdbfaf2099187", null ],
+    [ "le_audio_OpenFileRecording", "le__audio__interface_8h.html#a7d9b01ce8f55dcb47ae9e84a34c7cd12", null ],
     [ "le_audio_OpenI2sRx", "le__audio__interface_8h.html#a9e7d0042c4f422554eb10d64535608e5", null ],
     [ "le_audio_OpenI2sTx", "le__audio__interface_8h.html#a2633c1368adf60e342d7cadbbfa6278b", null ],
     [ "le_audio_OpenMic", "le__audio__interface_8h.html#a74f1ef979329f6c2bd56ea622f4d05b2", null ],

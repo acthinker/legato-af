@@ -30,6 +30,7 @@ var basic_concepts =
       [ "What's Next", "basic_components.html#compWhatsNext", null ]
     ] ],
     [ "Legato Interfaces", "basic_interfaces.html", [
+      [ "Overview", "basic_interfaces.html#intOverview", null ],
       [ "Function Call APIs", "basic_interfaces.html#functionCallAPIs", null ],
       [ "What's Next?", "basic_interfaces.html#intWhatsNext", null ]
     ] ],

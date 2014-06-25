@@ -11,7 +11,7 @@ var app_creating =
       [ "Install App", "appconverting_it_into_an_app.html#instApp", null ],
       [ "Run Logs", "appconverting_it_into_an_app.html#runLogs", null ],
       [ "Remove App", "appconverting_it_into_an_app.html#rmApp", null ],
-      [ "List Apps", "appconverting_it_into_an_app.html#lsApp", null ]
+      [ "List App", "appconverting_it_into_an_app.html#lsApp", null ]
     ] ],
     [ "Adding Things to Apps", "appadding_other_things.html", null ],
     [ "Application Notes", "app_notes.html", "app_notes" ]

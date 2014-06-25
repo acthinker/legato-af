@@ -13,7 +13,7 @@ var getstarted_dev_host_install =
       [ "Start Legato", "getstarted_install_packages.html#startLegato", null ]
     ] ],
     [ "Directories Installed", "getstarted_directories.html", [
-      [ "Dev Host Directories", "getstarted_directories.html#devHostDirs", null ],
-      [ "Target Directories", "getstarted_directories.html#targetDirs", null ]
+      [ "Dev Host", "getstarted_directories.html#devHostDirs", null ],
+      [ "Target", "getstarted_directories.html#targetDirs", null ]
     ] ]
 ];

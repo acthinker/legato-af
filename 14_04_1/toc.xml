@@ -32,8 +32,8 @@
             <topic label="Start Legato" href="getstarted_install_packages.html#startLegato"/>
           </topic>
           <topic label="Directories Installed" href="getstarted_directories.html">
-            <topic label="Dev Host Directories" href="getstarted_directories.html#devHostDirs"/>
-            <topic label="Target Directories" href="getstarted_directories.html#targetDirs"/>
+            <topic label="Dev Host" href="getstarted_directories.html#devHostDirs"/>
+            <topic label="Target" href="getstarted_directories.html#targetDirs"/>
           </topic>
         </topic>
         <topic label="Setup Target" href="getstarted_setup_target.html">
@@ -59,17 +59,6 @@
           <topic label="Rebuild Yocto Image" href="getstarted_yocto_linux.html#rebuildYoctoImages"/>
           <topic label="Flash Yocto Image" href="getstarted_yocto_linux.html#flashYoctoImages"/>
           <topic label="Custom Yocto Image" href="getstarted_yocto_linux.html#custYoctoImages"/>
-          <topic label="Yocto Install Notes" href="getstarted_install_notes.html">
-            <topic label="Log on Without Password" href="getstarted_install_notes.html#yoctoNoPwd"/>
-            <topic label="Use nfs root" href="getstarted_install_notes.html#yoctoNFSRoot"/>
-            <topic label="CDC-ECM for IP vs Ethernet" href="getstarted_install_notes.html#yoctoCDC"/>
-            <topic label="Setup Preferred IP" href="getstarted_install_notes.html#yoctoPrefIP"/>
-            <topic label="Setup Target Static IP" href="getstarted_install_notes.html#yoctoStaticIP"/>
-            <topic label="Setup using BSPTestReport.xls" href="getstarted_install_notes.html#yoctoBSPTestReport"/>
-            <topic label="Read/Write rootfs" href="getstarted_install_notes.html#yoctoReadWrite"/>
-            <topic label="Disable New Package Download" href="getstarted_install_notes.html#yoctoNoDown"/>
-            <topic label="Change Default USB Classes" href="getstarted_install_notes.html#yoctoDefUSB"/>
-          </topic>
         </topic>
         <topic label="Yocto Install Notes" href="getstarted_install_notes.html">
           <topic label="Log on Without Password" href="getstarted_install_notes.html#yoctoNoPwd"/>
@@ -128,6 +117,7 @@
         <topic label="What&apos;s Next" href="basic_components.html#compWhatsNext"/>
       </topic>
       <topic label="Legato Interfaces" href="basic_interfaces.html">
+        <topic label="Overview" href="basic_interfaces.html#intOverview"/>
         <topic label="Function Call APIs" href="basic_interfaces.html#functionCallAPIs"/>
         <topic label="What&apos;s Next?" href="basic_interfaces.html#intWhatsNext"/>
       </topic>
@@ -149,12 +139,12 @@
         <topic label="Install App" href="appconverting_it_into_an_app.html#instApp"/>
         <topic label="Run Logs" href="appconverting_it_into_an_app.html#runLogs"/>
         <topic label="Remove App" href="appconverting_it_into_an_app.html#rmApp"/>
-        <topic label="List Apps" href="appconverting_it_into_an_app.html#lsApp"/>
+        <topic label="List App" href="appconverting_it_into_an_app.html#lsApp"/>
       </topic>
       <topic label="Adding Things to Apps" href="appadding_other_things.html"/>
       <topic label="Application Notes" href="app_notes.html">
-        <topic label="Port Legacy Apps to Legato" href="port_legacy_apps.html">
-          <topic label="Port Self-contained Apps" href="port_legacy_apps.html#portSelfContained"/>
+        <topic label="Porting Legacy Apps to Legato" href="port_legacy_apps.html">
+          <topic label="Porting Self-contained Apps" href="port_legacy_apps.html#portSelfContained"/>
           <topic label="Porting Apps with Root Access" href="port_legacy_apps.html#portRootAccess"/>
           <topic label="Use Legato APIs and Build System" href="port_legacy_apps.html#portUsingAPIs"/>
           <topic label="Use Your Own main() with Legato APIs" href="port_legacy_apps.html#ownMainFunc"/>
@@ -337,24 +327,41 @@
       </topic>
     </topic>
     <topic label="Legato Services" href="legato_services.html">
+      <topic label="Configuration tree" href="legato_services.html#configTrees"/>
       <topic label="Application Services" href="legato_services.html#applicationServices"/>
       <topic label="Foundation Services" href="legato_services.html#foundationServices">
-        <topic label="Modem" href="legato_services.html#Modem"/>
+        <topic label="Services" href="legato_services.html#Modem"/>
         <topic label="Positioning" href="legato_services.html#positioning"/>
         <topic label="Audio" href="legato_services.html#audio"/>
+        <topic label="Platform Adaptors" href="legato_services.html#pa"/>
+      </topic>
+      <topic label="Configuration Tree Entries" href="config_tree_page.html">
+        <topic label="Introduction" href="config_tree_page.html#configTrees_Intro"/>
+        <topic label="Cellular Network Service" href="config_tree_page.html#cellnetConfigTree"/>
+        <topic label="Modem Radio Control" href="config_tree_page.html#mrcConfigTree"/>
+        <topic label="Modem Data Control" href="config_tree_page.html#mdcConfigTree"/>
+        <topic label="eCall" href="config_tree_page.html#ecallConfigTree"/>
+        <topic label="Positioning" href="config_tree_page.html#posConfigTree"/>
       </topic>
       <topic label="Data Connection Service" href="c_le_data.html">
         <topic label="Default Data Connection" href="c_le_data.html#c_le_data_default"/>
         <topic label="Data Connection Options" href="c_le_data.html#c_le_data_options"/>
       </topic>
+      <topic label="Cellular Network Service" href="c_le_cellnet.html">
+        <topic label="Table of Contents" href="c_le_cellnet.html#c_le_cellnet_toc"/>
+        <topic label="Introduction" href="c_le_cellnet.html#c_le_cellnet_intro"/>
+        <topic label="Requesting the Cellular Network" href="c_le_cellnet.html#c_le_cellnet_requesting"/>
+        <topic label="Network Options" href="c_le_cellnet.html#c_le_cellnet_options"/>
+        <topic label="Cellular Network configuration tree" href="c_le_cellnet.html#c_le_cellnet_configdb"/>
+      </topic>
       <topic label="SMS Services" href="c_sms.html">
-        <topic label="Creating a Message object" href="c_sms.html#le_sms_msg_ops_creating_msg"/>
-        <topic label="Deleting a Message object" href="c_sms.html#le_sms_msg_ops_deleting_msg"/>
-        <topic label="Sending a message" href="c_sms.html#le_sms_msg_ops_sending"/>
-        <topic label="Receiving a message" href="c_sms.html#le_sms_msg_ops_receiving"/>
-        <topic label="Listing  messages recorded in storage area" href="c_sms.html#le_sms_msg_ops_listing"/>
-        <topic label="Deleting a message from the storage area" href="c_sms.html#le_sms_msg_ops_deleting"/>
-        <topic label="Sample codes" href="c_sms.html#le_sms_msg_ops_samples"/>
+        <topic label="Creating a Message object" href="c_sms.html#le_sms_ops_creating_msg"/>
+        <topic label="Deleting a Message object" href="c_sms.html#le_sms_ops_deleting_msg"/>
+        <topic label="Sending a message" href="c_sms.html#le_sms_ops_sending"/>
+        <topic label="Receiving a message" href="c_sms.html#le_sms_ops_receiving"/>
+        <topic label="Listing  messages recorded in storage area" href="c_sms.html#le_sms_ops_listing"/>
+        <topic label="Deleting a message from the storage area" href="c_sms.html#le_sms_ops_deleting"/>
+        <topic label="Sample codes" href="c_sms.html#le_sms_ops_samples"/>
       </topic>
       <topic label="SIM Services" href="c_sim.html">
         <topic label="Counting the SIM card slots" href="c_sim.html#le_sim_count"/>
@@ -364,7 +371,7 @@
         <topic label="SIM Authentication" href="c_sim.html#le_sim_auth"/>
         <topic label="SIM states" href="c_sim.html#le_sim_state"/>
       </topic>
-      <topic label="Modem Radio Control API" href="c_mrc.html">
+      <topic label="Modem Radio Control" href="c_mrc.html">
         <topic label="Radio Power Management" href="c_mrc.html#le_mrc_power"/>
         <topic label="Radio Access Technology" href="c_mrc.html#le_mrc_rat"/>
         <topic label="Network Registration" href="c_mrc.html#le_mrc_registration"/>
@@ -374,17 +381,17 @@
         <topic label="Neighboring Cells Information" href="c_mrc.html#le_mrc_ngbr"/>
         <topic label="Radio configuration tree" href="c_mrc.html#le_mrc_configdb"/>
       </topic>
-      <topic label="Modem Data Control API" href="c_mdc.html">
+      <topic label="Modem Data Control" href="c_mdc.html">
         <topic label="Data Profiles" href="c_mdc.html#le_mdc_profile"/>
         <topic label="Data Sessions" href="c_mdc.html#le_mdc_session"/>
         <topic label="Data Statistics" href="c_mdc.html#le_mdc_dataStatistics"/>
         <topic label="Data configuration tree" href="c_mdc.html#le_mdc_configdb"/>
       </topic>
-      <topic label="Modem Call Control API" href="c_mcc.html">
-        <topic label="Modem Call Control Profile API" href="c_mcc_profile.html">
+      <topic label="Modem Call Control" href="c_mcc.html">
+        <topic label="Modem Call Control Profile" href="c_mcc_profile.html">
           <topic label="Using Profiles" href="c_mcc_profile.html#le_mcc_profiles"/>
         </topic>
-        <topic label="Modem Call Control API" href="c_mcc_call.html">
+        <topic label="Modem Call Control" href="c_mcc_call.html">
           <topic label="Starting a Call" href="c_mcc_call.html#le_mcc_call_starting_a_call"/>
           <topic label="Answering a call" href="c_mcc_call.html#le_mcc_call_answering_a_call"/>
         </topic>
@@ -403,6 +410,14 @@
         <topic label="Code sample" href="c_ecall.html#le_ecall_samples"/>
         <topic label="Configuration tree" href="c_ecall.html#le_ecall_configdb"/>
       </topic>
+      <topic label="Sample code" href="csample_code.html">
+        <topic label="Sample code for Modem Services" href="c_sample_codes_modem.html">
+          <topic label="Sample codes for SMS API" href="c_sample_codes_modem_sms.html">
+            <topic label="Sample code for Mobile Originated SMS message" href="c_sms_sample_m_o.html"/>
+            <topic label="Sample code for Mobile Terminated SMS message" href="c_sms_sample_m_t.html"/>
+          </topic>
+        </topic>
+      </topic>
       <topic label="Positioning Service" href="c_pos.html">
         <topic label="Fix On Demand" href="c_pos.html#le_pos_fix"/>
         <topic label="Navigation" href="c_pos.html#le_pos_navigation"/>
@@ -414,8 +429,44 @@
         <topic label="Control an Audio Stream" href="c_audio.html#le_audio_streams"/>
         <topic label="Create Audio connectors" href="c_audio.html#le_audio_connectors"/>
         <topic label="Specifying audio formats" href="c_audio.html#le_audio_formats"/>
+        <topic label="Play and record audio" href="c_audio.html#le_audio_file_pb_rec"/>
         <topic label="Code samples" href="c_audio.html#le_audio_samples"/>
       </topic>
+      <topic label="Platform Adapter Modem APIs" href="c_pa.html">
+        <topic label="List of Platform Adapter Modem APIs" href="c_pa.html#c_pa_apiList"/>
+        <topic label="Modem SMS Platform Adapter API" href="c_pa_sms.html">
+          <topic label="Table of Contents" href="c_pa_sms.html#pa_sms_toc"/>
+          <topic label="Introduction" href="c_pa_sms.html#pa_sms_intro"/>
+          <topic label="Rational" href="c_pa_sms.html#pa_sms_rational"/>
+        </topic>
+        <topic label="Modem SIM Platform Adapter API" href="c_pa_sim.html">
+          <topic label="Table of Contents" href="c_pa_sim.html#pa_sim_toc"/>
+          <topic label="Introduction" href="c_pa_sim.html#pa_sim_intro"/>
+          <topic label="Rational" href="c_pa_sim.html#pa_sim_rational"/>
+        </topic>
+        <topic label="Modem Data Control Platform Adapter API" href="c_pa_mdc.html">
+          <topic label="Table of Contents" href="c_pa_mdc.html#pa_mdc_toc"/>
+          <topic label="Introduction" href="c_pa_mdc.html#pa_mdc_intro"/>
+          <topic label="Rational" href="c_pa_mdc.html#pa_mdc_rational"/>
+        </topic>
+        <topic label="Modem Radio Control Platform Adapter API" href="c_pa_mrc.html"/>
+        <topic label="Modem Call Control Platform Adapter API" href="c_pa_mcc.html">
+          <topic label="Table of Contents" href="c_pa_mcc.html#pa_mcc_toc"/>
+          <topic label="Introduction" href="c_pa_mcc.html#pa_mcc_intro"/>
+          <topic label="Rational" href="c_pa_mcc.html#pa_mcc_rational"/>
+        </topic>
+        <topic label="Modem Information Platform Adapter API" href="c_pa_info.html">
+          <topic label="Table of Contents" href="c_pa_info.html#pa_info_toc"/>
+          <topic label="Introduction" href="c_pa_info.html#pa_info_intro"/>
+          <topic label="Rational" href="c_pa_info.html#pa_info_rational"/>
+        </topic>
+        <topic label="Modem eCall Platform Adapter API" href="c_pa_ecall.html">
+          <topic label="Table of Contents" href="c_pa_ecall.html#pa_info_toc"/>
+          <topic label="Introduction" href="c_pa_ecall.html#pa_ecall_intro"/>
+          <topic label="Rational" href="c_pa_ecall.html#pa_ecall_rational"/>
+        </topic>
+      </topic>
+      <topic label="Platform Adapter Global Navigation Satellite System API" href="c_pa_gnss.html"/>
     </topic>
     <topic label="C APIs" href="c__a_p_is.html">
       <topic label="Legato C APIs" href="c__a_p_is.html#apiList"/>
@@ -617,167 +668,67 @@
         <topic label="Checking UTF-8 Format" href="c_utf8.html#utf8_format"/>
       </topic>
     </topic>
-  </topic>
-  <topic label="C Language Coding Standards" href="ccoding_stds_main.html">
-    <topic label="Commenting" href="ccoding_stds_main.html#cstdsparamCommenting"/>
-    <topic label="Const Pointers" href="ccoding_stds_main.html#cstdsConstPointers"/>
-    <topic label="Cyclomatic Complexity" href="ccoding_stds_main.html#cstdsCyclomatic"/>
-    <topic label="Existing Code" href="ccoding_stds_main.html#cstdsExistingCode"/>
-    <topic label="Extern" href="ccoding_stds_main.html#cstdsExtern"/>
-    <topic label="Fan Out" href="ccoding_stds_main.html#cstdsFanOut"/>
-    <topic label="Function Parameters" href="ccoding_stds_main.html#cstdsFunctionParameter"/>
-    <topic label="Global Variables" href="ccoding_stds_main.html#cstdsGlobalVariables"/>
-    <topic label="Gotos" href="ccoding_stds_main.html#cstdsGotos"/>
-    <topic label="Heap" href="ccoding_stds_main.html#cstdsHeap"/>
-    <topic label="Interface Documentation" href="ccoding_stds_main.html#cstdsInterfaceDocumentation"/>
-    <topic label="Line Length" href="ccoding_stds_main.html#cstdsLineLength"/>
-    <topic label="Multiple Inclusion Guards" href="ccoding_stds_main.html#cstdsMultipleInclusionGuards"/>
-    <topic label="Multithreading" href="ccoding_stds_main.html#cstdsMultithreading"/>
-    <topic label="Recursion" href="ccoding_stds_main.html#cstdsRecursion"/>
-    <topic label="Separating Interface from Implementation" href="ccoding_stds_main.html#cstdsSeparateInterfacefromImplementation"/>
-    <topic label="Tabs" href="ccoding_stds_main.html#cstdsTabs"/>
-    <topic label="Naming Standards" href="ccoding_stds_naming.html">
-      <topic label="Naming Overview" href="ccoding_stds_naming.html#cstdsNaming">
-        <topic label="Be Descriptive" href="ccoding_stds_naming.html#descript"/>
-        <topic label="Prefixes" href="ccoding_stds_naming.html#prefix"/>
-        <topic label="Component Interfaces" href="ccoding_stds_naming.html#cstdsInterComponentInterfaces"/>
-        <topic label="Module Interfaces" href="ccoding_stds_naming.html#cstdsInterModuleInterfaces"/>
+    <topic label="Related Info" href="related_info.html">
+      <topic label="C Language Coding Standards" href="ccoding_stds_main.html">
+        <topic label="Commenting" href="ccoding_stds_main.html#cstdsparamCommenting"/>
+        <topic label="Const Pointers" href="ccoding_stds_main.html#cstdsConstPointers"/>
+        <topic label="Cyclomatic Complexity" href="ccoding_stds_main.html#cstdsCyclomatic"/>
+        <topic label="Existing Code" href="ccoding_stds_main.html#cstdsExistingCode"/>
+        <topic label="Extern" href="ccoding_stds_main.html#cstdsExtern"/>
+        <topic label="Fan Out" href="ccoding_stds_main.html#cstdsFanOut"/>
+        <topic label="Function Parameters" href="ccoding_stds_main.html#cstdsFunctionParameter"/>
+        <topic label="Global Variables" href="ccoding_stds_main.html#cstdsGlobalVariables"/>
+        <topic label="Gotos" href="ccoding_stds_main.html#cstdsGotos"/>
+        <topic label="Heap" href="ccoding_stds_main.html#cstdsHeap"/>
+        <topic label="Interface Documentation" href="ccoding_stds_main.html#cstdsInterfaceDocumentation"/>
+        <topic label="Line Length" href="ccoding_stds_main.html#cstdsLineLength"/>
+        <topic label="Multiple Inclusion Guards" href="ccoding_stds_main.html#cstdsMultipleInclusionGuards"/>
+        <topic label="Multithreading" href="ccoding_stds_main.html#cstdsMultithreading"/>
+        <topic label="Recursion" href="ccoding_stds_main.html#cstdsRecursion"/>
+        <topic label="Separating Interface from Implementation" href="ccoding_stds_main.html#cstdsSeparateInterfacefromImplementation"/>
+        <topic label="Tabs" href="ccoding_stds_main.html#cstdsTabs"/>
+        <topic label="Naming Standards" href="ccoding_stds_naming.html">
+          <topic label="Naming Overview" href="ccoding_stds_naming.html#cstdsNaming">
+            <topic label="Be Descriptive" href="ccoding_stds_naming.html#descript"/>
+            <topic label="Prefixes" href="ccoding_stds_naming.html#prefix"/>
+            <topic label="Component Interfaces" href="ccoding_stds_naming.html#cstdsInterComponentInterfaces"/>
+            <topic label="Module Interfaces" href="ccoding_stds_naming.html#cstdsInterModuleInterfaces"/>
+          </topic>
+          <topic label="Files" href="ccoding_stds_naming.html#cstdsFiles"/>
+          <topic label="Macros" href="ccoding_stds_naming.html#cstdsMacros"/>
+          <topic label="Types" href="ccoding_stds_name_types.html">
+            <topic label="Suffix" href="ccoding_stds_name_types.html#cstdsNameSuffix"/>
+            <topic label="Prefix" href="ccoding_stds_name_types.html#cstdsNameTypesPrefix"/>
+            <topic label="Name" href="ccoding_stds_name_types.html#cstdsNameType"/>
+            <topic label="Cardinal Types" href="ccoding_stds_name_types.html#cstdsCardinalTypes"/>
+            <topic label="Enumeration Members" href="ccoding_stds_name_types.html#cstdsEnumerationMembers"/>
+            <topic label="Struct and Union Namespaces" href="ccoding_stds_name_types.html#cstdsStructandUnionNamespaces"/>
+            <topic label="Struct and Union Members" href="ccoding_stds_name_types.html#cstdsStructandUnionMembers"/>
+          </topic>
+          <topic label="Functions" href="ccoding_stds_name_funcs.html">
+            <topic label="Prefix" href="ccoding_stds_name_funcs.html#cstdsFuncsPrefix"/>
+            <topic label="Camel Case" href="ccoding_stds_name_funcs.html#cstdsCamelCaseName"/>
+            <topic label="Verbage" href="ccoding_stds_name_funcs.html#cstdsVerbage"/>
+          </topic>
+          <topic label="Variables &amp; Function Parameters" href="ccoding_stds_param.html">
+            <topic label="Camel Case" href="ccoding_stds_param.html#cstdsparamCamelCase"/>
+            <topic label="Prefix" href="ccoding_stds_param.html#cstdsparamPrefix"/>
+            <topic label="Pointers" href="ccoding_stds_param.html#cstdsparamPointers"/>
+            <topic label="Static Variables" href="ccoding_stds_param.html#cstdsparamStaticVariables"/>
+            <topic label="Abbreviations" href="ccoding_stds_param.html#cstdsparamAbbreviations"/>
+          </topic>
+        </topic>
+        <topic label="Abbreviations" href="ccoding_stds_abbr.html"/>
       </topic>
-      <topic label="Files" href="ccoding_stds_naming.html#cstdsFiles"/>
-      <topic label="Macros" href="ccoding_stds_naming.html#cstdsMacros"/>
-      <topic label="Types" href="ccoding_stds_name_types.html">
-        <topic label="Suffix" href="ccoding_stds_name_types.html#cstdsNameSuffix"/>
-        <topic label="Prefix" href="ccoding_stds_name_types.html#cstdsNameTypesPrefix"/>
-        <topic label="Name" href="ccoding_stds_name_types.html#cstdsNameType"/>
-        <topic label="Cardinal Types" href="ccoding_stds_name_types.html#cstdsCardinalTypes"/>
-        <topic label="Enumeration Members" href="ccoding_stds_name_types.html#cstdsEnumerationMembers"/>
-        <topic label="Struct and Union Namespaces" href="ccoding_stds_name_types.html#cstdsStructandUnionNamespaces"/>
-        <topic label="Struct and Union Members" href="ccoding_stds_name_types.html#cstdsStructandUnionMembers"/>
+      <topic label="Configuration Tree API" href="api_config.html">
+        <topic label="A Transactional Approach" href="api_config.html#cfg_transaction"/>
+        <topic label="Iterating the Tree" href="api_config.html#cfg_iteration"/>
+        <topic label="Writing Configuration Data, using a write transaction." href="api_config.html#cfg_transactWrite"/>
+        <topic label="Reading configuration data with a read transaction." href="api_config.html#cfg_transactRead"/>
+        <topic label="Working without Transactions" href="api_config.html#cfg_quick"/>
       </topic>
-      <topic label="Functions" href="ccoding_stds_name_funcs.html">
-        <topic label="Prefix" href="ccoding_stds_name_funcs.html#cstdsFuncsPrefix"/>
-        <topic label="Camel Case" href="ccoding_stds_name_funcs.html#cstdsCamelCaseName"/>
-        <topic label="Verbage" href="ccoding_stds_name_funcs.html#cstdsVerbage"/>
-      </topic>
-      <topic label="Variables &amp; Function Parameters" href="ccoding_stds_param.html">
-        <topic label="Camel Case" href="ccoding_stds_param.html#cstdsparamCamelCase"/>
-        <topic label="Prefix" href="ccoding_stds_param.html#cstdsparamPrefix"/>
-        <topic label="Pointers" href="ccoding_stds_param.html#cstdsparamPointers"/>
-        <topic label="Static Variables" href="ccoding_stds_param.html#cstdsparamStaticVariables"/>
-        <topic label="Abbreviations" href="ccoding_stds_param.html#cstdsparamAbbreviations"/>
-      </topic>
-    </topic>
-    <topic label="Abbreviations" href="ccoding_stds_abbr.html"/>
-  </topic>
-  <topic label="Sample codes" href="c_sample_codes.html">
-    <topic label="Sample codes for Modem Services" href="c_sample_codes_modem.html">
-      <topic label="Sample codes for SMS API" href="c_sample_codes_modem_sms.html">
-        <topic label="Sample code for Mobile Originated SMS message" href="c_sms_sample_m_o.html"/>
-        <topic label="Sample code for Mobile Terminated SMS message" href="c_sms_sample_m_t.html"/>
-      </topic>
-    </topic>
-  </topic>
-  <topic label="Configuration Tree API" href="api_config.html">
-    <topic label="A Transactional Approach" href="api_config.html#cfg_transaction"/>
-    <topic label="Iterating the Tree" href="api_config.html#cfg_iteration"/>
-    <topic label="Writing Configuration Data, using a write transaction." href="api_config.html#cfg_transactWrite"/>
-    <topic label="Reading configuration data with a read transaction." href="api_config.html#cfg_transactRead"/>
-    <topic label="Working without Transactions" href="api_config.html#cfg_quick"/>
-  </topic>
-  <topic label="Modem Services" href="c_mdm_apis.html">
-    <topic label="List of High-Level Modem APIs" href="c_mdm_apis.html#c_mdm_apiList"/>
-    <topic label="SMS Services" href="c_sms.html">
-      <topic label="Creating a Message object" href="c_sms.html#le_sms_msg_ops_creating_msg"/>
-      <topic label="Deleting a Message object" href="c_sms.html#le_sms_msg_ops_deleting_msg"/>
-      <topic label="Sending a message" href="c_sms.html#le_sms_msg_ops_sending"/>
-      <topic label="Receiving a message" href="c_sms.html#le_sms_msg_ops_receiving"/>
-      <topic label="Listing  messages recorded in storage area" href="c_sms.html#le_sms_msg_ops_listing"/>
-      <topic label="Deleting a message from the storage area" href="c_sms.html#le_sms_msg_ops_deleting"/>
-      <topic label="Sample codes" href="c_sms.html#le_sms_msg_ops_samples"/>
-    </topic>
-    <topic label="SIM Services" href="c_sim.html">
-      <topic label="Counting the SIM card slots" href="c_sim.html#le_sim_count"/>
-      <topic label="Creating a SIM object" href="c_sim.html#le_sim_create"/>
-      <topic label="Deleting a SIM object" href="c_sim.html#le_sim_delete"/>
-      <topic label="SIM identification information" href="c_sim.html#le_sim_id"/>
-      <topic label="SIM Authentication" href="c_sim.html#le_sim_auth"/>
-      <topic label="SIM states" href="c_sim.html#le_sim_state"/>
-    </topic>
-    <topic label="Modem Data Control API" href="c_mdc.html">
-      <topic label="Data Profiles" href="c_mdc.html#le_mdc_profile"/>
-      <topic label="Data Sessions" href="c_mdc.html#le_mdc_session"/>
-      <topic label="Data Statistics" href="c_mdc.html#le_mdc_dataStatistics"/>
-      <topic label="Data configuration tree" href="c_mdc.html#le_mdc_configdb"/>
-    </topic>
-    <topic label="Modem Radio Control API" href="c_mrc.html">
-      <topic label="Radio Power Management" href="c_mrc.html#le_mrc_power"/>
-      <topic label="Radio Access Technology" href="c_mrc.html#le_mrc_rat"/>
-      <topic label="Network Registration" href="c_mrc.html#le_mrc_registration"/>
-      <topic label="Signal Quality" href="c_mrc.html#le_mrc_signal"/>
-      <topic label="Home Network Information" href="c_mrc.html#le_mrc_network_information"/>
-      <topic label="Network Scan" href="c_mrc.html#le_mrc_networkScan"/>
-      <topic label="Neighboring Cells Information" href="c_mrc.html#le_mrc_ngbr"/>
-      <topic label="Radio configuration tree" href="c_mrc.html#le_mrc_configdb"/>
-    </topic>
-    <topic label="Modem Call Control API" href="c_mcc.html">
-      <topic label="Modem Call Control Profile API" href="c_mcc_profile.html">
-        <topic label="Using Profiles" href="c_mcc_profile.html#le_mcc_profiles"/>
-      </topic>
-      <topic label="Modem Call Control API" href="c_mcc_call.html">
-        <topic label="Starting a Call" href="c_mcc_call.html#le_mcc_call_starting_a_call"/>
-        <topic label="Answering a call" href="c_mcc_call.html#le_mcc_call_answering_a_call"/>
-      </topic>
-    </topic>
-    <topic label="Modem Information API" href="c_info.html"/>
-    <topic label="AirVantage Modem Remote Management Services" href="c_remote_mgmt.html">
-      <topic label="Wake-Up signaling" href="c_remote_mgmt.html#le_remoteMgmt_wakeupindic"/>
-      <topic label="Do Not Disturb Signs" href="c_remote_mgmt.html#le_remoteMgmt_dontdisturb"/>
-    </topic>
-    <topic label="eCall API" href="c_ecall.html">
-      <topic label="Table of Contents" href="c_ecall.html#le_ecall_toc"/>
-      <topic label="Introduction" href="c_ecall.html#le_ecall_intro"/>
-      <topic label="eCall Session" href="c_ecall.html#le_ecall_session"/>
-      <topic label="Minimum Set of Data (MSD)" href="c_ecall.html#le_ecall_msd"/>
-      <topic label="Concurrency" href="c_ecall.html#le_ecall_concurrency"/>
-      <topic label="Code sample" href="c_ecall.html#le_ecall_samples"/>
-      <topic label="Configuration tree" href="c_ecall.html#le_ecall_configdb"/>
     </topic>
   </topic>
-  <topic label="Platform Adapter Modem APIs" href="c_pa.html">
-    <topic label="List of Platform Adapter Modem APIs" href="c_pa.html#c_pa_apiList"/>
-    <topic label="Modem SMS Platform Adapter API" href="c_pa_sms.html">
-      <topic label="Table of Contents" href="c_pa_sms.html#pa_sms_toc"/>
-      <topic label="Introduction" href="c_pa_sms.html#pa_sms_intro"/>
-      <topic label="Rational" href="c_pa_sms.html#pa_sms_rational"/>
-    </topic>
-    <topic label="Modem SIM Platform Adapter API" href="c_pa_sim.html">
-      <topic label="Table of Contents" href="c_pa_sim.html#pa_sim_toc"/>
-      <topic label="Introduction" href="c_pa_sim.html#pa_sim_intro"/>
-      <topic label="Rational" href="c_pa_sim.html#pa_sim_rational"/>
-    </topic>
-    <topic label="Modem Data Control Platform Adapter API" href="c_pa_mdc.html">
-      <topic label="Table of Contents" href="c_pa_mdc.html#pa_mdc_toc"/>
-      <topic label="Introduction" href="c_pa_mdc.html#pa_mdc_intro"/>
-      <topic label="Rational" href="c_pa_mdc.html#pa_mdc_rational"/>
-    </topic>
-    <topic label="Modem Radio Control Platform Adapter API" href="c_pa_mrc.html"/>
-    <topic label="Modem Call Control Platform Adapter API" href="c_pa_mcc.html">
-      <topic label="Table of Contents" href="c_pa_mcc.html#pa_mcc_toc"/>
-      <topic label="Introduction" href="c_pa_mcc.html#pa_mcc_intro"/>
-      <topic label="Rational" href="c_pa_mcc.html#pa_mcc_rational"/>
-    </topic>
-    <topic label="Modem Information Platform Adapter API" href="c_pa_info.html">
-      <topic label="Table of Contents" href="c_pa_info.html#pa_info_toc"/>
-      <topic label="Introduction" href="c_pa_info.html#pa_info_intro"/>
-      <topic label="Rational" href="c_pa_info.html#pa_info_rational"/>
-    </topic>
-    <topic label="Modem eCall Platform Adapter API" href="c_pa_ecall.html">
-      <topic label="Table of Contents" href="c_pa_ecall.html#pa_info_toc"/>
-      <topic label="Introduction" href="c_pa_ecall.html#pa_ecall_intro"/>
-      <topic label="Rational" href="c_pa_ecall.html#pa_ecall_rational"/>
-    </topic>
-  </topic>
-  <topic label="Platform Adapter Global Navigation Satellite System API" href="c_pa_gnss.html"/>
   <topic label="Data Structures">
     <topic label="Data Structures" href="annotated.html">
       <topic label="le_clk_Time_t" href="structle__clk___time__t.html">
@@ -792,7 +743,9 @@
         <topic label="headLinkPtr" href="structle__dls___list__t.html#a830f3082336d0b79e10e6206e2428dda"/>
       </topic>
       <topic label="le_mem_PoolStats_t" href="structle__mem___pool_stats__t.html">
+        <topic label="maxNumBlocksUsed" href="structle__mem___pool_stats__t.html#ae0ecac2638936865038492db1e7d3d20"/>
         <topic label="numAllocs" href="structle__mem___pool_stats__t.html#abcfdbe19fa0d2deb6bc57858fc0c4512"/>
+        <topic label="numBlocksInUse" href="structle__mem___pool_stats__t.html#a313be0351549e89c5137819f67b72e3b"/>
         <topic label="numFree" href="structle__mem___pool_stats__t.html#adbc69b9f0b2b6719fdb9f40e29688381"/>
         <topic label="numOverflows" href="structle__mem___pool_stats__t.html#ae60202bce92af5ecb9b0f4a2312be7ec"/>
       </topic>
@@ -852,7 +805,7 @@
       <topic label="pa_mcc_CallEventData_t" href="structpa__mcc___call_event_data__t.html">
         <topic label="callId" href="structpa__mcc___call_event_data__t.html#a88613e6f82b16ff79d1aa7f2682e064b"/>
         <topic label="event" href="structpa__mcc___call_event_data__t.html#a8119ef661c99bf561b67e389145bd592"/>
-        <topic label="phoneNumber" href="structpa__mcc___call_event_data__t.html#a79fe7d779e67eff04f2ef988a3aa0e29"/>
+        <topic label="phoneNumber" href="structpa__mcc___call_event_data__t.html#af7426e2047c92f92dd2f16f221203463"/>
         <topic label="TerminationEvent" href="structpa__mcc___call_event_data__t.html#aec2204b6c6ee7d35178c16d184eaad9d"/>
       </topic>
       <topic label="pa_mdc_Authentication_t" href="structpa__mdc___authentication__t.html">
@@ -867,6 +820,7 @@
       <topic label="pa_mdc_ProfileData_t" href="structpa__mdc___profile_data__t.html">
         <topic label="apn" href="structpa__mdc___profile_data__t.html#a6953e5f8f5d52ea3834a5053164c0810"/>
         <topic label="authentication" href="structpa__mdc___profile_data__t.html#adc69a3abd177f26adf45468d401c6787"/>
+        <topic label="name" href="structpa__mdc___profile_data__t.html#aa4a29e8d8c01fcf1e8a8574fe6e03494"/>
         <topic label="pdp" href="structpa__mdc___profile_data__t.html#afcee1339d7466a3e9cd55a112b4f5bae"/>
       </topic>
       <topic label="pa_mdc_SessionStateData_t" href="structpa__mdc___session_state_data__t.html">
@@ -908,21 +862,21 @@
       <topic label="pa_sms_Pdu_t" href="structpa__sms___pdu__t.html">
         <topic label="data" href="structpa__sms___pdu__t.html#afe40b5f9d9c374323c1d78c34821142a"/>
         <topic label="dataLen" href="structpa__sms___pdu__t.html#a540bfee9b53c597323088a0b9d39de3a"/>
-        <topic label="status" href="structpa__sms___pdu__t.html#ad7c7be8f3647fc1810dcac7399451f50"/>
+        <topic label="status" href="structpa__sms___pdu__t.html#ac972d79efde081b3d0a2b3218898b765"/>
       </topic>
       <topic label="pa_sms_SmsDeliver_t" href="structpa__sms___sms_deliver__t.html">
         <topic label="data" href="structpa__sms___sms_deliver__t.html#a79797a41ee43676e1211cb2ab9010102"/>
         <topic label="dataLen" href="structpa__sms___sms_deliver__t.html#aa04af47dca4e645a8ef31dfe2f0a7d17"/>
-        <topic label="format" href="structpa__sms___sms_deliver__t.html#a8271bc639ba204b14a385e635ca75609"/>
-        <topic label="oa" href="structpa__sms___sms_deliver__t.html#a354132653c1c3d554bbd1d4499fdf34a"/>
+        <topic label="format" href="structpa__sms___sms_deliver__t.html#a86cdc2ed066543089f73825a511d3b06"/>
+        <topic label="oa" href="structpa__sms___sms_deliver__t.html#ad4cdb0cbb96d56a05fe6a034c3056c12"/>
         <topic label="scts" href="structpa__sms___sms_deliver__t.html#a31b04e78ee28e5d01240e17a3e3fcd82"/>
-        <topic label="status" href="structpa__sms___sms_deliver__t.html#a847c314446a96a81405aae9967028049"/>
+        <topic label="status" href="structpa__sms___sms_deliver__t.html#a1a6aaecb73364ea1fc01b07529ef3225"/>
       </topic>
       <topic label="pa_sms_SmsSubmit_t" href="structpa__sms___sms_submit__t.html">
-        <topic label="da" href="structpa__sms___sms_submit__t.html#af1fe215d38fae1f309a4d0a19a7587fa"/>
+        <topic label="da" href="structpa__sms___sms_submit__t.html#a8f6016c36dbcf99d14a72037cc3da20b"/>
         <topic label="data" href="structpa__sms___sms_submit__t.html#a67c17299897f72830484b8256add24de"/>
         <topic label="dataLen" href="structpa__sms___sms_submit__t.html#a6b85d3ecd777af094c3dc7b088fd6b8e"/>
-        <topic label="status" href="structpa__sms___sms_submit__t.html#a633feef7a868b1b64c11d289f432a417"/>
+        <topic label="status" href="structpa__sms___sms_submit__t.html#aa642c8f0f829e50df4112cec04ce7a9b"/>
       </topic>
     </topic>
     <topic label="Data Structure Index" href="classes.html"/>
@@ -967,7 +921,7 @@
                   <topic label="pa_mcc_CallEventData_t" href="structpa__mcc___call_event_data__t.html">
                     <topic label="callId" href="structpa__mcc___call_event_data__t.html#a88613e6f82b16ff79d1aa7f2682e064b"/>
                     <topic label="event" href="structpa__mcc___call_event_data__t.html#a8119ef661c99bf561b67e389145bd592"/>
-                    <topic label="phoneNumber" href="structpa__mcc___call_event_data__t.html#a79fe7d779e67eff04f2ef988a3aa0e29"/>
+                    <topic label="phoneNumber" href="structpa__mcc___call_event_data__t.html#af7426e2047c92f92dd2f16f221203463"/>
                     <topic label="TerminationEvent" href="structpa__mcc___call_event_data__t.html#aec2204b6c6ee7d35178c16d184eaad9d"/>
                   </topic>
                   <topic label="pa_mcc_CallEventHandlerFunc_t" href="pa__mcc_8h.html#a89add32228e1d90f316ac89d5ceddfac"/>
@@ -994,6 +948,7 @@
                   <topic label="pa_mdc_ProfileData_t" href="structpa__mdc___profile_data__t.html">
                     <topic label="apn" href="structpa__mdc___profile_data__t.html#a6953e5f8f5d52ea3834a5053164c0810"/>
                     <topic label="authentication" href="structpa__mdc___profile_data__t.html#adc69a3abd177f26adf45468d401c6787"/>
+                    <topic label="name" href="structpa__mdc___profile_data__t.html#aa4a29e8d8c01fcf1e8a8574fe6e03494"/>
                     <topic label="pdp" href="structpa__mdc___profile_data__t.html#afcee1339d7466a3e9cd55a112b4f5bae"/>
                   </topic>
                   <topic label="pa_mdc_SessionStateData_t" href="structpa__mdc___session_state_data__t.html">
@@ -1007,6 +962,8 @@
                   <topic label="PA_MDC_APN_MAX_BYTES" href="pa__mdc_8h.html#a1d502fe139e71614c1da3ce86b77845b"/>
                   <topic label="PA_MDC_APN_MAX_LEN" href="pa__mdc_8h.html#acd55db6349f5835c76681394bd12b6cb"/>
                   <topic label="PA_MDC_MAX_PROFILE" href="pa__mdc_8h.html#aba413d25bc77f318c8727ddd3c8311ea"/>
+                  <topic label="PA_MDC_PROFILE_NAME_MAX_BYTES" href="pa__mdc_8h.html#adddb136e73a2684d98e1914812a9df6c"/>
+                  <topic label="PA_MDC_PROFILE_NAME_MAX_LEN" href="pa__mdc_8h.html#a46f48350aa6d5386930a156a11a02d8e"/>
                   <topic label="PA_MDC_PWD_MAX_BYTES" href="pa__mdc_8h.html#a9bfae458896997fad7a5d4661c398ac7"/>
                   <topic label="PA_MDC_PWD_MAX_LEN" href="pa__mdc_8h.html#af7904e71e6cbe017c20005f883ccc7ce"/>
                   <topic label="PA_MDC_USERNAME_MAX_BYTES" href="pa__mdc_8h.html#ab3ce12ea70b612b2496626323a848009"/>
@@ -1030,14 +987,15 @@
                   <topic label="pa_mdc_SessionType_t" href="pa__mdc_8h.html#ab48edc772294429cd271b1ac687b9784">
                     <topic label="PA_MDC_SESSION_IPV4" href="pa__mdc_8h.html#ab48edc772294429cd271b1ac687b9784a9da9f63a5af4842c84aedf0665e60457"/>
                     <topic label="PA_MDC_SESSION_IPV6" href="pa__mdc_8h.html#ab48edc772294429cd271b1ac687b9784a5731e80ed8b73afc23f16edcabbe6540"/>
+                    <topic label="PA_MDC_SESSION_IPV4V6" href="pa__mdc_8h.html#ab48edc772294429cd271b1ac687b9784a6b91fb317db00cbcc2c08b1a8c05c3f0"/>
                   </topic>
                   <topic label="pa_mdc_GetAccessPointName" href="pa__mdc_8h.html#ac95c89c80142955ac41d19fe51973322"/>
                   <topic label="pa_mdc_GetDataBearerTechnology" href="pa__mdc_8h.html#a0552788381d8ec47d01384c8ed992ddc"/>
                   <topic label="pa_mdc_GetDataFlowStatistics" href="pa__mdc_8h.html#a23dab96f2ff38300bea7420d9bc2de0f"/>
-                  <topic label="pa_mdc_GetDNSAddresses" href="pa__mdc_8h.html#a7fc6193788700251c5ad686562aeeab2"/>
-                  <topic label="pa_mdc_GetGatewayAddress" href="pa__mdc_8h.html#a9cbf5ca521ffff57ad35e876b8e08021"/>
+                  <topic label="pa_mdc_GetDNSAddresses" href="pa__mdc_8h.html#a1db2be28012731a6c35c5a6013687aa2"/>
+                  <topic label="pa_mdc_GetGatewayAddress" href="pa__mdc_8h.html#ac2371a432e8e8e437133f93d88995fd8"/>
                   <topic label="pa_mdc_GetInterfaceName" href="pa__mdc_8h.html#a153b2028394dcf3f565e323369242ea9"/>
-                  <topic label="pa_mdc_GetIPAddress" href="pa__mdc_8h.html#ae257b9058b67a1f9f06bb59b05686c5f"/>
+                  <topic label="pa_mdc_GetIPAddress" href="pa__mdc_8h.html#aaa774fd4880108555f67fd1994750ff6"/>
                   <topic label="pa_mdc_GetSessionState" href="pa__mdc_8h.html#a111a332a64bc54c5cecac81d2b578120"/>
                   <topic label="pa_mdc_GetSessionType" href="pa__mdc_8h.html#a3e46d08d8fd86a80e287a9b5547ac1e6"/>
                   <topic label="pa_mdc_ReadProfile" href="pa__mdc_8h.html#a3b1cfa6c551d97348d99d0c72f1e6f77"/>
@@ -1163,21 +1121,21 @@
                   <topic label="pa_sms_SmsDeliver_t" href="structpa__sms___sms_deliver__t.html">
                     <topic label="data" href="structpa__sms___sms_deliver__t.html#a79797a41ee43676e1211cb2ab9010102"/>
                     <topic label="dataLen" href="structpa__sms___sms_deliver__t.html#aa04af47dca4e645a8ef31dfe2f0a7d17"/>
-                    <topic label="format" href="structpa__sms___sms_deliver__t.html#a8271bc639ba204b14a385e635ca75609"/>
-                    <topic label="oa" href="structpa__sms___sms_deliver__t.html#a354132653c1c3d554bbd1d4499fdf34a"/>
+                    <topic label="format" href="structpa__sms___sms_deliver__t.html#a86cdc2ed066543089f73825a511d3b06"/>
+                    <topic label="oa" href="structpa__sms___sms_deliver__t.html#ad4cdb0cbb96d56a05fe6a034c3056c12"/>
                     <topic label="scts" href="structpa__sms___sms_deliver__t.html#a31b04e78ee28e5d01240e17a3e3fcd82"/>
-                    <topic label="status" href="structpa__sms___sms_deliver__t.html#a847c314446a96a81405aae9967028049"/>
+                    <topic label="status" href="structpa__sms___sms_deliver__t.html#a1a6aaecb73364ea1fc01b07529ef3225"/>
                   </topic>
                   <topic label="pa_sms_SmsSubmit_t" href="structpa__sms___sms_submit__t.html">
-                    <topic label="da" href="structpa__sms___sms_submit__t.html#af1fe215d38fae1f309a4d0a19a7587fa"/>
+                    <topic label="da" href="structpa__sms___sms_submit__t.html#a8f6016c36dbcf99d14a72037cc3da20b"/>
                     <topic label="data" href="structpa__sms___sms_submit__t.html#a67c17299897f72830484b8256add24de"/>
                     <topic label="dataLen" href="structpa__sms___sms_submit__t.html#a6b85d3ecd777af094c3dc7b088fd6b8e"/>
-                    <topic label="status" href="structpa__sms___sms_submit__t.html#a633feef7a868b1b64c11d289f432a417"/>
+                    <topic label="status" href="structpa__sms___sms_submit__t.html#aa642c8f0f829e50df4112cec04ce7a9b"/>
                   </topic>
                   <topic label="pa_sms_Pdu_t" href="structpa__sms___pdu__t.html">
                     <topic label="data" href="structpa__sms___pdu__t.html#afe40b5f9d9c374323c1d78c34821142a"/>
                     <topic label="dataLen" href="structpa__sms___pdu__t.html#a540bfee9b53c597323088a0b9d39de3a"/>
-                    <topic label="status" href="structpa__sms___pdu__t.html#ad7c7be8f3647fc1810dcac7399451f50"/>
+                    <topic label="status" href="structpa__sms___pdu__t.html#ac972d79efde081b3d0a2b3218898b765"/>
                   </topic>
                   <topic label="pa_sms_Message_t" href="structpa__sms___message__t.html">
                     <topic label="pdu" href="structpa__sms___message__t.html#a8e7f4d7548bf7b7654e829d250b2c27f"/>
@@ -1192,11 +1150,11 @@
                     <topic label="PA_SMS_SMS_STATUS_REPORT" href="pa__sms_8h.html#a0914a185712b38afe2909d72498adb57a11bab5d85d0802891abdfd0c4517fa7b"/>
                     <topic label="PA_SMS_PDU" href="pa__sms_8h.html#a0914a185712b38afe2909d72498adb57a18c860013325facb64537096de7c9e96"/>
                   </topic>
-                  <topic label="pa_sms_ChangeMessageStatus" href="pa__sms_8h.html#a17ceaca30372ca95c7de03346fd9366b"/>
+                  <topic label="pa_sms_ChangeMessageStatus" href="pa__sms_8h.html#ae08f099b2d5afa9b1635b41371e4e4ff"/>
                   <topic label="pa_sms_ClearNewMsgHandler" href="pa__sms_8h.html#a6bfc9d9adacb3b6e3d09930bd6b4f229"/>
                   <topic label="pa_sms_DelAllMsg" href="pa__sms_8h.html#a33af3336a1f2081d0c4835a647226c1d"/>
                   <topic label="pa_sms_DelMsgFromMem" href="pa__sms_8h.html#ad4ef8bc554ace8bb25d0bfb157591e2d"/>
-                  <topic label="pa_sms_ListMsgFromMem" href="pa__sms_8h.html#a088390c777247273183acb8a9fdd9955"/>
+                  <topic label="pa_sms_ListMsgFromMem" href="pa__sms_8h.html#ae7235e23dab88c896c8c2274740be9b3"/>
                   <topic label="pa_sms_RdPDUMsgFromMem" href="pa__sms_8h.html#a2ad8e4fcaa8219f48a546edcbed3ae12"/>
                   <topic label="pa_sms_SendPduMsg" href="pa__sms_8h.html#a1f80ab1d97387f7f00d4c78a2a7df123"/>
                   <topic label="pa_sms_SetNewMsgHandler" href="pa__sms_8h.html#a2a86e77cb1d0029c86e3e645aa7dbc32"/>
@@ -1378,6 +1336,7 @@
             </topic>
             <topic label="le_eventLoop.h" href="le__event_loop_8h.html">
               <topic label="COMPONENT_INIT" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec"/>
+              <topic label="LE_CI_LINKAGE" href="le__event_loop_8h.html#a3973e227dd6ff4e79b2f97c42b105662"/>
               <topic label="LE_EVENT_INIT_HANDLER" href="le__event_loop_8h.html#a47faa85db57fa5243f12a4a1e55fbfec"/>
               <topic label="LE_EVENT_NUM_FD_EVENT_TYPES" href="le__event_loop_8h.html#a132c64abe6d2d236b2e5397a3b37c6a9"/>
               <topic label="le_event_DeferredFunc_t" href="le__event_loop_8h.html#ae838df51ccf62658e2f9ef544869fc95"/>
@@ -1513,7 +1472,9 @@
             </topic>
             <topic label="le_mem.h" href="le__mem_8h.html">
               <topic label="le_mem_PoolStats_t" href="structle__mem___pool_stats__t.html">
+                <topic label="maxNumBlocksUsed" href="structle__mem___pool_stats__t.html#ae0ecac2638936865038492db1e7d3d20"/>
                 <topic label="numAllocs" href="structle__mem___pool_stats__t.html#abcfdbe19fa0d2deb6bc57858fc0c4512"/>
+                <topic label="numBlocksInUse" href="structle__mem___pool_stats__t.html#a313be0351549e89c5137819f67b72e3b"/>
                 <topic label="numFree" href="structle__mem___pool_stats__t.html#adbc69b9f0b2b6719fdb9f40e29688381"/>
                 <topic label="numOverflows" href="structle__mem___pool_stats__t.html#ae60202bce92af5ecb9b0f4a2312be7ec"/>
               </topic>
@@ -1527,9 +1488,12 @@
               <topic label="le_mem_ExpandPool" href="le__mem_8h.html#a79a4321ffa0345f267eaf3b7d3d3528a"/>
               <topic label="le_mem_FindPool" href="le__mem_8h.html#a2a3a1245814aca76d56aa978505a0268"/>
               <topic label="le_mem_ForceAlloc" href="le__mem_8h.html#af7c289c73d4182835a26a9099f3db359"/>
+              <topic label="le_mem_GetName" href="le__mem_8h.html#a721219712fb3d62988cc151a1908cb4b"/>
+              <topic label="le_mem_GetObjectFullSize" href="le__mem_8h.html#ac802750b9aab7bb596004f30ce58adf0"/>
               <topic label="le_mem_GetObjectSize" href="le__mem_8h.html#a0f6fbc0c886486a1e19fc43143991c66"/>
               <topic label="le_mem_GetStats" href="le__mem_8h.html#ab7b41431c57c8c7b5c4ff1501fd5b772"/>
               <topic label="le_mem_GetTotalNumObjs" href="le__mem_8h.html#a4f7a6ac940b2f468a6012283d95a0f6d"/>
+              <topic label="le_mem_IsSubPool" href="le__mem_8h.html#a55840232147421c951714013abbab4ec"/>
               <topic label="le_mem_Release" href="le__mem_8h.html#a6d8e3fe430bcb81efe97b57ce30ef2de"/>
               <topic label="le_mem_ResetStats" href="le__mem_8h.html#a35b7e757356764c39f0a7ede2aa242ae"/>
               <topic label="le_mem_SetDestructor" href="le__mem_8h.html#a055007b38ce04bcb823e08034fd11b85"/>
@@ -1833,6 +1797,8 @@
               <topic label="le_audio_GetFormat" href="le__audio_8h.html#adcb75fe810f57c09c3c77d97949cc6d5"/>
               <topic label="le_audio_GetGain" href="le__audio_8h.html#a51a86829cdd6f27234f482e5dbb6c933"/>
               <topic label="le_audio_Mute" href="le__audio_8h.html#a147e97c49dbc003f63df78f97d5fca32"/>
+              <topic label="le_audio_OpenFilePlayback" href="le__audio_8h.html#a34f3ed7c0885b2a1a29bdbfaf2099187"/>
+              <topic label="le_audio_OpenFileRecording" href="le__audio_8h.html#a7d9b01ce8f55dcb47ae9e84a34c7cd12"/>
               <topic label="le_audio_OpenI2sRx" href="le__audio_8h.html#a9e7d0042c4f422554eb10d64535608e5"/>
               <topic label="le_audio_OpenI2sTx" href="le__audio_8h.html#a2633c1368adf60e342d7cadbbfa6278b"/>
               <topic label="le_audio_OpenMic" href="le__audio_8h.html#a74f1ef979329f6c2bd56ea622f4d05b2"/>
@@ -1864,6 +1830,8 @@
               <topic label="le_audio_GetFormat" href="le__audio__interface_8h.html#a7e50add53e328c1dc6b680188990ebbb"/>
               <topic label="le_audio_GetGain" href="le__audio__interface_8h.html#a51a86829cdd6f27234f482e5dbb6c933"/>
               <topic label="le_audio_Mute" href="le__audio__interface_8h.html#a147e97c49dbc003f63df78f97d5fca32"/>
+              <topic label="le_audio_OpenFilePlayback" href="le__audio__interface_8h.html#a34f3ed7c0885b2a1a29bdbfaf2099187"/>
+              <topic label="le_audio_OpenFileRecording" href="le__audio__interface_8h.html#a7d9b01ce8f55dcb47ae9e84a34c7cd12"/>
               <topic label="le_audio_OpenI2sRx" href="le__audio__interface_8h.html#a9e7d0042c4f422554eb10d64535608e5"/>
               <topic label="le_audio_OpenI2sTx" href="le__audio__interface_8h.html#a2633c1368adf60e342d7cadbbfa6278b"/>
               <topic label="le_audio_OpenMic" href="le__audio__interface_8h.html#a74f1ef979329f6c2bd56ea622f4d05b2"/>
@@ -1881,9 +1849,30 @@
             </topic>
           </topic>
         </topic>
+        <topic label="cellNetService" href="dir_ac6849d6d8def6bad5cbd48c3d768e88.html">
+          <topic label="c" href="dir_2c15da885763185ffc59fd697a370386.html">
+            <topic label="le_cellnet_interface.h" href="le__cellnet__interface_8h.html">
+              <topic label="le_cellnet_RequestObjRef_t" href="le__cellnet__interface_8h.html#a10b8f6316828a125c7c347b5f7f07068"/>
+              <topic label="le_cellnet_StateHandlerFunc_t" href="le__cellnet__interface_8h.html#aad5258dbc14a4d52515b9c6e59ab45eb"/>
+              <topic label="le_cellnet_StateHandlerRef_t" href="le__cellnet__interface_8h.html#a9aff9d554f5ff7626af01f6bf83dd85b"/>
+              <topic label="le_cellnet_State_t" href="le__cellnet__interface_8h.html#abead6b673a155b6f9e0001f129759fc3">
+                <topic label="LE_CELLNET_RADIO_OFF" href="le__cellnet__interface_8h.html#abead6b673a155b6f9e0001f129759fc3aacb3fea4033900e7b919915b4315e575"/>
+                <topic label="LE_CELLNET_REG_EMERGENCY" href="le__cellnet__interface_8h.html#abead6b673a155b6f9e0001f129759fc3aa43e5e0f7f510780f958d32a55a9e459"/>
+                <topic label="LE_CELLNET_REG_HOME" href="le__cellnet__interface_8h.html#abead6b673a155b6f9e0001f129759fc3a0008bf93afedf4cfc30fbdc5fd5c91be"/>
+                <topic label="LE_CELLNET_REG_ROAMING" href="le__cellnet__interface_8h.html#abead6b673a155b6f9e0001f129759fc3ab3ad1a505efad881cc4ef0d18a400875"/>
+                <topic label="LE_CELLNET_REG_UNKNOWN" href="le__cellnet__interface_8h.html#abead6b673a155b6f9e0001f129759fc3aa7b18dfa0b377e2d837802691f3e97a8"/>
+              </topic>
+              <topic label="le_cellnet_AddStateHandler" href="le__cellnet__interface_8h.html#a61818679ce4a016073c4da6e4cd76ecc"/>
+              <topic label="le_cellnet_Release" href="le__cellnet__interface_8h.html#ae3387759b2ae9ecf0992ac685cec5bcd"/>
+              <topic label="le_cellnet_RemoveStateHandler" href="le__cellnet__interface_8h.html#a27d54167407b13002368dcbf5fe8c3b6"/>
+              <topic label="le_cellnet_Request" href="le__cellnet__interface_8h.html#adc6770a47ed109a77ae44241a953da5f"/>
+              <topic label="le_cellnet_StartClient" href="le__cellnet__interface_8h.html#ab91f33ac0fcc34a6456f86b7353ac183"/>
+              <topic label="le_cellnet_StopClient" href="le__cellnet__interface_8h.html#a27c87bd912e1af3171102ccbc043e0d3"/>
+            </topic>
+          </topic>
+        </topic>
         <topic label="config" href="dir_08126d15689217c29f94f40302e1244c.html">
           <topic label="c" href="dir_0fb2bf13e85f356acb54b11877ea42ea.html">
-            <topic label="configTypes.h" href="config_types_8h_source.html"/>
             <topic label="le_cfg_interface.h" href="le__cfg__interface_8h.html">
               <topic label="le_cfg_ChangeHandlerFunc_t" href="le__cfg__interface_8h.html#affe352cba8a8cac1f8950901ea47b61c"/>
               <topic label="le_cfg_ChangeHandlerRef_t" href="le__cfg__interface_8h.html#ad02e652d8ea74b6e8ebb8125190e5244"/>
@@ -1984,12 +1973,29 @@
               <topic label="le_info_GetImei" href="le__info_8h.html#a71cf1bb18746d74bc02e45bebab2c746"/>
             </topic>
             <topic label="le_mcc.h" href="le__mcc_8h.html">
-              <topic label="le_mcc_call_Ref_t" href="le__mcc_8h.html#a01e5a8b3f03992c774444992db91286d"/>
-              <topic label="le_mcc_profile_CallEventHandlerFunc_t" href="le__mcc_8h.html#a5e3fd8ff283d6f13eb32a30772ff3a6d"/>
+              <topic label="le_mcc_call_ObjRef_t" href="le__mcc_8h.html#adb403b78b90d26456b14cd87a6c05e13"/>
+              <topic label="le_mcc_profile_CallEventHandlerFunc_t" href="le__mcc_8h.html#a4cbd930820d56e334568b323183e7c5e"/>
               <topic label="le_mcc_profile_CallEventHandlerRef_t" href="le__mcc_8h.html#ab7cd9c129e8e55e57bc4a2ff714c603f"/>
-              <topic label="le_mcc_profile_Ref_t" href="le__mcc_8h.html#a39d1c1707c1bca34cd73e16bfa10ac81"/>
+              <topic label="le_mcc_profile_ObjRef_t" href="le__mcc_8h.html#abfb274dcad0e0e8acc35bc300177d499"/>
               <topic label="le_mcc_profile_StateChangeHandlerFunc_t" href="le__mcc_8h.html#a5651915d4156059de54473d9d6155aa3"/>
               <topic label="le_mcc_profile_StateChangeHandlerRef_t" href="le__mcc_8h.html#a05b4cd55e57ad801a597de0c59b984a4"/>
+              <topic label="le_mcc_call_Event_t" href="le__mcc_8h.html#adcb2920422915a863a7ea52fe592d64d">
+                <topic label="LE_MCC_EVENT_INCOMING" href="le__mcc_8h.html#adcb2920422915a863a7ea52fe592d64dab37936f33d31259ea0c16169ba852bd0"/>
+                <topic label="LE_MCC_EVENT_ALERTING" href="le__mcc_8h.html#adcb2920422915a863a7ea52fe592d64da05261a9fdb7ee59a0dae1cc27bb30e07"/>
+                <topic label="LE_MCC_EVENT_EARLY_MEDIA" href="le__mcc_8h.html#adcb2920422915a863a7ea52fe592d64dae7b873c301bb878f337094b49e5edfc3"/>
+                <topic label="LE_MCC_EVENT_CONNECTED" href="le__mcc_8h.html#adcb2920422915a863a7ea52fe592d64da86702531207c50314b10ae3278c7ca0d"/>
+                <topic label="LE_MCC_EVENT_TERMINATED" href="le__mcc_8h.html#adcb2920422915a863a7ea52fe592d64da38b7c4ab21fa9828be8169372e41ae98"/>
+                <topic label="LE_MCC_EVENT_ON_HOLD" href="le__mcc_8h.html#adcb2920422915a863a7ea52fe592d64da11c957908799cc338bf6d700e4677200"/>
+                <topic label="LE_MCC_EVENT_TRANSFERED" href="le__mcc_8h.html#adcb2920422915a863a7ea52fe592d64da34a9ad66dff5e71d2ad95d668f22525b"/>
+              </topic>
+              <topic label="le_mcc_call_TerminationReason_t" href="le__mcc_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45">
+                <topic label="LE_MCC_TERM_NETWORK_FAIL" href="le__mcc_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45a2ef2a4a77e51faec38a2c131ff5d6f24"/>
+                <topic label="LE_MCC_TERM_BAD_ADDRESS" href="le__mcc_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45a870528e7279ca1e6732ee176153cdc77"/>
+                <topic label="LE_MCC_TERM_BUSY" href="le__mcc_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45a96b1a006f4cb8027fb5d351797aa545b"/>
+                <topic label="LE_MCC_TERM_LOCAL_ENDED" href="le__mcc_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45af4262288191582892e6f84e51e3082c1"/>
+                <topic label="LE_MCC_TERM_REMOTE_ENDED" href="le__mcc_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45ad33c3e71bdfd7513392f28bf2a7e9c9b"/>
+                <topic label="LE_MCC_TERM_NOT_DEFINED" href="le__mcc_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45a46e4a6551c1b564f00bde4419d8b07c8"/>
+              </topic>
               <topic label="le_mcc_profile_State_t" href="le__mcc_8h.html#aa1a56df1f670e55c3e9b6385c52fdee9">
                 <topic label="LE_MCC_PROFILE_NOT_AVAILABLE" href="le__mcc_8h.html#aa1a56df1f670e55c3e9b6385c52fdee9a8e7102eb385289350e7f006821f82064"/>
                 <topic label="LE_MCC_PROFILE_IDLE" href="le__mcc_8h.html#aa1a56df1f670e55c3e9b6385c52fdee9ad0d0c5f27160c4a8ef5b77a5b22bac5f"/>
@@ -1997,251 +2003,209 @@
                 <topic label="LE_MCC_PROFILE_DND" href="le__mcc_8h.html#aa1a56df1f670e55c3e9b6385c52fdee9a3910b854120c416bb64a04c7897e413b"/>
                 <topic label="LE_MCC_PROFILE_IN_USE" href="le__mcc_8h.html#aa1a56df1f670e55c3e9b6385c52fdee9aba342afa472ff84c89c24c24caedb7de"/>
               </topic>
-              <topic label="le_mcc_call_Answer" href="le__mcc_8h.html#ac52db9513af1486e7ee5020e3128fb0d"/>
-              <topic label="le_mcc_call_Delete" href="le__mcc_8h.html#a91b1ccae151f59126317ae89cd5e10e0"/>
-              <topic label="le_mcc_call_GetRemoteTel" href="le__mcc_8h.html#a491f336e36008f821564d16acc7e0daf"/>
-              <topic label="le_mcc_call_GetRxAudioStream" href="le__mcc_8h.html#a90c35114bdea1206c5df756cb9b5fb07"/>
-              <topic label="le_mcc_call_GetTerminationReason" href="le__mcc_8h.html#a9bd56258bf4350afdb2602bdb6f61c07"/>
-              <topic label="le_mcc_call_GetTxAudioStream" href="le__mcc_8h.html#a62a8f95c3e5f0db0384b77a85ec77d1c"/>
-              <topic label="le_mcc_call_HangUp" href="le__mcc_8h.html#a0f5df7e46bdd63f4b91071bf8495ad9c"/>
-              <topic label="le_mcc_call_IsConnected" href="le__mcc_8h.html#aa71f1765ffcb50e3b8b39172f14d7a77"/>
-              <topic label="le_mcc_call_Start" href="le__mcc_8h.html#aba77900f0bbe1e66d3d486a068bcc85c"/>
-              <topic label="le_mcc_profile_AddCallEventHandler" href="le__mcc_8h.html#ae8d9e27ae0112eaafaf907266e60b111"/>
-              <topic label="le_mcc_profile_AddStateChangeHandler" href="le__mcc_8h.html#ad895a612fcc83b2b9010193c79cf4949"/>
-              <topic label="le_mcc_profile_CreateCall" href="le__mcc_8h.html#a4a8a49c514d5d60fbda3276251406ac7"/>
-              <topic label="le_mcc_profile_GetByName" href="le__mcc_8h.html#abd7c8a9b67b14aac0e4a32cc5e9f34a9"/>
-              <topic label="le_mcc_profile_GetState" href="le__mcc_8h.html#a339996086ebf3c6c5242b3ce0414b926"/>
-              <topic label="le_mcc_profile_Release" href="le__mcc_8h.html#a72e387c98e50d084c09a7e0a83af6341"/>
+              <topic label="le_mcc_call_Answer" href="le__mcc_8h.html#a2baf050ffc6b4cd4ff465a621d31fd91"/>
+              <topic label="le_mcc_call_Delete" href="le__mcc_8h.html#a9f2a3ed81f334a3d8dc04b81ac87fd86"/>
+              <topic label="le_mcc_call_GetRemoteTel" href="le__mcc_8h.html#ac7cdebc8414d63bb026ded0d827c555b"/>
+              <topic label="le_mcc_call_GetRxAudioStream" href="le__mcc_8h.html#a340c69ac34db98ee1248a6d11a229372"/>
+              <topic label="le_mcc_call_GetTerminationReason" href="le__mcc_8h.html#af6bf77424889dd65d573ad15333fef36"/>
+              <topic label="le_mcc_call_GetTxAudioStream" href="le__mcc_8h.html#ae22c0dead782b11ecfa60a3a9532fde6"/>
+              <topic label="le_mcc_call_HangUp" href="le__mcc_8h.html#a7a3f07a065bd6d6f1ae6ec9573a993f7"/>
+              <topic label="le_mcc_call_IsConnected" href="le__mcc_8h.html#a53eb3004475df2bd63c860552d1597ca"/>
+              <topic label="le_mcc_call_Start" href="le__mcc_8h.html#a20caad708661519760a699c9b45724c8"/>
+              <topic label="le_mcc_profile_AddCallEventHandler" href="le__mcc_8h.html#a481994851e17c5da8950f9de0fe85a01"/>
+              <topic label="le_mcc_profile_AddStateChangeHandler" href="le__mcc_8h.html#a47d77fcf517be8cd734bd9a5c073bead"/>
+              <topic label="le_mcc_profile_CreateCall" href="le__mcc_8h.html#a6bca39aed481a70f06e0e987410aa321"/>
+              <topic label="le_mcc_profile_GetByName" href="le__mcc_8h.html#a062edd5cb69dfa29a6d974dd5b01d84e"/>
+              <topic label="le_mcc_profile_GetState" href="le__mcc_8h.html#a712498ca3bf30c9ef0f1bbb6fc2c4d23"/>
+              <topic label="le_mcc_profile_Release" href="le__mcc_8h.html#a4b3b06ab0ec426b82338e6b4fb32145a"/>
               <topic label="le_mcc_profile_RemoveCallEventHandler" href="le__mcc_8h.html#a81d1aa35b7e1c0783698021fda046da7"/>
               <topic label="le_mcc_profile_RemoveStateChangeHandler" href="le__mcc_8h.html#aa373b926ca96415b1a8e7448b4c20763"/>
             </topic>
             <topic label="le_mdc.h" href="le__mdc_8h.html">
-              <topic label="le_mdc_Profile_Ref_t" href="le__mdc_8h.html#a153daa416f0dee70989b0f9eef8ae68c"/>
+              <topic label="LE_MDC_PROFILE_NAME_MAX_BYTES" href="le__mdc_8h.html#a7e0f2bf76317c92a908e3bad8519a3be"/>
+              <topic label="LE_MDC_PROFILE_NAME_MAX_LEN" href="le__mdc_8h.html#aee3f7fce8d7b92374221d9d7aa15374d"/>
+              <topic label="le_mdc_ProfileRef_t" href="le__mdc_8h.html#a91074d8f0d88c6645e3085dfadf87011"/>
               <topic label="le_mdc_SessionStateHandlerFunc_t" href="le__mdc_8h.html#abcf0c174aaefa3fad5bbde20b62083cf"/>
               <topic label="le_mdc_SessionStateHandlerRef_t" href="le__mdc_8h.html#a1a5079ca540f75d009991c164f1c2a51"/>
-              <topic label="le_mdc_AddSessionStateHandler" href="le__mdc_8h.html#a3a98e19c2fe3bd3516e16c8aadf06a50"/>
-              <topic label="le_mdc_GetAccessPointName" href="le__mdc_8h.html#ad481bd262813ad6f6d7d39ab2b0f714b"/>
+              <topic label="le_mdc_dataBearerTechnology_t" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5">
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_UNKNOWN" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5aa74ef22bfd51f6bec5d3521080f9537a"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_1X" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5af1a513b9966ddce01044f75470419f81"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_HRPD" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5aa5c883b0cfa74c19d69deb7b5be35aff"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_GSM" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5a94176f1b8b893b313de18327d7adaec3"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_UMTS" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5ae64ce5a2106f90bfd6b5551a70e10569"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA200_HRPD" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5ab13a7530196f896b98694d676a5585f3"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_EDGE" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5a9fb68b0b35940df0c02aaafc308223bd"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_HSDPA_WCDMA" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5a0bcddd3268bef4649c0112cf6c683eb8"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_WCDMA_HSUPA" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5a805a015fdd4b70c2ccc45f73a442bfa3"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_HSDPA_HSUPA" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5aacd98a6200f7e384d0a4391c51cc7a62"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_LTE" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5ad74d1b39916f65f547b3c3a263a8eb4d"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_EHRPD" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5aff19a89df5659dfb03cf054d7d4f464b"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_HSDPAPLUS_WCDMA" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5a1cb8d1908190af8568834783099bd6d7"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_HSDPAPLUS_HSUPA" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5aa64f40d51068493391d044293604f2c3"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_DC_HSDPAPLUS_WCDMA" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5a81ee296961f2ce02f956ec4922b7ddb6"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_DC_HSDPAPLUS_HSUPA" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5ae4eec73a39982154aa21badab0f91aef"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_HSDPAPLUS_64QAM" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5a06a267102041c33862b8ae7b32f33a8d"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_HSDPAPLUS_64QAM_HSUPA" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5a34e5a91e86e21b95e3f5417755f6af19"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_TDSCDMA" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5a530f1c7eb8bf8b97facafa1f5fa92002"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_TDSCDMA_HSDPA" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5a4ea6f735c4898b4dfd70353934deb991"/>
+                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_TDSCDMA_HSUPA" href="le__mdc_8h.html#a2528134f403cedf7310b0f2502ef96d5adc187d8eac2831b20da4f6da25bc76f0"/>
+              </topic>
+              <topic label="le_mdc_AddSessionStateHandler" href="le__mdc_8h.html#a683b65de2b0435758fcca066e2a4a42a"/>
+              <topic label="le_mdc_GetAccessPointName" href="le__mdc_8h.html#ac47ea9aa7c5e57c7690ce600aaaaff96"/>
               <topic label="le_mdc_GetBytesCounters" href="le__mdc_8h.html#ac3e85060f94bf1cd02c544f31608d977"/>
-              <topic label="le_mdc_GetDataBearerTechnology" href="le__mdc_8h.html#a8bb712721b3dda168f3bc12228bf79e4"/>
-              <topic label="le_mdc_GetDNSAddresses" href="le__mdc_8h.html#a0a1e04effb88288fdd9478d6f74b5734"/>
-              <topic label="le_mdc_GetGatewayAddress" href="le__mdc_8h.html#ada3d08016267318d2b334cf5b5fff1b8"/>
-              <topic label="le_mdc_GetInterfaceName" href="le__mdc_8h.html#aa4058861975bc869f3bb63ab1ffe9a16"/>
-              <topic label="le_mdc_GetIPAddress" href="le__mdc_8h.html#a56de95bee34e58639b9e3c3dc45dbecb"/>
-              <topic label="le_mdc_GetProfileName" href="le__mdc_8h.html#ae82509091d6e4f3f476120cf90594b8e"/>
-              <topic label="le_mdc_GetSessionState" href="le__mdc_8h.html#a0e99ea550357ec6f712bfb8a9913dc1e"/>
-              <topic label="le_mdc_IsIPV4" href="le__mdc_8h.html#a90f9b98adc367436614e29f934ce1c3b"/>
-              <topic label="le_mdc_IsIPV6" href="le__mdc_8h.html#a1db6fc9bdcea2f679814ad69965fe33c"/>
-              <topic label="le_mdc_LoadProfile" href="le__mdc_8h.html#ae360d030f93ecab6cdcbf61effed24cd"/>
+              <topic label="le_mdc_GetDataBearerTechnology" href="le__mdc_8h.html#a14d1b9559735169d1f0097c2191aaa5f"/>
+              <topic label="le_mdc_GetInterfaceName" href="le__mdc_8h.html#a8f4012f24a610d287bba0c06362fd173"/>
+              <topic label="le_mdc_GetIPv4Address" href="le__mdc_8h.html#a50e10d3a38387d242ba90e12572560bf"/>
+              <topic label="le_mdc_GetIPv4DNSAddresses" href="le__mdc_8h.html#a0dd0dcf60d647388fa3e1973917a6161"/>
+              <topic label="le_mdc_GetIPv4GatewayAddress" href="le__mdc_8h.html#a061ba6e80b741548b112138ff5f4ca66"/>
+              <topic label="le_mdc_GetIPv6Address" href="le__mdc_8h.html#a82784119cda4976e6255534642ed6c5a"/>
+              <topic label="le_mdc_GetIPv6DNSAddresses" href="le__mdc_8h.html#ad9cb7d3299620d9dcde551cec45389a1"/>
+              <topic label="le_mdc_GetIPv6GatewayAddress" href="le__mdc_8h.html#a9941823d9d3b5bab4255d9fed405be73"/>
+              <topic label="le_mdc_GetProfileName" href="le__mdc_8h.html#ae09460a9deacca732f7c8355bdfd1214"/>
+              <topic label="le_mdc_GetSessionState" href="le__mdc_8h.html#a9bacf6ff603a5bf26413363686dcc20e"/>
+              <topic label="le_mdc_IsIPv4" href="le__mdc_8h.html#aa3912e94864a6e5862e07f58b3772cba"/>
+              <topic label="le_mdc_IsIPv6" href="le__mdc_8h.html#adde11de0b17b2c937acca6355b6fba11"/>
+              <topic label="le_mdc_LoadProfile" href="le__mdc_8h.html#ae90f83b3f86365055b47bbd3a0d058fb"/>
               <topic label="le_mdc_RemoveSessionStateHandler" href="le__mdc_8h.html#af223a193b73ce6f870947557f69136dc"/>
               <topic label="le_mdc_ResetBytesCounter" href="le__mdc_8h.html#a63636b2779d2ee6a6520ebfb2d26666c"/>
-              <topic label="le_mdc_StartSession" href="le__mdc_8h.html#a4611f8c0a26a9c2b8c6d8bb6ce39ce7d"/>
-              <topic label="le_mdc_StopSession" href="le__mdc_8h.html#a3306a2efe863079f6bde881db39476bc"/>
+              <topic label="le_mdc_StartSession" href="le__mdc_8h.html#a2cb08d5c3e6c43297d80448891719649"/>
+              <topic label="le_mdc_StopSession" href="le__mdc_8h.html#a53453f85065c3cace0922150b7e3d869"/>
             </topic>
-            <topic label="le_mdm_defs.h" href="le__mdm__defs_8h.html">
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_0_A_SYSTEM" href="le__mdm__defs_8h.html#a6c23202f418adf84cda39ac77ee2b622"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_0_B_SYSTEM" href="le__mdm__defs_8h.html#a67e3677e3f16bf0ab85e46a8e42cbc17"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_10" href="le__mdm__defs_8h.html#a40c3207b206ba57c3db2e69b0302ce3a"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_11" href="le__mdm__defs_8h.html#af60edc0420edb0fe3f2dfd123e2d400a"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_12" href="le__mdm__defs_8h.html#a27c4b42fd14c57227eea74841051f9f7"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_14" href="le__mdm__defs_8h.html#aea3ef4a251ac9059d265ff4bd180c3f7"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_15" href="le__mdm__defs_8h.html#a47f09c3d5678ab54de889cc4dddd7a02"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_16" href="le__mdm__defs_8h.html#aea28384d68499c55edc11090fe0e37c1"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_17" href="le__mdm__defs_8h.html#a5894ab1c74361f73e7a128fc3c624884"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_18" href="le__mdm__defs_8h.html#af2f35f3503d4e107a687f82b4b1eea58"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_19" href="le__mdm__defs_8h.html#adb046bbe029345fd4a0ee73bebe14e54"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_1_ALL_BLOCKS" href="le__mdm__defs_8h.html#a134b330e3a8039b1dfffb53d85045bca"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_2_PLACEHOLDER" href="le__mdm__defs_8h.html#a626feec0f4bfe5c0ad53c1cf11ae3631"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_3_A_SYSTEM" href="le__mdm__defs_8h.html#af9153648da9fd653754d74b6193fc607"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_4_ALL_BLOCKS" href="le__mdm__defs_8h.html#a03f326c55252c3d06a0ffb779817115a"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_5_ALL_BLOCKS" href="le__mdm__defs_8h.html#a57bfdd6b2a5a3539fe55c1c48b0f4978"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_6" href="le__mdm__defs_8h.html#a51d4451d8adab250f8df27e8843a10db"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_7" href="le__mdm__defs_8h.html#ab0328941a02c6b82e322f8c702fe0e52"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_8" href="le__mdm__defs_8h.html#a853449457fa83f1620ac1f01d5366208"/>
-              <topic label="LE_MRC_BITMASK_BAND_CLASS_9" href="le__mdm__defs_8h.html#aa1b065e9f85ab6fbf7c2d758c119c145"/>
-              <topic label="LE_MRC_BITMASK_BAND_EGSM_900" href="le__mdm__defs_8h.html#aa13d708f998436db90ad42bfc7d39980"/>
-              <topic label="LE_MRC_BITMASK_BAND_GSM_450" href="le__mdm__defs_8h.html#afa93a1b19b4cc7be9d80d24821c1e6bf"/>
-              <topic label="LE_MRC_BITMASK_BAND_GSM_480" href="le__mdm__defs_8h.html#a10f25cbd9fca8491d0286857c83ad273"/>
-              <topic label="LE_MRC_BITMASK_BAND_GSM_750" href="le__mdm__defs_8h.html#a7b8653b0561f9d4fedfcac303f794ff5"/>
-              <topic label="LE_MRC_BITMASK_BAND_GSM_850" href="le__mdm__defs_8h.html#a7487f3f8664367f110884de74c5feaf7"/>
-              <topic label="LE_MRC_BITMASK_BAND_GSM_DCS_1800" href="le__mdm__defs_8h.html#a77e5a7bfd3b7c9907871bd1193f262b7"/>
-              <topic label="LE_MRC_BITMASK_BAND_GSM_PCS_1900" href="le__mdm__defs_8h.html#a8148072a6ba4c65c59c79260f5ef4f87"/>
-              <topic label="LE_MRC_BITMASK_BAND_GSMR_900" href="le__mdm__defs_8h.html#aca1ebc066bd239ce9d8fd1cda4655af6"/>
-              <topic label="LE_MRC_BITMASK_BAND_PRI_GSM_900" href="le__mdm__defs_8h.html#abc28e52ab3ddf6e5e1c2c540f033349b"/>
-              <topic label="LE_MRC_BITMASK_BAND_WCDMA_EU_2600" href="le__mdm__defs_8h.html#a1c5db42e69042f56b5b4617331cd931a"/>
-              <topic label="LE_MRC_BITMASK_BAND_WCDMA_EU_CH_DCS_1800" href="le__mdm__defs_8h.html#a61768df7388cfed82a80f3585160a0fd"/>
-              <topic label="LE_MRC_BITMASK_BAND_WCDMA_EU_J_900" href="le__mdm__defs_8h.html#a48d158198a1a53077f188c9ab2ec188c"/>
-              <topic label="LE_MRC_BITMASK_BAND_WCDMA_EU_J_CH_IMT_2100" href="le__mdm__defs_8h.html#ab8317d9f498e8123eaed89ba32218015"/>
-              <topic label="LE_MRC_BITMASK_BAND_WCDMA_J_1700" href="le__mdm__defs_8h.html#a2ed896a415a61140928d64fe3b895780"/>
-              <topic label="LE_MRC_BITMASK_BAND_WCDMA_J_800" href="le__mdm__defs_8h.html#a13008ec8e88ae22bdbd16f4d65095e42"/>
-              <topic label="LE_MRC_BITMASK_BAND_WCDMA_US_1700" href="le__mdm__defs_8h.html#aac13dd30f15af4586d8ea468ec57ac3b"/>
-              <topic label="LE_MRC_BITMASK_BAND_WCDMA_US_850" href="le__mdm__defs_8h.html#a5438feff11dd7efb7ba78e56d43e8be7"/>
-              <topic label="LE_MRC_BITMASK_BAND_WCDMA_US_PCS_1900" href="le__mdm__defs_8h.html#aced3fa9ad11c177e4751ccd1f0d08eeb"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_1" href="le__mdm__defs_8h.html#a154171a18a665d98b7f40a238ea77d84"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_10" href="le__mdm__defs_8h.html#a3377c1c9684177e8445d190d1d9bc8ae"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_11" href="le__mdm__defs_8h.html#a9b1f10bd53239fca2000f285a81ceb97"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_12" href="le__mdm__defs_8h.html#a19dfcf41fd8d38d002d46cec5c27e302"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_13" href="le__mdm__defs_8h.html#a3b1e7781fd2c50b8dbcb91a140a17c58"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_14" href="le__mdm__defs_8h.html#ab936cbe0daa2d12cf1c98804e20451ca"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_17" href="le__mdm__defs_8h.html#af8a5f29e81358cf82fc33406befe828e"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_18" href="le__mdm__defs_8h.html#a4c4c9ae81b766845913bd57871a5bfbc"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_19" href="le__mdm__defs_8h.html#a58b8e3522326b06e2cc172999095a04a"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_2" href="le__mdm__defs_8h.html#a81a19324a130d1965975131c282867d8"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_20" href="le__mdm__defs_8h.html#a8eb2aeb5152d352924027a14e3f6e839"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_21" href="le__mdm__defs_8h.html#a4f7e45220bbde3de06155af86fbde53b"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_24" href="le__mdm__defs_8h.html#a925beed41733160e39bfc7f0b7678abf"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_25" href="le__mdm__defs_8h.html#a3ce12a183684bcab27518c59fdd301b9"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_3" href="le__mdm__defs_8h.html#a6c82c81f69948f1b6973dc843a8784dd"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_33" href="le__mdm__defs_8h.html#a86177b90fac670ec1bba7686773796ec"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_34" href="le__mdm__defs_8h.html#a148419b329a5bde78f7c59d6486cf355"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_35" href="le__mdm__defs_8h.html#a17e1e2bc9f878c7b9adab25fdd9f4b7a"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_36" href="le__mdm__defs_8h.html#a1f76e70cd4c72c2d14ce60c0f4375f99"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_37" href="le__mdm__defs_8h.html#abc9fe1755620e49a3d68cd97dbe2f8df"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_38" href="le__mdm__defs_8h.html#ae22180b76973d1fdd6d9f371d1af904d"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_39" href="le__mdm__defs_8h.html#a89351a27f0ae7d95b2ce57e8e254598c"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_4" href="le__mdm__defs_8h.html#a8da631f8a46e219d7a7937a5c4975547"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_40" href="le__mdm__defs_8h.html#a83ee42d88c3a93ddbc30b42af606827a"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_41" href="le__mdm__defs_8h.html#a73cb494d328e374763581751f45b11c6"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_42" href="le__mdm__defs_8h.html#afb5b4272e01b158f69644a1f0d01462e"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_43" href="le__mdm__defs_8h.html#ad169f3f95989f5fdd566dfc7edd412d7"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_5" href="le__mdm__defs_8h.html#a29b5d3daee0e83150568566f7ffe8951"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_6" href="le__mdm__defs_8h.html#aa9c264c3e0495ae7d9248d8cd7448da7"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_7" href="le__mdm__defs_8h.html#acd243417da6c5f572e7faf5d96889735"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_8" href="le__mdm__defs_8h.html#ae2b1a789778a1b40201b8c507912d45f"/>
-              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_9" href="le__mdm__defs_8h.html#a1c112f0fd660f061e29bb9bbe878672b"/>
-              <topic label="LE_MRC_BITMASK_RAT_CDMA" href="le__mdm__defs_8h.html#a1912278f483cfcf4e5bc8fd8685c1d63"/>
-              <topic label="LE_MRC_BITMASK_RAT_GSM" href="le__mdm__defs_8h.html#aa987de1855b0057d1b8554f58b173aca"/>
-              <topic label="LE_MRC_BITMASK_RAT_LTE" href="le__mdm__defs_8h.html#aade5d40b9cdb06f7160c9c4c9bbe50bc"/>
-              <topic label="LE_MRC_BITMASK_RAT_UMTS" href="le__mdm__defs_8h.html#abbfdde2afabcc6d267ae24adc78b6f14"/>
-              <topic label="LE_MRC_BITMASK_TDSCDMA_BAND_A" href="le__mdm__defs_8h.html#ad35c5c91a622f704304e2db81067e08c"/>
-              <topic label="LE_MRC_BITMASK_TDSCDMA_BAND_B" href="le__mdm__defs_8h.html#abc60975c894e5bf9fdd1b06e66ba1588"/>
-              <topic label="LE_MRC_BITMASK_TDSCDMA_BAND_C" href="le__mdm__defs_8h.html#aaa0c126634496a0c4f5a35d191d3aa4c"/>
-              <topic label="LE_MRC_BITMASK_TDSCDMA_BAND_D" href="le__mdm__defs_8h.html#a47b83e799aa18c21582ecc705f05a8a6"/>
-              <topic label="LE_MRC_BITMASK_TDSCDMA_BAND_E" href="le__mdm__defs_8h.html#a6adcd731359f64e2fee958a612413fe3"/>
-              <topic label="LE_MRC_BITMASK_TDSCDMA_BAND_F" href="le__mdm__defs_8h.html#af72f51c6ae6586daf7b1e7cb73284ccb"/>
-              <topic label="LE_MRC_MCC_BYTES" href="le__mdm__defs_8h.html#aec88b97b54a45f86e6cb34f65b2d0afd"/>
-              <topic label="LE_MRC_MCC_LEN" href="le__mdm__defs_8h.html#aa50ed3f6d70185be4a35c811518895cf"/>
-              <topic label="LE_MRC_MNC_BYTES" href="le__mdm__defs_8h.html#aeae0e240c77730be724ad7ac42596469"/>
-              <topic label="LE_MRC_MNC_LEN" href="le__mdm__defs_8h.html#a0550a0420d5f13f4b68a6c880473e768"/>
-              <topic label="LE_SMS_BINARY_MAX_LEN" href="le__mdm__defs_8h.html#a1650cf6d5689e4c59a58b508ca5e4ee1"/>
-              <topic label="LE_SMS_PDU_MAX_LEN" href="le__mdm__defs_8h.html#a3670915e8564b5a615937688367092a6"/>
-              <topic label="LE_SMS_TEL_NMBR_MAX_LEN" href="le__mdm__defs_8h.html#ae8ade945283aa2536178b4528d8545df"/>
-              <topic label="LE_SMS_TEXT_MAX_LEN" href="le__mdm__defs_8h.html#ac1b7b4dad3b9f7f1fe602494123a10b0"/>
-              <topic label="LE_SMS_TIMESTAMP_MAX_LEN" href="le__mdm__defs_8h.html#accabf44fe7d9f2b85b807eee8da276c3"/>
-              <topic label="LE_TEL_NMBR_MAX_LEN" href="le__mdm__defs_8h.html#ae24754fbc6da22292bca54fe0b8d1cca"/>
-              <topic label="le_mcc_call_Event_t" href="le__mdm__defs_8h.html#adcb2920422915a863a7ea52fe592d64d">
-                <topic label="LE_MCC_EVENT_INCOMING" href="le__mdm__defs_8h.html#adcb2920422915a863a7ea52fe592d64dab37936f33d31259ea0c16169ba852bd0"/>
-                <topic label="LE_MCC_EVENT_ALERTING" href="le__mdm__defs_8h.html#adcb2920422915a863a7ea52fe592d64da05261a9fdb7ee59a0dae1cc27bb30e07"/>
-                <topic label="LE_MCC_EVENT_EARLY_MEDIA" href="le__mdm__defs_8h.html#adcb2920422915a863a7ea52fe592d64dae7b873c301bb878f337094b49e5edfc3"/>
-                <topic label="LE_MCC_EVENT_CONNECTED" href="le__mdm__defs_8h.html#adcb2920422915a863a7ea52fe592d64da86702531207c50314b10ae3278c7ca0d"/>
-                <topic label="LE_MCC_EVENT_TERMINATED" href="le__mdm__defs_8h.html#adcb2920422915a863a7ea52fe592d64da38b7c4ab21fa9828be8169372e41ae98"/>
-                <topic label="LE_MCC_EVENT_ON_HOLD" href="le__mdm__defs_8h.html#adcb2920422915a863a7ea52fe592d64da11c957908799cc338bf6d700e4677200"/>
-                <topic label="LE_MCC_EVENT_TRANSFERED" href="le__mdm__defs_8h.html#adcb2920422915a863a7ea52fe592d64da34a9ad66dff5e71d2ad95d668f22525b"/>
-              </topic>
-              <topic label="le_mcc_call_TerminationReason_t" href="le__mdm__defs_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45">
-                <topic label="LE_MCC_TERM_NETWORK_FAIL" href="le__mdm__defs_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45a2ef2a4a77e51faec38a2c131ff5d6f24"/>
-                <topic label="LE_MCC_TERM_BAD_ADDRESS" href="le__mdm__defs_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45a870528e7279ca1e6732ee176153cdc77"/>
-                <topic label="LE_MCC_TERM_BUSY" href="le__mdm__defs_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45a96b1a006f4cb8027fb5d351797aa545b"/>
-                <topic label="LE_MCC_TERM_LOCAL_ENDED" href="le__mdm__defs_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45af4262288191582892e6f84e51e3082c1"/>
-                <topic label="LE_MCC_TERM_REMOTE_ENDED" href="le__mdm__defs_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45ad33c3e71bdfd7513392f28bf2a7e9c9b"/>
-                <topic label="LE_MCC_TERM_NOT_DEFINED" href="le__mdm__defs_8h.html#aff3a5f9c95b4d6193c6cd4f5e18cfd45a46e4a6551c1b564f00bde4419d8b07c8"/>
-              </topic>
-              <topic label="le_mdc_dataBearerTechnology_t" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5">
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_UNKNOWN" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5aa74ef22bfd51f6bec5d3521080f9537a"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_1X" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5af1a513b9966ddce01044f75470419f81"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_HRPD" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5aa5c883b0cfa74c19d69deb7b5be35aff"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_GSM" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5a94176f1b8b893b313de18327d7adaec3"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_UMTS" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5ae64ce5a2106f90bfd6b5551a70e10569"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA200_HRPD" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5ab13a7530196f896b98694d676a5585f3"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_EDGE" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5a9fb68b0b35940df0c02aaafc308223bd"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_HSDPA_WCDMA" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5a0bcddd3268bef4649c0112cf6c683eb8"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_WCDMA_HSUPA" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5a805a015fdd4b70c2ccc45f73a442bfa3"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_HSDPA_HSUPA" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5aacd98a6200f7e384d0a4391c51cc7a62"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_LTE" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5ad74d1b39916f65f547b3c3a263a8eb4d"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_EHRPD" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5aff19a89df5659dfb03cf054d7d4f464b"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_HSDPAPLUS_WCDMA" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5a1cb8d1908190af8568834783099bd6d7"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_HSDPAPLUS_HSUPA" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5aa64f40d51068493391d044293604f2c3"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_DC_HSDPAPLUS_WCDMA" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5a81ee296961f2ce02f956ec4922b7ddb6"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_DC_HSDPAPLUS_HSUPA" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5ae4eec73a39982154aa21badab0f91aef"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_HSDPAPLUS_64QAM" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5a06a267102041c33862b8ae7b32f33a8d"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_HSDPAPLUS_64QAM_HSUPA" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5a34e5a91e86e21b95e3f5417755f6af19"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_TDSCDMA" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5a530f1c7eb8bf8b97facafa1f5fa92002"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_TDSCDMA_HSDPA" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5a4ea6f735c4898b4dfd70353934deb991"/>
-                <topic label="LE_MDC_DATA_BEARER_TECHNOLOGY_TDSCDMA_HSUPA" href="le__mdm__defs_8h.html#a2528134f403cedf7310b0f2502ef96d5adc187d8eac2831b20da4f6da25bc76f0"/>
-              </topic>
-              <topic label="le_mrc_NetRegState_t" href="le__mdm__defs_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61">
-                <topic label="LE_MRC_REG_NONE" href="le__mdm__defs_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61affdd881b043ba92f868ffef52b0b9124"/>
-                <topic label="LE_MRC_REG_HOME" href="le__mdm__defs_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61a90fd9c8ee7f965840af2536e2a33316a"/>
-                <topic label="LE_MRC_REG_SEARCHING" href="le__mdm__defs_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61afe4b6da8ae01273d2188456660452eda"/>
-                <topic label="LE_MRC_REG_DENIED" href="le__mdm__defs_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61af6b1505fb7f90fa379a9dd8d031e9814"/>
-                <topic label="LE_MRC_REG_ROAMING" href="le__mdm__defs_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61a9f5ddbf3dcdceb8e24e46aea83ba4e7f"/>
-                <topic label="LE_MRC_REG_UNKNOWN" href="le__mdm__defs_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61acdba928b7dfb851adfa0211acccabb65"/>
-              </topic>
-              <topic label="le_mrc_Rat_t" href="le__mdm__defs_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">
-                <topic label="LE_MRC_RAT_UNKNOWN" href="le__mdm__defs_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43a6088198c65a39429fe6a67f322df0480"/>
-                <topic label="LE_MRC_RAT_GSM" href="le__mdm__defs_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43ae19505d98b78ac22398bce06605dd1a4"/>
-                <topic label="LE_MRC_RAT_UMTS" href="le__mdm__defs_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43afe34c4f3a53aa717f5ecb94dd59bf728"/>
-                <topic label="LE_MRC_RAT_LTE" href="le__mdm__defs_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43aaf2b25a8ec75f9bacb51967f23247176"/>
-                <topic label="LE_MRC_RAT_CDMA" href="le__mdm__defs_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43a1634a4ab71f130dd2aae46aa09ca0771"/>
-                <topic label="LE_MRC_RAT_ALL" href="le__mdm__defs_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43aac032f28348a900d439ce496e20c586a"/>
-              </topic>
-              <topic label="le_sim_States_t" href="le__mdm__defs_8h.html#a21b9bb7d5e5e7ece213e00738a5bae41">
-                <topic label="LE_SIM_INSERTED" href="le__mdm__defs_8h.html#a21b9bb7d5e5e7ece213e00738a5bae41a86aea853ae5fcc1a2e3c8d352d8689d3"/>
-                <topic label="LE_SIM_ABSENT" href="le__mdm__defs_8h.html#a21b9bb7d5e5e7ece213e00738a5bae41a813e26946372fbc3960aa97713b6ca2f"/>
-                <topic label="LE_SIM_READY" href="le__mdm__defs_8h.html#a21b9bb7d5e5e7ece213e00738a5bae41aa7f1f6c3391e32af8ce3ba2242276d64"/>
-                <topic label="LE_SIM_BLOCKED" href="le__mdm__defs_8h.html#a21b9bb7d5e5e7ece213e00738a5bae41af83b91131d516ad3756781108000515a"/>
-                <topic label="LE_SIM_BUSY" href="le__mdm__defs_8h.html#a21b9bb7d5e5e7ece213e00738a5bae41a944435801d6359050dc37092396ca951"/>
-                <topic label="LE_SIM_STATE_UNKNOWN" href="le__mdm__defs_8h.html#a21b9bb7d5e5e7ece213e00738a5bae41ad82522676bf094ea402a0311356e434f"/>
-              </topic>
-              <topic label="le_sms_msg_Format_t" href="le__mdm__defs_8h.html#a0a1b9c1f16108c60a1ac18e49bdbc990">
-                <topic label="LE_SMS_FORMAT_PDU" href="le__mdm__defs_8h.html#a0a1b9c1f16108c60a1ac18e49bdbc990a3f6a4a63acbf7aec5a498017ff53a6e8"/>
-                <topic label="LE_SMS_FORMAT_TEXT" href="le__mdm__defs_8h.html#a0a1b9c1f16108c60a1ac18e49bdbc990a1bb6a0d76a622b1185ee879e1595dff8"/>
-                <topic label="LE_SMS_FORMAT_BINARY" href="le__mdm__defs_8h.html#a0a1b9c1f16108c60a1ac18e49bdbc990ac70333fc9281ed10aa405d585689c000"/>
-                <topic label="LE_SMS_FORMAT_UNKNOWN" href="le__mdm__defs_8h.html#a0a1b9c1f16108c60a1ac18e49bdbc990abea80bb6058e34a427c02b80bfede497"/>
-              </topic>
-              <topic label="le_sms_msg_Status_t" href="le__mdm__defs_8h.html#a8a4088eb54768d223f77b57656b32253">
-                <topic label="LE_SMS_RX_READ" href="le__mdm__defs_8h.html#a8a4088eb54768d223f77b57656b32253acf7543162a77df096f714c66555052f1"/>
-                <topic label="LE_SMS_RX_UNREAD" href="le__mdm__defs_8h.html#a8a4088eb54768d223f77b57656b32253a30d180b7a6410abdd57182014746b8bc"/>
-                <topic label="LE_SMS_STORED_SENT" href="le__mdm__defs_8h.html#a8a4088eb54768d223f77b57656b32253ad3254c9e0006f34d438c6e1918d3973f"/>
-                <topic label="LE_SMS_STORED_UNSENT" href="le__mdm__defs_8h.html#a8a4088eb54768d223f77b57656b32253a57f62f640b2341ae3ac86310df6759e5"/>
-                <topic label="LE_SMS_SENT" href="le__mdm__defs_8h.html#a8a4088eb54768d223f77b57656b32253aa20b05cdd468e822268c59d9789ef132"/>
-                <topic label="LE_SMS_UNSENT" href="le__mdm__defs_8h.html#a8a4088eb54768d223f77b57656b32253afd992b5c50b6420d37067f8c516d9fef"/>
-                <topic label="LE_SMS_STATUS_UNKNOWN" href="le__mdm__defs_8h.html#a8a4088eb54768d223f77b57656b32253ae7b415d976598f3a548d8ab8382d2019"/>
-              </topic>
-            </topic>
+            <topic label="le_mdm_defs.h" href="le__mdm__defs_8h_source.html"/>
             <topic label="le_mrc.h" href="le__mrc_8h.html">
-              <topic label="le_mrc_CellInfo_Ref_t" href="le__mrc_8h.html#ad832aa1bd196ca977deaa6a74a4f810a"/>
-              <topic label="le_mrc_NeighborCells_Ref_t" href="le__mrc_8h.html#aef1bee27e1391e5236cb20e76ec11bde"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_0_A_SYSTEM" href="le__mrc_8h.html#a6c23202f418adf84cda39ac77ee2b622"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_0_B_SYSTEM" href="le__mrc_8h.html#a67e3677e3f16bf0ab85e46a8e42cbc17"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_10" href="le__mrc_8h.html#a40c3207b206ba57c3db2e69b0302ce3a"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_11" href="le__mrc_8h.html#af60edc0420edb0fe3f2dfd123e2d400a"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_12" href="le__mrc_8h.html#a27c4b42fd14c57227eea74841051f9f7"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_14" href="le__mrc_8h.html#aea3ef4a251ac9059d265ff4bd180c3f7"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_15" href="le__mrc_8h.html#a47f09c3d5678ab54de889cc4dddd7a02"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_16" href="le__mrc_8h.html#aea28384d68499c55edc11090fe0e37c1"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_17" href="le__mrc_8h.html#a5894ab1c74361f73e7a128fc3c624884"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_18" href="le__mrc_8h.html#af2f35f3503d4e107a687f82b4b1eea58"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_19" href="le__mrc_8h.html#adb046bbe029345fd4a0ee73bebe14e54"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_1_ALL_BLOCKS" href="le__mrc_8h.html#a134b330e3a8039b1dfffb53d85045bca"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_2_PLACEHOLDER" href="le__mrc_8h.html#a626feec0f4bfe5c0ad53c1cf11ae3631"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_3_A_SYSTEM" href="le__mrc_8h.html#af9153648da9fd653754d74b6193fc607"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_4_ALL_BLOCKS" href="le__mrc_8h.html#a03f326c55252c3d06a0ffb779817115a"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_5_ALL_BLOCKS" href="le__mrc_8h.html#a57bfdd6b2a5a3539fe55c1c48b0f4978"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_6" href="le__mrc_8h.html#a51d4451d8adab250f8df27e8843a10db"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_7" href="le__mrc_8h.html#ab0328941a02c6b82e322f8c702fe0e52"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_8" href="le__mrc_8h.html#a853449457fa83f1620ac1f01d5366208"/>
+              <topic label="LE_MRC_BITMASK_BAND_CLASS_9" href="le__mrc_8h.html#aa1b065e9f85ab6fbf7c2d758c119c145"/>
+              <topic label="LE_MRC_BITMASK_BAND_EGSM_900" href="le__mrc_8h.html#aa13d708f998436db90ad42bfc7d39980"/>
+              <topic label="LE_MRC_BITMASK_BAND_GSM_450" href="le__mrc_8h.html#afa93a1b19b4cc7be9d80d24821c1e6bf"/>
+              <topic label="LE_MRC_BITMASK_BAND_GSM_480" href="le__mrc_8h.html#a10f25cbd9fca8491d0286857c83ad273"/>
+              <topic label="LE_MRC_BITMASK_BAND_GSM_750" href="le__mrc_8h.html#a7b8653b0561f9d4fedfcac303f794ff5"/>
+              <topic label="LE_MRC_BITMASK_BAND_GSM_850" href="le__mrc_8h.html#a7487f3f8664367f110884de74c5feaf7"/>
+              <topic label="LE_MRC_BITMASK_BAND_GSM_DCS_1800" href="le__mrc_8h.html#a77e5a7bfd3b7c9907871bd1193f262b7"/>
+              <topic label="LE_MRC_BITMASK_BAND_GSM_PCS_1900" href="le__mrc_8h.html#a8148072a6ba4c65c59c79260f5ef4f87"/>
+              <topic label="LE_MRC_BITMASK_BAND_GSMR_900" href="le__mrc_8h.html#aca1ebc066bd239ce9d8fd1cda4655af6"/>
+              <topic label="LE_MRC_BITMASK_BAND_PRI_GSM_900" href="le__mrc_8h.html#abc28e52ab3ddf6e5e1c2c540f033349b"/>
+              <topic label="LE_MRC_BITMASK_BAND_WCDMA_EU_2600" href="le__mrc_8h.html#a1c5db42e69042f56b5b4617331cd931a"/>
+              <topic label="LE_MRC_BITMASK_BAND_WCDMA_EU_CH_DCS_1800" href="le__mrc_8h.html#a61768df7388cfed82a80f3585160a0fd"/>
+              <topic label="LE_MRC_BITMASK_BAND_WCDMA_EU_J_900" href="le__mrc_8h.html#a48d158198a1a53077f188c9ab2ec188c"/>
+              <topic label="LE_MRC_BITMASK_BAND_WCDMA_EU_J_CH_IMT_2100" href="le__mrc_8h.html#ab8317d9f498e8123eaed89ba32218015"/>
+              <topic label="LE_MRC_BITMASK_BAND_WCDMA_J_1700" href="le__mrc_8h.html#a2ed896a415a61140928d64fe3b895780"/>
+              <topic label="LE_MRC_BITMASK_BAND_WCDMA_J_800" href="le__mrc_8h.html#a13008ec8e88ae22bdbd16f4d65095e42"/>
+              <topic label="LE_MRC_BITMASK_BAND_WCDMA_US_1700" href="le__mrc_8h.html#aac13dd30f15af4586d8ea468ec57ac3b"/>
+              <topic label="LE_MRC_BITMASK_BAND_WCDMA_US_850" href="le__mrc_8h.html#a5438feff11dd7efb7ba78e56d43e8be7"/>
+              <topic label="LE_MRC_BITMASK_BAND_WCDMA_US_PCS_1900" href="le__mrc_8h.html#aced3fa9ad11c177e4751ccd1f0d08eeb"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_1" href="le__mrc_8h.html#a154171a18a665d98b7f40a238ea77d84"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_10" href="le__mrc_8h.html#a3377c1c9684177e8445d190d1d9bc8ae"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_11" href="le__mrc_8h.html#a9b1f10bd53239fca2000f285a81ceb97"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_12" href="le__mrc_8h.html#a19dfcf41fd8d38d002d46cec5c27e302"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_13" href="le__mrc_8h.html#a3b1e7781fd2c50b8dbcb91a140a17c58"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_14" href="le__mrc_8h.html#ab936cbe0daa2d12cf1c98804e20451ca"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_17" href="le__mrc_8h.html#af8a5f29e81358cf82fc33406befe828e"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_18" href="le__mrc_8h.html#a4c4c9ae81b766845913bd57871a5bfbc"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_19" href="le__mrc_8h.html#a58b8e3522326b06e2cc172999095a04a"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_2" href="le__mrc_8h.html#a81a19324a130d1965975131c282867d8"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_20" href="le__mrc_8h.html#a8eb2aeb5152d352924027a14e3f6e839"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_21" href="le__mrc_8h.html#a4f7e45220bbde3de06155af86fbde53b"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_24" href="le__mrc_8h.html#a925beed41733160e39bfc7f0b7678abf"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_25" href="le__mrc_8h.html#a3ce12a183684bcab27518c59fdd301b9"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_3" href="le__mrc_8h.html#a6c82c81f69948f1b6973dc843a8784dd"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_33" href="le__mrc_8h.html#a86177b90fac670ec1bba7686773796ec"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_34" href="le__mrc_8h.html#a148419b329a5bde78f7c59d6486cf355"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_35" href="le__mrc_8h.html#a17e1e2bc9f878c7b9adab25fdd9f4b7a"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_36" href="le__mrc_8h.html#a1f76e70cd4c72c2d14ce60c0f4375f99"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_37" href="le__mrc_8h.html#abc9fe1755620e49a3d68cd97dbe2f8df"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_38" href="le__mrc_8h.html#ae22180b76973d1fdd6d9f371d1af904d"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_39" href="le__mrc_8h.html#a89351a27f0ae7d95b2ce57e8e254598c"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_4" href="le__mrc_8h.html#a8da631f8a46e219d7a7937a5c4975547"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_40" href="le__mrc_8h.html#a83ee42d88c3a93ddbc30b42af606827a"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_41" href="le__mrc_8h.html#a73cb494d328e374763581751f45b11c6"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_42" href="le__mrc_8h.html#afb5b4272e01b158f69644a1f0d01462e"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_43" href="le__mrc_8h.html#ad169f3f95989f5fdd566dfc7edd412d7"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_5" href="le__mrc_8h.html#a29b5d3daee0e83150568566f7ffe8951"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_6" href="le__mrc_8h.html#aa9c264c3e0495ae7d9248d8cd7448da7"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_7" href="le__mrc_8h.html#acd243417da6c5f572e7faf5d96889735"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_8" href="le__mrc_8h.html#ae2b1a789778a1b40201b8c507912d45f"/>
+              <topic label="LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_9" href="le__mrc_8h.html#a1c112f0fd660f061e29bb9bbe878672b"/>
+              <topic label="LE_MRC_BITMASK_RAT_CDMA" href="le__mrc_8h.html#a1912278f483cfcf4e5bc8fd8685c1d63"/>
+              <topic label="LE_MRC_BITMASK_RAT_GSM" href="le__mrc_8h.html#aa987de1855b0057d1b8554f58b173aca"/>
+              <topic label="LE_MRC_BITMASK_RAT_LTE" href="le__mrc_8h.html#aade5d40b9cdb06f7160c9c4c9bbe50bc"/>
+              <topic label="LE_MRC_BITMASK_RAT_UMTS" href="le__mrc_8h.html#abbfdde2afabcc6d267ae24adc78b6f14"/>
+              <topic label="LE_MRC_BITMASK_TDSCDMA_BAND_A" href="le__mrc_8h.html#ad35c5c91a622f704304e2db81067e08c"/>
+              <topic label="LE_MRC_BITMASK_TDSCDMA_BAND_B" href="le__mrc_8h.html#abc60975c894e5bf9fdd1b06e66ba1588"/>
+              <topic label="LE_MRC_BITMASK_TDSCDMA_BAND_C" href="le__mrc_8h.html#aaa0c126634496a0c4f5a35d191d3aa4c"/>
+              <topic label="LE_MRC_BITMASK_TDSCDMA_BAND_D" href="le__mrc_8h.html#a47b83e799aa18c21582ecc705f05a8a6"/>
+              <topic label="LE_MRC_BITMASK_TDSCDMA_BAND_E" href="le__mrc_8h.html#a6adcd731359f64e2fee958a612413fe3"/>
+              <topic label="LE_MRC_BITMASK_TDSCDMA_BAND_F" href="le__mrc_8h.html#af72f51c6ae6586daf7b1e7cb73284ccb"/>
+              <topic label="LE_MRC_MCC_BYTES" href="le__mrc_8h.html#aec88b97b54a45f86e6cb34f65b2d0afd"/>
+              <topic label="LE_MRC_MCC_LEN" href="le__mrc_8h.html#aa50ed3f6d70185be4a35c811518895cf"/>
+              <topic label="LE_MRC_MNC_BYTES" href="le__mrc_8h.html#aeae0e240c77730be724ad7ac42596469"/>
+              <topic label="LE_MRC_MNC_LEN" href="le__mrc_8h.html#a0550a0420d5f13f4b68a6c880473e768"/>
+              <topic label="le_mrc_CellInfoRef_t" href="le__mrc_8h.html#a8fbb2523c254ba473a3f59efa452355e"/>
+              <topic label="le_mrc_NeighborCellsRef_t" href="le__mrc_8h.html#a672ea94ad892bb95f43836b5fbd24188"/>
               <topic label="le_mrc_NetRegStateHandlerFunc_t" href="le__mrc_8h.html#aa3485637172fcec54b891e246eeaa1df"/>
               <topic label="le_mrc_NetRegStateHandlerRef_t" href="le__mrc_8h.html#a118ae04d27a3623bf31ead39af501fdb"/>
               <topic label="le_mrc_RatChangeHandlerFunc_t" href="le__mrc_8h.html#a4df62433e1e42cec337d31dfc7e5458e"/>
               <topic label="le_mrc_RatChangeHandlerRef_t" href="le__mrc_8h.html#a5ac252acd68a64b336ae9a98ca6113ac"/>
-              <topic label="le_mrc_ScanInformation_ListRef_t" href="le__mrc_8h.html#afdc0fa35977d599265ce70a1ade95666"/>
-              <topic label="le_mrc_ScanInformation_Ref_t" href="le__mrc_8h.html#a82364d092536d0a9677ff41bdf1c2c13"/>
+              <topic label="le_mrc_ScanInformationListRef_t" href="le__mrc_8h.html#a25a9e79cc9078e22cec22444fd959c61"/>
+              <topic label="le_mrc_ScanInformationRef_t" href="le__mrc_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea"/>
+              <topic label="le_mrc_NetRegState_t" href="le__mrc_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61">
+                <topic label="LE_MRC_REG_NONE" href="le__mrc_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61affdd881b043ba92f868ffef52b0b9124"/>
+                <topic label="LE_MRC_REG_HOME" href="le__mrc_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61a90fd9c8ee7f965840af2536e2a33316a"/>
+                <topic label="LE_MRC_REG_SEARCHING" href="le__mrc_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61afe4b6da8ae01273d2188456660452eda"/>
+                <topic label="LE_MRC_REG_DENIED" href="le__mrc_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61af6b1505fb7f90fa379a9dd8d031e9814"/>
+                <topic label="LE_MRC_REG_ROAMING" href="le__mrc_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61a9f5ddbf3dcdceb8e24e46aea83ba4e7f"/>
+                <topic label="LE_MRC_REG_UNKNOWN" href="le__mrc_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61acdba928b7dfb851adfa0211acccabb65"/>
+              </topic>
+              <topic label="le_mrc_Rat_t" href="le__mrc_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">
+                <topic label="LE_MRC_RAT_UNKNOWN" href="le__mrc_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43a6088198c65a39429fe6a67f322df0480"/>
+                <topic label="LE_MRC_RAT_GSM" href="le__mrc_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43ae19505d98b78ac22398bce06605dd1a4"/>
+                <topic label="LE_MRC_RAT_UMTS" href="le__mrc_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43afe34c4f3a53aa717f5ecb94dd59bf728"/>
+                <topic label="LE_MRC_RAT_LTE" href="le__mrc_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43aaf2b25a8ec75f9bacb51967f23247176"/>
+                <topic label="LE_MRC_RAT_CDMA" href="le__mrc_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43a1634a4ab71f130dd2aae46aa09ca0771"/>
+                <topic label="LE_MRC_RAT_ALL" href="le__mrc_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43aac032f28348a900d439ce496e20c586a"/>
+              </topic>
               <topic label="le_mrc_AddNetRegStateHandler" href="le__mrc_8h.html#ace1cd9a07ba4048b68911097bae579d4"/>
               <topic label="le_mrc_AddRatChangeHandler" href="le__mrc_8h.html#a53a0900eb65f2ee3b30abc5ea5bdb1ec"/>
-              <topic label="le_mrc_DeleteCellularNetworkScan" href="le__mrc_8h.html#aabbed28955eab0ed5c942a2a037ed6cf"/>
-              <topic label="le_mrc_DeleteNeighborCellsInfo" href="le__mrc_8h.html#a2a36594f06217845847860058b6fe5f2"/>
-              <topic label="le_mrc_GetCellularNetworkMccMnc" href="le__mrc_8h.html#a54c3ddcd6c877b48c612aee65a82b5fd"/>
-              <topic label="le_mrc_GetCellularNetworkName" href="le__mrc_8h.html#a2a52836260653cc51f95b592d0ad1b5f"/>
-              <topic label="le_mrc_GetFirstCellularNetworkScan" href="le__mrc_8h.html#a0852cae99a555d7cf84fa037ca10cb99"/>
-              <topic label="le_mrc_GetFirstNeighborCellInfo" href="le__mrc_8h.html#a16e3171e05b85cf0b60fb6966041af8b"/>
+              <topic label="le_mrc_DeleteCellularNetworkScan" href="le__mrc_8h.html#ac45ce335b3fa063b83bb925e67eeaeb3"/>
+              <topic label="le_mrc_DeleteNeighborCellsInfo" href="le__mrc_8h.html#a101343359e8d36ab41180aede2891b07"/>
+              <topic label="le_mrc_GetCellularNetworkMccMnc" href="le__mrc_8h.html#aad275d839efe8b2b5eafe65ef87bd3d3"/>
+              <topic label="le_mrc_GetCellularNetworkName" href="le__mrc_8h.html#a8398fc513b8973d85745b69c6ff50d23"/>
+              <topic label="le_mrc_GetFirstCellularNetworkScan" href="le__mrc_8h.html#ae006d053b037cec589aa85053472a2af"/>
+              <topic label="le_mrc_GetFirstNeighborCellInfo" href="le__mrc_8h.html#ab50724fd74818d71da1dfcd2217dd795"/>
               <topic label="le_mrc_GetHomeNetworkName" href="le__mrc_8h.html#adb0f8482f975f23c574594f7e6c1c4df"/>
-              <topic label="le_mrc_GetNeighborCellId" href="le__mrc_8h.html#a0895ede4d936937cc2a004acdaaf35cc"/>
-              <topic label="le_mrc_GetNeighborCellLocAreaCode" href="le__mrc_8h.html#ad33d1cd899974ced0ee7d6b8c1981128"/>
-              <topic label="le_mrc_GetNeighborCellRxLevel" href="le__mrc_8h.html#a9eae22ceb2df40d7e1e57a9ec617b2f5"/>
-              <topic label="le_mrc_GetNeighborCellsInfo" href="le__mrc_8h.html#ae6278ae1817f8cbb9ec425f85b756ff9"/>
+              <topic label="le_mrc_GetNeighborCellId" href="le__mrc_8h.html#abdbc94e474235417d8610e2eb95558eb"/>
+              <topic label="le_mrc_GetNeighborCellLocAreaCode" href="le__mrc_8h.html#a70ba0ca70367bc673a6bca1e246bb88f"/>
+              <topic label="le_mrc_GetNeighborCellRxLevel" href="le__mrc_8h.html#aeae116235802afd041afd9df009642aa"/>
+              <topic label="le_mrc_GetNeighborCellsInfo" href="le__mrc_8h.html#a8d44fe46e61f3399c5e0dd6002b042ae"/>
               <topic label="le_mrc_GetNetRegState" href="le__mrc_8h.html#a4f11e27862fef384c0023f5b538e543d"/>
-              <topic label="le_mrc_GetNextCellularNetworkScan" href="le__mrc_8h.html#a75b4a316e87b15ac7558043a5e2080f9"/>
-              <topic label="le_mrc_GetNextNeighborCellInfo" href="le__mrc_8h.html#a71f62bb1260e5b1f6382f048e5bbbfdb"/>
+              <topic label="le_mrc_GetNextCellularNetworkScan" href="le__mrc_8h.html#ae0ca9f0c1c106d6ddeef784c6bb0d69b"/>
+              <topic label="le_mrc_GetNextNeighborCellInfo" href="le__mrc_8h.html#a0baede61d9b260a3ec83e3ab320d0715"/>
               <topic label="le_mrc_GetRadioAccessTechInUse" href="le__mrc_8h.html#a3ad9533c467cec0902d5d165bb32d67b"/>
               <topic label="le_mrc_GetRadioPower" href="le__mrc_8h.html#aac51332c6c84e460746eb1ad45c064d6"/>
               <topic label="le_mrc_GetSignalQual" href="le__mrc_8h.html#a717aa0f4e4dc9a83b6adc2f26f3f0258"/>
-              <topic label="le_mrc_IsCellularNetworkAvailable" href="le__mrc_8h.html#a68f43831a24c0876f3369f8f04fecc3c"/>
-              <topic label="le_mrc_IsCellularNetworkForbidden" href="le__mrc_8h.html#a83c48b76855849170377097f0518e348"/>
-              <topic label="le_mrc_IsCellularNetworkHome" href="le__mrc_8h.html#a6bd66ede48ce256daa45318fe721194f"/>
-              <topic label="le_mrc_IsCellularNetworkInUse" href="le__mrc_8h.html#aee8a43ae54b3598fccdcfb8f4b12ad57"/>
-              <topic label="le_mrc_IsCellularNetworkRatAvailable" href="le__mrc_8h.html#a7dd469abba42286dbe675e0dc23b4460"/>
-              <topic label="le_mrc_PerformCellularNetworkScan" href="le__mrc_8h.html#aeeca2f873b7830d9b069dce692e99abe"/>
+              <topic label="le_mrc_IsCellularNetworkAvailable" href="le__mrc_8h.html#a72ca8072f90d453169baff44441c41c0"/>
+              <topic label="le_mrc_IsCellularNetworkForbidden" href="le__mrc_8h.html#a699a52d014550124a5b3362ee888a780"/>
+              <topic label="le_mrc_IsCellularNetworkHome" href="le__mrc_8h.html#a7333dfc638f50524f9c6fd81457828ba"/>
+              <topic label="le_mrc_IsCellularNetworkInUse" href="le__mrc_8h.html#a4c859fc1364c183aa1d26a022db365c6"/>
+              <topic label="le_mrc_IsCellularNetworkRatAvailable" href="le__mrc_8h.html#a5293779345670c7ba236cf347f50122b"/>
+              <topic label="le_mrc_PerformCellularNetworkScan" href="le__mrc_8h.html#a2257f5cb738034fc25b64d991f8fa8c7"/>
               <topic label="le_mrc_RegisterCellularNetwork" href="le__mrc_8h.html#ad62cca6ea4e0825231ab382f981540ff"/>
               <topic label="le_mrc_RemoveNetRegStateHandler" href="le__mrc_8h.html#ac48c2d083b4b1fe59dffbba1d75e426e"/>
               <topic label="le_mrc_RemoveRatChangeHandler" href="le__mrc_8h.html#a818abae622b5d2cb3cfec53b15f7023e"/>
@@ -2262,84 +2226,111 @@
               <topic label="LE_SIM_PIN_MAX_LEN" href="le__sim_8h.html#ad2e7d02474310221f6815561ea02659f"/>
               <topic label="LE_SIM_PIN_MIN_LEN" href="le__sim_8h.html#a072e9b594642fe6d4a2dd24c375ae0e2"/>
               <topic label="LE_SIM_PUK_LEN" href="le__sim_8h.html#ad0bf9f5a415eeb0eaf246bd9753a5099"/>
-              <topic label="le_sim_NewStateHandlerFunc_t" href="le__sim_8h.html#a2e622e0c142de1d251440c28a090920e"/>
+              <topic label="le_sim_NewStateHandlerFunc_t" href="le__sim_8h.html#a8c28705bb5a60de8cd45ec3d54de9434"/>
               <topic label="le_sim_NewStateHandlerRef_t" href="le__sim_8h.html#a2762b1c04a51b185890700b0fa94f92d"/>
-              <topic label="le_sim_Ref_t" href="le__sim_8h.html#a75a1a0bebb8f474519f366effe52a0c7"/>
+              <topic label="le_sim_ObjRef_t" href="le__sim_8h.html#aec875f4e275f62075c033d25dcf08fbe"/>
+              <topic label="le_sim_States_t" href="le__sim_8h.html#a21b9bb7d5e5e7ece213e00738a5bae41">
+                <topic label="LE_SIM_INSERTED" href="le__sim_8h.html#a21b9bb7d5e5e7ece213e00738a5bae41a86aea853ae5fcc1a2e3c8d352d8689d3"/>
+                <topic label="LE_SIM_ABSENT" href="le__sim_8h.html#a21b9bb7d5e5e7ece213e00738a5bae41a813e26946372fbc3960aa97713b6ca2f"/>
+                <topic label="LE_SIM_READY" href="le__sim_8h.html#a21b9bb7d5e5e7ece213e00738a5bae41aa7f1f6c3391e32af8ce3ba2242276d64"/>
+                <topic label="LE_SIM_BLOCKED" href="le__sim_8h.html#a21b9bb7d5e5e7ece213e00738a5bae41af83b91131d516ad3756781108000515a"/>
+                <topic label="LE_SIM_BUSY" href="le__sim_8h.html#a21b9bb7d5e5e7ece213e00738a5bae41a944435801d6359050dc37092396ca951"/>
+                <topic label="LE_SIM_STATE_UNKNOWN" href="le__sim_8h.html#a21b9bb7d5e5e7ece213e00738a5bae41ad82522676bf094ea402a0311356e434f"/>
+              </topic>
               <topic label="le_sim_AddNewStateHandler" href="le__sim_8h.html#a4965e5346ff67093f41f858341cbaf41"/>
-              <topic label="le_sim_ChangePIN" href="le__sim_8h.html#ae344afecde57adf76afdaa9ecc9547a7"/>
+              <topic label="le_sim_ChangePIN" href="le__sim_8h.html#a2194febae925af2073b474fd39a42db3"/>
               <topic label="le_sim_CountSlots" href="le__sim_8h.html#a106e220e84b5aec759b036a171eaed8e"/>
-              <topic label="le_sim_Create" href="le__sim_8h.html#ad853288e065e5bb8463b71c929d947fd"/>
-              <topic label="le_sim_Delete" href="le__sim_8h.html#a55d30a893f5784907edd9564f84f3124"/>
-              <topic label="le_sim_EnterPIN" href="le__sim_8h.html#af4e4828f4181c8b695074b5806797172"/>
-              <topic label="le_sim_GetICCID" href="le__sim_8h.html#acef5700d445ccc47de83197b68a212fa"/>
-              <topic label="le_sim_GetIMSI" href="le__sim_8h.html#acaeb7a5d24d3e87596f484d8495e20ac"/>
-              <topic label="le_sim_GetRemainingPINTries" href="le__sim_8h.html#ab06e750ac70edcc31ddd0a10ee48197c"/>
+              <topic label="le_sim_Create" href="le__sim_8h.html#a96ae7c3ffad698c16d03442dff711155"/>
+              <topic label="le_sim_Delete" href="le__sim_8h.html#aa06384e5e32d769c1a62ef42a1e6fd43"/>
+              <topic label="le_sim_EnterPIN" href="le__sim_8h.html#a21e04db9ce0234c5f9a88456f74de3b5"/>
+              <topic label="le_sim_GetICCID" href="le__sim_8h.html#a57253bdc5b927ed81c6c9d36cdcd0ceb"/>
+              <topic label="le_sim_GetIMSI" href="le__sim_8h.html#add6a411cc3a88f6c885e54bb9ef006d6"/>
+              <topic label="le_sim_GetRemainingPINTries" href="le__sim_8h.html#a84a634fa664d51a6d35eb839bcdc4e8c"/>
               <topic label="le_sim_GetSelectedCard" href="le__sim_8h.html#af61ce2885fb5b0cc60b857abe98dac56"/>
-              <topic label="le_sim_GetSlotNumber" href="le__sim_8h.html#ac7ad43d5b65ea51229d82e53dbff3864"/>
-              <topic label="le_sim_GetState" href="le__sim_8h.html#af7546b1e1f0e9689996fd399d0597f5c"/>
-              <topic label="le_sim_GetSubscriberPhoneNumber" href="le__sim_8h.html#a6bfacd0e20000925a532d157538c6cb8"/>
-              <topic label="le_sim_IsPresent" href="le__sim_8h.html#abf0f3927a8eb4c576cfe19b2331acd89"/>
-              <topic label="le_sim_IsReady" href="le__sim_8h.html#a18fcea4abbaf79d0e22c0cc29293ee5a"/>
-              <topic label="le_sim_Lock" href="le__sim_8h.html#a8b2e681142e99eb71bc7587597dbd34d"/>
+              <topic label="le_sim_GetSlotNumber" href="le__sim_8h.html#aec5f1fcdd9b0455b6a1259e1ac9fc1d9"/>
+              <topic label="le_sim_GetState" href="le__sim_8h.html#a284e5a087bfb09b3453b9b3f388e24bd"/>
+              <topic label="le_sim_GetSubscriberPhoneNumber" href="le__sim_8h.html#ab0b3c5da618c1168aaa1685189db6b0b"/>
+              <topic label="le_sim_IsPresent" href="le__sim_8h.html#a1ad9cdf49b2e6e905d09c32bdb59a0e7"/>
+              <topic label="le_sim_IsReady" href="le__sim_8h.html#a6b15a8fb698f7cf10649173ef9735f5f"/>
+              <topic label="le_sim_Lock" href="le__sim_8h.html#a34445fea55def77c06cf392440932acc"/>
               <topic label="le_sim_RemoveNewStateHandler" href="le__sim_8h.html#a0286578e9aa46ba864df1878263b9f84"/>
-              <topic label="le_sim_Unblock" href="le__sim_8h.html#a860afd729cf750bc6526559eb097d542"/>
-              <topic label="le_sim_Unlock" href="le__sim_8h.html#aa84bb7139a46932a85a9b055d2d77372"/>
+              <topic label="le_sim_Unblock" href="le__sim_8h.html#a2d91fc8407d17a1a50303472b72de8e9"/>
+              <topic label="le_sim_Unlock" href="le__sim_8h.html#aa95ecd114b8a8206ecc0e28374fbc085"/>
             </topic>
             <topic label="le_sms.h" href="le__sms_8h.html">
-              <topic label="le_sms_msg_ListRef_t" href="le__sms_8h.html#aa7fff440851f00cbdc49226c861e8fb7"/>
-              <topic label="le_sms_msg_Ref_t" href="le__sms_8h.html#a9eb1de4c4f18fd646af2be405b011a06"/>
-              <topic label="le_sms_msg_RxMessageHandlerFunc_t" href="le__sms_8h.html#acf7593a6078e1a74efa7cfe609316586"/>
-              <topic label="le_sms_msg_RxMessageHandlerRef_t" href="le__sms_8h.html#a51fb3a3816a7eb50749fe98bbaa63b3a"/>
-              <topic label="le_sms_msg_AddRxMessageHandler" href="le__sms_8h.html#a9c2bcb812602f52b3adcf80ff2d6d354"/>
-              <topic label="le_sms_msg_Create" href="le__sms_8h.html#a56f5c913912acfd28d1fdc7c996e0295"/>
-              <topic label="le_sms_msg_CreateRxMsgList" href="le__sms_8h.html#a7ceb32b464883ba2c9573f5fb7b29113"/>
-              <topic label="le_sms_msg_Delete" href="le__sms_8h.html#ad8412741c747ec366c3df403029c3b95"/>
-              <topic label="le_sms_msg_DeleteFromStorage" href="le__sms_8h.html#adee6a8ba0f060ae12e0b3d951a07dd01"/>
-              <topic label="le_sms_msg_DeleteList" href="le__sms_8h.html#ae811a178b7f1b42d0d417ab21259435c"/>
-              <topic label="le_sms_msg_GetBinary" href="le__sms_8h.html#aa2ef747e0d4b4a825ad9795f74cb094e"/>
-              <topic label="le_sms_msg_GetFirst" href="le__sms_8h.html#a7b00a9995304275e4a307483db831aae"/>
-              <topic label="le_sms_msg_GetFormat" href="le__sms_8h.html#a17d6b6939cd107f57b7f95e2b4699d0b"/>
-              <topic label="le_sms_msg_GetNext" href="le__sms_8h.html#a5b6abace280b50c402b5716052b665a9"/>
-              <topic label="le_sms_msg_GetPDU" href="le__sms_8h.html#a1c5363ab2e9814af2720164fcd483f2f"/>
-              <topic label="le_sms_msg_GetPDULen" href="le__sms_8h.html#a32762ec20cb037e123bb19303d6d4212"/>
-              <topic label="le_sms_msg_GetSenderTel" href="le__sms_8h.html#a6556a1da7f176836c68ba0b66f8a94d7"/>
-              <topic label="le_sms_msg_GetStatus" href="le__sms_8h.html#a6fed5c39592ddf0b1a9cdf4d749e77ae"/>
-              <topic label="le_sms_msg_GetText" href="le__sms_8h.html#a1b1215728797edfc926bf1348311060c"/>
-              <topic label="le_sms_msg_GetTimeStamp" href="le__sms_8h.html#ae67c6ba33603fc1766e7fbd7f02731e9"/>
-              <topic label="le_sms_msg_GetUserdataLen" href="le__sms_8h.html#a55622fddf87b35405d1e48c0e90cb592"/>
-              <topic label="le_sms_msg_MarkRead" href="le__sms_8h.html#a60f3ae08f75d9792b73ec77e855ce2e8"/>
-              <topic label="le_sms_msg_MarkUnread" href="le__sms_8h.html#a1211b0b7c4eaeaf0935dc70f9efd1e20"/>
-              <topic label="le_sms_msg_RemoveRxMessageHandler" href="le__sms_8h.html#af69c0fa7d191157207e677c67bab4a35"/>
-              <topic label="le_sms_msg_Send" href="le__sms_8h.html#afc8256b53cd7e528f7e0736b2e6e3faa"/>
-              <topic label="le_sms_msg_SetBinary" href="le__sms_8h.html#ac3ba825778c49e0b6966134833c6160a"/>
-              <topic label="le_sms_msg_SetDestination" href="le__sms_8h.html#afee6b2eb05e5c56a82837bd3f8d43371"/>
-              <topic label="le_sms_msg_SetPDU" href="le__sms_8h.html#af748aa957c534332f510a8ddc470f81b"/>
-              <topic label="le_sms_msg_SetText" href="le__sms_8h.html#abe60284e9c441636527dfb9da448eb04"/>
+              <topic label="LE_SMS_BINARY_MAX_LEN" href="le__sms_8h.html#a1650cf6d5689e4c59a58b508ca5e4ee1"/>
+              <topic label="LE_SMS_PDU_MAX_LEN" href="le__sms_8h.html#a3670915e8564b5a615937688367092a6"/>
+              <topic label="LE_SMS_TEXT_MAX_LEN" href="le__sms_8h.html#ac1b7b4dad3b9f7f1fe602494123a10b0"/>
+              <topic label="LE_SMS_TIMESTAMP_MAX_LEN" href="le__sms_8h.html#accabf44fe7d9f2b85b807eee8da276c3"/>
+              <topic label="le_sms_MsgListRef_t" href="le__sms_8h.html#afd91170c5ea21ec7ca98f7ce95049dae"/>
+              <topic label="le_sms_MsgRef_t" href="le__sms_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7"/>
+              <topic label="le_sms_RxMessageHandlerFunc_t" href="le__sms_8h.html#af9c99d5b0a4745bd624590cc077133f0"/>
+              <topic label="le_sms_RxMessageHandlerRef_t" href="le__sms_8h.html#a77d2607cc541bf0369e69bb2d105d4bf"/>
+              <topic label="le_sms_Format_t" href="le__sms_8h.html#a337778c44e63660c44fa2116699296c0">
+                <topic label="LE_SMS_FORMAT_PDU" href="le__sms_8h.html#a337778c44e63660c44fa2116699296c0a3f6a4a63acbf7aec5a498017ff53a6e8"/>
+                <topic label="LE_SMS_FORMAT_TEXT" href="le__sms_8h.html#a337778c44e63660c44fa2116699296c0a1bb6a0d76a622b1185ee879e1595dff8"/>
+                <topic label="LE_SMS_FORMAT_BINARY" href="le__sms_8h.html#a337778c44e63660c44fa2116699296c0ac70333fc9281ed10aa405d585689c000"/>
+                <topic label="LE_SMS_FORMAT_UNKNOWN" href="le__sms_8h.html#a337778c44e63660c44fa2116699296c0abea80bb6058e34a427c02b80bfede497"/>
+              </topic>
+              <topic label="le_sms_Status_t" href="le__sms_8h.html#a18a1937acb5878ae01a9d668fe5070b6">
+                <topic label="LE_SMS_RX_READ" href="le__sms_8h.html#a18a1937acb5878ae01a9d668fe5070b6acf7543162a77df096f714c66555052f1"/>
+                <topic label="LE_SMS_RX_UNREAD" href="le__sms_8h.html#a18a1937acb5878ae01a9d668fe5070b6a30d180b7a6410abdd57182014746b8bc"/>
+                <topic label="LE_SMS_STORED_SENT" href="le__sms_8h.html#a18a1937acb5878ae01a9d668fe5070b6ad3254c9e0006f34d438c6e1918d3973f"/>
+                <topic label="LE_SMS_STORED_UNSENT" href="le__sms_8h.html#a18a1937acb5878ae01a9d668fe5070b6a57f62f640b2341ae3ac86310df6759e5"/>
+                <topic label="LE_SMS_SENT" href="le__sms_8h.html#a18a1937acb5878ae01a9d668fe5070b6aa20b05cdd468e822268c59d9789ef132"/>
+                <topic label="LE_SMS_UNSENT" href="le__sms_8h.html#a18a1937acb5878ae01a9d668fe5070b6afd992b5c50b6420d37067f8c516d9fef"/>
+                <topic label="LE_SMS_STATUS_UNKNOWN" href="le__sms_8h.html#a18a1937acb5878ae01a9d668fe5070b6ae7b415d976598f3a548d8ab8382d2019"/>
+              </topic>
+              <topic label="le_sms_AddRxMessageHandler" href="le__sms_8h.html#a39a29e6ec1b819d8c0251b6347deaf02"/>
+              <topic label="le_sms_Create" href="le__sms_8h.html#a668abcbcff2f1f3c5cdf799315a81058"/>
+              <topic label="le_sms_CreateRxMsgList" href="le__sms_8h.html#aee4328f9e417108fa16794cc135073d0"/>
+              <topic label="le_sms_Delete" href="le__sms_8h.html#aca1691010c88995cb47225f2889910fa"/>
+              <topic label="le_sms_DeleteFromStorage" href="le__sms_8h.html#aff755186b683b94ba2788b48e28284a3"/>
+              <topic label="le_sms_DeleteList" href="le__sms_8h.html#a4027c05c4ee7552ab0e081caa315c8a2"/>
+              <topic label="le_sms_GetBinary" href="le__sms_8h.html#af000a9c84e4e181dfe250715b403f4e4"/>
+              <topic label="le_sms_GetFirst" href="le__sms_8h.html#a934253dee33a6090656876cff853b2c6"/>
+              <topic label="le_sms_GetFormat" href="le__sms_8h.html#a5c2b8ce7043b4732c7b0ede7c5d7118c"/>
+              <topic label="le_sms_GetNext" href="le__sms_8h.html#ac3b6a30a6d4e4f21749b536184b836ec"/>
+              <topic label="le_sms_GetPDU" href="le__sms_8h.html#a22507e4cfc8ea091ccc19801d240060a"/>
+              <topic label="le_sms_GetPDULen" href="le__sms_8h.html#abb89b302e564f3d55d604bb0c0dda022"/>
+              <topic label="le_sms_GetSenderTel" href="le__sms_8h.html#af3cae92eb9e866f508767e8559ec79ba"/>
+              <topic label="le_sms_GetStatus" href="le__sms_8h.html#ae1843c72eca77cd6da94cb686e5c2ae8"/>
+              <topic label="le_sms_GetText" href="le__sms_8h.html#a863bd9eb16fe5ad6027c1a2df35d485b"/>
+              <topic label="le_sms_GetTimeStamp" href="le__sms_8h.html#ae86e81fc1f70a54eeaee19b89b52f482"/>
+              <topic label="le_sms_GetUserdataLen" href="le__sms_8h.html#a6165464dd3502b3c76b79b32206ba10f"/>
+              <topic label="le_sms_MarkRead" href="le__sms_8h.html#a3dbd11952804520512fed270d183461d"/>
+              <topic label="le_sms_MarkUnread" href="le__sms_8h.html#a6ef04e331af6563b79e77bb51b28bc55"/>
+              <topic label="le_sms_RemoveRxMessageHandler" href="le__sms_8h.html#a469a4d08b9ccb8b61ed7b8294e6ee3ef"/>
+              <topic label="le_sms_Send" href="le__sms_8h.html#ab7dee7d2c74cfcadd9ea0d5fe1786dfc"/>
+              <topic label="le_sms_SetBinary" href="le__sms_8h.html#af446ada4abf7b31ca265d9124b41a32e"/>
+              <topic label="le_sms_SetDestination" href="le__sms_8h.html#a2d459c750a9b1817cf0bcebafbf6f0ef"/>
+              <topic label="le_sms_SetPDU" href="le__sms_8h.html#ad555dbe18552b3c9f0c6e9639fcecb95"/>
+              <topic label="le_sms_SetText" href="le__sms_8h.html#a1284d11cda6092f4d498da0c0e2353fc"/>
             </topic>
             <topic label="mcc_call_interface.h" href="mcc__call__interface_8h.html">
-              <topic label="le_mcc_call_Answer" href="mcc__call__interface_8h.html#ac52db9513af1486e7ee5020e3128fb0d"/>
-              <topic label="le_mcc_call_Delete" href="mcc__call__interface_8h.html#a91b1ccae151f59126317ae89cd5e10e0"/>
-              <topic label="le_mcc_call_GetRemoteTel" href="mcc__call__interface_8h.html#aa3c2e51df85fd4ff0a9f88f70a6a71e3"/>
-              <topic label="le_mcc_call_GetRxAudioStream" href="mcc__call__interface_8h.html#a90c35114bdea1206c5df756cb9b5fb07"/>
-              <topic label="le_mcc_call_GetTerminationReason" href="mcc__call__interface_8h.html#a9bd56258bf4350afdb2602bdb6f61c07"/>
-              <topic label="le_mcc_call_GetTxAudioStream" href="mcc__call__interface_8h.html#a62a8f95c3e5f0db0384b77a85ec77d1c"/>
-              <topic label="le_mcc_call_HangUp" href="mcc__call__interface_8h.html#a0f5df7e46bdd63f4b91071bf8495ad9c"/>
-              <topic label="le_mcc_call_IsConnected" href="mcc__call__interface_8h.html#aa71f1765ffcb50e3b8b39172f14d7a77"/>
-              <topic label="le_mcc_call_Start" href="mcc__call__interface_8h.html#aba77900f0bbe1e66d3d486a068bcc85c"/>
+              <topic label="le_mcc_call_Answer" href="mcc__call__interface_8h.html#a2baf050ffc6b4cd4ff465a621d31fd91"/>
+              <topic label="le_mcc_call_Delete" href="mcc__call__interface_8h.html#a9f2a3ed81f334a3d8dc04b81ac87fd86"/>
+              <topic label="le_mcc_call_GetRemoteTel" href="mcc__call__interface_8h.html#aaeef08727353b823be55f83d40c9290a"/>
+              <topic label="le_mcc_call_GetRxAudioStream" href="mcc__call__interface_8h.html#a340c69ac34db98ee1248a6d11a229372"/>
+              <topic label="le_mcc_call_GetTerminationReason" href="mcc__call__interface_8h.html#af6bf77424889dd65d573ad15333fef36"/>
+              <topic label="le_mcc_call_GetTxAudioStream" href="mcc__call__interface_8h.html#ae22c0dead782b11ecfa60a3a9532fde6"/>
+              <topic label="le_mcc_call_HangUp" href="mcc__call__interface_8h.html#a7a3f07a065bd6d6f1ae6ec9573a993f7"/>
+              <topic label="le_mcc_call_IsConnected" href="mcc__call__interface_8h.html#a53eb3004475df2bd63c860552d1597ca"/>
+              <topic label="le_mcc_call_Start" href="mcc__call__interface_8h.html#a20caad708661519760a699c9b45724c8"/>
               <topic label="le_mcc_call_StartClient" href="mcc__call__interface_8h.html#a2a179f71d4433ce63479e2d466c77adf"/>
               <topic label="le_mcc_call_StopClient" href="mcc__call__interface_8h.html#aa7638a4130d8a2c3b61fefc59259ff2d"/>
             </topic>
             <topic label="mcc_profile_interface.h" href="mcc__profile__interface_8h.html">
-              <topic label="le_mcc_profile_CallEventHandlerFunc_t" href="mcc__profile__interface_8h.html#a5e3fd8ff283d6f13eb32a30772ff3a6d"/>
+              <topic label="le_mcc_profile_CallEventHandlerFunc_t" href="mcc__profile__interface_8h.html#a4cbd930820d56e334568b323183e7c5e"/>
               <topic label="le_mcc_profile_CallEventHandlerRef_t" href="mcc__profile__interface_8h.html#ab7cd9c129e8e55e57bc4a2ff714c603f"/>
               <topic label="le_mcc_profile_StateChangeHandlerFunc_t" href="mcc__profile__interface_8h.html#a5651915d4156059de54473d9d6155aa3"/>
               <topic label="le_mcc_profile_StateChangeHandlerRef_t" href="mcc__profile__interface_8h.html#a05b4cd55e57ad801a597de0c59b984a4"/>
-              <topic label="le_mcc_profile_AddCallEventHandler" href="mcc__profile__interface_8h.html#a79250ea1f4c14b9bc9c4419f61bc331f"/>
-              <topic label="le_mcc_profile_AddStateChangeHandler" href="mcc__profile__interface_8h.html#af12300668007cf37b3121596d26a2c00"/>
-              <topic label="le_mcc_profile_CreateCall" href="mcc__profile__interface_8h.html#a4a8a49c514d5d60fbda3276251406ac7"/>
-              <topic label="le_mcc_profile_GetByName" href="mcc__profile__interface_8h.html#abd7c8a9b67b14aac0e4a32cc5e9f34a9"/>
-              <topic label="le_mcc_profile_GetState" href="mcc__profile__interface_8h.html#a339996086ebf3c6c5242b3ce0414b926"/>
-              <topic label="le_mcc_profile_Release" href="mcc__profile__interface_8h.html#a72e387c98e50d084c09a7e0a83af6341"/>
+              <topic label="le_mcc_profile_AddCallEventHandler" href="mcc__profile__interface_8h.html#ae220400c29b85000d81b3bf37e0024ab"/>
+              <topic label="le_mcc_profile_AddStateChangeHandler" href="mcc__profile__interface_8h.html#ab6eac14d55e58d3d4da0da582d8408b2"/>
+              <topic label="le_mcc_profile_CreateCall" href="mcc__profile__interface_8h.html#a6bca39aed481a70f06e0e987410aa321"/>
+              <topic label="le_mcc_profile_GetByName" href="mcc__profile__interface_8h.html#a062edd5cb69dfa29a6d974dd5b01d84e"/>
+              <topic label="le_mcc_profile_GetState" href="mcc__profile__interface_8h.html#a712498ca3bf30c9ef0f1bbb6fc2c4d23"/>
+              <topic label="le_mcc_profile_Release" href="mcc__profile__interface_8h.html#a4b3b06ab0ec426b82338e6b4fb32145a"/>
               <topic label="le_mcc_profile_RemoveCallEventHandler" href="mcc__profile__interface_8h.html#a1d7581d0d52f2501d320cd415ae3a2d8"/>
               <topic label="le_mcc_profile_RemoveStateChangeHandler" href="mcc__profile__interface_8h.html#ab9b988a5cfa6c293d33a972818202733"/>
               <topic label="le_mcc_profile_StartClient" href="mcc__profile__interface_8h.html#aa834268aaa4c749d3266c1ca766b5d80"/>
@@ -2348,25 +2339,28 @@
             <topic label="mdc_interface.h" href="mdc__interface_8h.html">
               <topic label="le_mdc_SessionStateHandlerFunc_t" href="mdc__interface_8h.html#abcf0c174aaefa3fad5bbde20b62083cf"/>
               <topic label="le_mdc_SessionStateHandlerRef_t" href="mdc__interface_8h.html#a1a5079ca540f75d009991c164f1c2a51"/>
-              <topic label="le_mdc_AddSessionStateHandler" href="mdc__interface_8h.html#a68c83cea1c67af1d179df23d7028ca54"/>
-              <topic label="le_mdc_GetAccessPointName" href="mdc__interface_8h.html#ab2ed8eece45a47ce2fe23a84d87cfa9c"/>
+              <topic label="le_mdc_AddSessionStateHandler" href="mdc__interface_8h.html#a594c85c1ccb56ddfbaf36496f35f681e"/>
+              <topic label="le_mdc_GetAccessPointName" href="mdc__interface_8h.html#a7eeb17e69549fe2c5c43af58d750b588"/>
               <topic label="le_mdc_GetBytesCounters" href="mdc__interface_8h.html#aaad833c105f7d0ae77f18195d6739080"/>
-              <topic label="le_mdc_GetDataBearerTechnology" href="mdc__interface_8h.html#a7474f8ff84fbab5cde4d49277e259155"/>
-              <topic label="le_mdc_GetDNSAddresses" href="mdc__interface_8h.html#a63ba3cb5391701764357a8b737b50019"/>
-              <topic label="le_mdc_GetGatewayAddress" href="mdc__interface_8h.html#abb505ff8417b50e6562a10e343328f5b"/>
-              <topic label="le_mdc_GetInterfaceName" href="mdc__interface_8h.html#a9d2dc2cf724134737dd655ae7b4bdfd7"/>
-              <topic label="le_mdc_GetIPAddress" href="mdc__interface_8h.html#a49bfa40e6e332d35e1f2373981101c7e"/>
-              <topic label="le_mdc_GetProfileName" href="mdc__interface_8h.html#abd8824a18e0c0307dee65bbc383cb8c0"/>
-              <topic label="le_mdc_GetSessionState" href="mdc__interface_8h.html#a0e99ea550357ec6f712bfb8a9913dc1e"/>
-              <topic label="le_mdc_IsIPV4" href="mdc__interface_8h.html#a90f9b98adc367436614e29f934ce1c3b"/>
-              <topic label="le_mdc_IsIPV6" href="mdc__interface_8h.html#a1db6fc9bdcea2f679814ad69965fe33c"/>
-              <topic label="le_mdc_LoadProfile" href="mdc__interface_8h.html#aaf1a5096e60a30e32de138665dc03d2e"/>
+              <topic label="le_mdc_GetDataBearerTechnology" href="mdc__interface_8h.html#a49543976597b70b254cc084c160b89c8"/>
+              <topic label="le_mdc_GetInterfaceName" href="mdc__interface_8h.html#abf470aa8e252114cbb95b4e337083d52"/>
+              <topic label="le_mdc_GetIPv4Address" href="mdc__interface_8h.html#a732acb5823549a1644aa1bb5ba69fea5"/>
+              <topic label="le_mdc_GetIPv4DNSAddresses" href="mdc__interface_8h.html#ae99f6e212de1b0c0ea8a8763b62e0bea"/>
+              <topic label="le_mdc_GetIPv4GatewayAddress" href="mdc__interface_8h.html#af4be1afa6d44a4a7041f9f02660704b9"/>
+              <topic label="le_mdc_GetIPv6Address" href="mdc__interface_8h.html#aacd6a0b646f26625cdb26a78d42f8e5f"/>
+              <topic label="le_mdc_GetIPv6DNSAddresses" href="mdc__interface_8h.html#a8aeb3f684567eee2976b851b7d713f01"/>
+              <topic label="le_mdc_GetIPv6GatewayAddress" href="mdc__interface_8h.html#a0b82eac1ed112bd3b82060cc54751246"/>
+              <topic label="le_mdc_GetProfileName" href="mdc__interface_8h.html#ae4d7ef641924231258876f45556c5314"/>
+              <topic label="le_mdc_GetSessionState" href="mdc__interface_8h.html#a9bacf6ff603a5bf26413363686dcc20e"/>
+              <topic label="le_mdc_IsIPv4" href="mdc__interface_8h.html#aa3912e94864a6e5862e07f58b3772cba"/>
+              <topic label="le_mdc_IsIPv6" href="mdc__interface_8h.html#adde11de0b17b2c937acca6355b6fba11"/>
+              <topic label="le_mdc_LoadProfile" href="mdc__interface_8h.html#ae365c6ad563e17de72809871f90441b2"/>
               <topic label="le_mdc_RemoveSessionStateHandler" href="mdc__interface_8h.html#a3b89962f4383f42a357f5a5fcc14fdff"/>
               <topic label="le_mdc_ResetBytesCounter" href="mdc__interface_8h.html#a63636b2779d2ee6a6520ebfb2d26666c"/>
               <topic label="le_mdc_StartClient" href="mdc__interface_8h.html#a15636117e097415566ef63194705970e"/>
-              <topic label="le_mdc_StartSession" href="mdc__interface_8h.html#a4611f8c0a26a9c2b8c6d8bb6ce39ce7d"/>
+              <topic label="le_mdc_StartSession" href="mdc__interface_8h.html#a2cb08d5c3e6c43297d80448891719649"/>
               <topic label="le_mdc_StopClient" href="mdc__interface_8h.html#ae9f096bb21f13bc98b5f4d6bbd48d340"/>
-              <topic label="le_mdc_StopSession" href="mdc__interface_8h.html#a3306a2efe863079f6bde881db39476bc"/>
+              <topic label="le_mdc_StopSession" href="mdc__interface_8h.html#a53453f85065c3cace0922150b7e3d869"/>
             </topic>
             <topic label="mrc_interface.h" href="mrc__interface_8h.html">
               <topic label="le_mrc_NetRegStateHandlerFunc_t" href="mrc__interface_8h.html#aa3485637172fcec54b891e246eeaa1df"/>
@@ -2375,29 +2369,29 @@
               <topic label="le_mrc_RatChangeHandlerRef_t" href="mrc__interface_8h.html#a5ac252acd68a64b336ae9a98ca6113ac"/>
               <topic label="le_mrc_AddNetRegStateHandler" href="mrc__interface_8h.html#aa1925a88d9aa51fc868dd21a6b3611c6"/>
               <topic label="le_mrc_AddRatChangeHandler" href="mrc__interface_8h.html#aedd9c526588a8298322525cfba6f875d"/>
-              <topic label="le_mrc_DeleteCellularNetworkScan" href="mrc__interface_8h.html#aabbed28955eab0ed5c942a2a037ed6cf"/>
-              <topic label="le_mrc_DeleteNeighborCellsInfo" href="mrc__interface_8h.html#a2a36594f06217845847860058b6fe5f2"/>
-              <topic label="le_mrc_GetCellularNetworkMccMnc" href="mrc__interface_8h.html#a70d046f604befbde8520e072e9a726e4"/>
-              <topic label="le_mrc_GetCellularNetworkName" href="mrc__interface_8h.html#a207dd411e963addfa5721b5a2a88c980"/>
-              <topic label="le_mrc_GetFirstCellularNetworkScan" href="mrc__interface_8h.html#a0852cae99a555d7cf84fa037ca10cb99"/>
-              <topic label="le_mrc_GetFirstNeighborCellInfo" href="mrc__interface_8h.html#a16e3171e05b85cf0b60fb6966041af8b"/>
+              <topic label="le_mrc_DeleteCellularNetworkScan" href="mrc__interface_8h.html#ac45ce335b3fa063b83bb925e67eeaeb3"/>
+              <topic label="le_mrc_DeleteNeighborCellsInfo" href="mrc__interface_8h.html#a101343359e8d36ab41180aede2891b07"/>
+              <topic label="le_mrc_GetCellularNetworkMccMnc" href="mrc__interface_8h.html#af4fa2d3f3c9a664b8e46478dba048f2e"/>
+              <topic label="le_mrc_GetCellularNetworkName" href="mrc__interface_8h.html#a82cb12c5f02baccbb04b0af1be4eb031"/>
+              <topic label="le_mrc_GetFirstCellularNetworkScan" href="mrc__interface_8h.html#ae006d053b037cec589aa85053472a2af"/>
+              <topic label="le_mrc_GetFirstNeighborCellInfo" href="mrc__interface_8h.html#ab50724fd74818d71da1dfcd2217dd795"/>
               <topic label="le_mrc_GetHomeNetworkName" href="mrc__interface_8h.html#aa7adeff4838e18d678233f255a9cf6fe"/>
-              <topic label="le_mrc_GetNeighborCellId" href="mrc__interface_8h.html#a0895ede4d936937cc2a004acdaaf35cc"/>
-              <topic label="le_mrc_GetNeighborCellLocAreaCode" href="mrc__interface_8h.html#ad33d1cd899974ced0ee7d6b8c1981128"/>
-              <topic label="le_mrc_GetNeighborCellRxLevel" href="mrc__interface_8h.html#a9eae22ceb2df40d7e1e57a9ec617b2f5"/>
-              <topic label="le_mrc_GetNeighborCellsInfo" href="mrc__interface_8h.html#ae6278ae1817f8cbb9ec425f85b756ff9"/>
+              <topic label="le_mrc_GetNeighborCellId" href="mrc__interface_8h.html#abdbc94e474235417d8610e2eb95558eb"/>
+              <topic label="le_mrc_GetNeighborCellLocAreaCode" href="mrc__interface_8h.html#a70ba0ca70367bc673a6bca1e246bb88f"/>
+              <topic label="le_mrc_GetNeighborCellRxLevel" href="mrc__interface_8h.html#aeae116235802afd041afd9df009642aa"/>
+              <topic label="le_mrc_GetNeighborCellsInfo" href="mrc__interface_8h.html#a8d44fe46e61f3399c5e0dd6002b042ae"/>
               <topic label="le_mrc_GetNetRegState" href="mrc__interface_8h.html#a4f11e27862fef384c0023f5b538e543d"/>
-              <topic label="le_mrc_GetNextCellularNetworkScan" href="mrc__interface_8h.html#a75b4a316e87b15ac7558043a5e2080f9"/>
-              <topic label="le_mrc_GetNextNeighborCellInfo" href="mrc__interface_8h.html#a71f62bb1260e5b1f6382f048e5bbbfdb"/>
+              <topic label="le_mrc_GetNextCellularNetworkScan" href="mrc__interface_8h.html#ae0ca9f0c1c106d6ddeef784c6bb0d69b"/>
+              <topic label="le_mrc_GetNextNeighborCellInfo" href="mrc__interface_8h.html#a0baede61d9b260a3ec83e3ab320d0715"/>
               <topic label="le_mrc_GetRadioAccessTechInUse" href="mrc__interface_8h.html#a3ad9533c467cec0902d5d165bb32d67b"/>
               <topic label="le_mrc_GetRadioPower" href="mrc__interface_8h.html#aac51332c6c84e460746eb1ad45c064d6"/>
               <topic label="le_mrc_GetSignalQual" href="mrc__interface_8h.html#a717aa0f4e4dc9a83b6adc2f26f3f0258"/>
-              <topic label="le_mrc_IsCellularNetworkAvailable" href="mrc__interface_8h.html#a68f43831a24c0876f3369f8f04fecc3c"/>
-              <topic label="le_mrc_IsCellularNetworkForbidden" href="mrc__interface_8h.html#a83c48b76855849170377097f0518e348"/>
-              <topic label="le_mrc_IsCellularNetworkHome" href="mrc__interface_8h.html#a6bd66ede48ce256daa45318fe721194f"/>
-              <topic label="le_mrc_IsCellularNetworkInUse" href="mrc__interface_8h.html#aee8a43ae54b3598fccdcfb8f4b12ad57"/>
-              <topic label="le_mrc_IsCellularNetworkRatAvailable" href="mrc__interface_8h.html#a7dd469abba42286dbe675e0dc23b4460"/>
-              <topic label="le_mrc_PerformCellularNetworkScan" href="mrc__interface_8h.html#aeeca2f873b7830d9b069dce692e99abe"/>
+              <topic label="le_mrc_IsCellularNetworkAvailable" href="mrc__interface_8h.html#a72ca8072f90d453169baff44441c41c0"/>
+              <topic label="le_mrc_IsCellularNetworkForbidden" href="mrc__interface_8h.html#a699a52d014550124a5b3362ee888a780"/>
+              <topic label="le_mrc_IsCellularNetworkHome" href="mrc__interface_8h.html#a7333dfc638f50524f9c6fd81457828ba"/>
+              <topic label="le_mrc_IsCellularNetworkInUse" href="mrc__interface_8h.html#a4c859fc1364c183aa1d26a022db365c6"/>
+              <topic label="le_mrc_IsCellularNetworkRatAvailable" href="mrc__interface_8h.html#a5293779345670c7ba236cf347f50122b"/>
+              <topic label="le_mrc_PerformCellularNetworkScan" href="mrc__interface_8h.html#a2257f5cb738034fc25b64d991f8fa8c7"/>
               <topic label="le_mrc_RegisterCellularNetwork" href="mrc__interface_8h.html#a578262185e6c0514e4ad5ba584c360ca"/>
               <topic label="le_mrc_RemoveNetRegStateHandler" href="mrc__interface_8h.html#a3033ecbc5b32c7847a794ee1d81922bd"/>
               <topic label="le_mrc_RemoveRatChangeHandler" href="mrc__interface_8h.html#aed4f1730c99a1a9204a198e3df3cf6f5"/>
@@ -2406,60 +2400,60 @@
               <topic label="le_mrc_StopClient" href="mrc__interface_8h.html#a59af0a3ab2d9e3e091d59fa54b8056ab"/>
             </topic>
             <topic label="sim_interface.h" href="sim__interface_8h.html">
-              <topic label="le_sim_NewStateHandlerFunc_t" href="sim__interface_8h.html#a2e622e0c142de1d251440c28a090920e"/>
+              <topic label="le_sim_NewStateHandlerFunc_t" href="sim__interface_8h.html#a8c28705bb5a60de8cd45ec3d54de9434"/>
               <topic label="le_sim_NewStateHandlerRef_t" href="sim__interface_8h.html#a2762b1c04a51b185890700b0fa94f92d"/>
               <topic label="le_sim_AddNewStateHandler" href="sim__interface_8h.html#a8e296a7cd35edd99cb1dc21232e280dd"/>
-              <topic label="le_sim_ChangePIN" href="sim__interface_8h.html#a12a4cb132d59cbadbff64df17c057d30"/>
+              <topic label="le_sim_ChangePIN" href="sim__interface_8h.html#a25b4180ddc334e9ce4b95edc697223f3"/>
               <topic label="le_sim_CountSlots" href="sim__interface_8h.html#a106e220e84b5aec759b036a171eaed8e"/>
-              <topic label="le_sim_Create" href="sim__interface_8h.html#ad853288e065e5bb8463b71c929d947fd"/>
-              <topic label="le_sim_Delete" href="sim__interface_8h.html#a55d30a893f5784907edd9564f84f3124"/>
-              <topic label="le_sim_EnterPIN" href="sim__interface_8h.html#ada32d1326d6bb43825625deca9c451a3"/>
-              <topic label="le_sim_GetICCID" href="sim__interface_8h.html#a0f1f00bfe9aefb272578d159b10a3f11"/>
-              <topic label="le_sim_GetIMSI" href="sim__interface_8h.html#a2ccc9de4f6d6ed25d852bb078f11a5c7"/>
-              <topic label="le_sim_GetRemainingPINTries" href="sim__interface_8h.html#ab06e750ac70edcc31ddd0a10ee48197c"/>
+              <topic label="le_sim_Create" href="sim__interface_8h.html#a96ae7c3ffad698c16d03442dff711155"/>
+              <topic label="le_sim_Delete" href="sim__interface_8h.html#aa06384e5e32d769c1a62ef42a1e6fd43"/>
+              <topic label="le_sim_EnterPIN" href="sim__interface_8h.html#a0ffb109740d942cf4a871dbd2adc479f"/>
+              <topic label="le_sim_GetICCID" href="sim__interface_8h.html#a1b3bb0c7ce251237cc7abf1b1a169f4f"/>
+              <topic label="le_sim_GetIMSI" href="sim__interface_8h.html#a44cea593963c4c8b7a2c0be753737d06"/>
+              <topic label="le_sim_GetRemainingPINTries" href="sim__interface_8h.html#a84a634fa664d51a6d35eb839bcdc4e8c"/>
               <topic label="le_sim_GetSelectedCard" href="sim__interface_8h.html#af61ce2885fb5b0cc60b857abe98dac56"/>
-              <topic label="le_sim_GetSlotNumber" href="sim__interface_8h.html#ac7ad43d5b65ea51229d82e53dbff3864"/>
-              <topic label="le_sim_GetState" href="sim__interface_8h.html#af7546b1e1f0e9689996fd399d0597f5c"/>
-              <topic label="le_sim_GetSubscriberPhoneNumber" href="sim__interface_8h.html#a3069866e25aa5999e523748ba0428c77"/>
-              <topic label="le_sim_IsPresent" href="sim__interface_8h.html#abf0f3927a8eb4c576cfe19b2331acd89"/>
-              <topic label="le_sim_IsReady" href="sim__interface_8h.html#a18fcea4abbaf79d0e22c0cc29293ee5a"/>
-              <topic label="le_sim_Lock" href="sim__interface_8h.html#a028cf420a1453e7360f059e64402c197"/>
+              <topic label="le_sim_GetSlotNumber" href="sim__interface_8h.html#aec5f1fcdd9b0455b6a1259e1ac9fc1d9"/>
+              <topic label="le_sim_GetState" href="sim__interface_8h.html#a284e5a087bfb09b3453b9b3f388e24bd"/>
+              <topic label="le_sim_GetSubscriberPhoneNumber" href="sim__interface_8h.html#a47d9f838829fcb16da2eec0f4cc81f92"/>
+              <topic label="le_sim_IsPresent" href="sim__interface_8h.html#a1ad9cdf49b2e6e905d09c32bdb59a0e7"/>
+              <topic label="le_sim_IsReady" href="sim__interface_8h.html#a6b15a8fb698f7cf10649173ef9735f5f"/>
+              <topic label="le_sim_Lock" href="sim__interface_8h.html#a4fc5c00efaab78fa594cc028b22a0e30"/>
               <topic label="le_sim_RemoveNewStateHandler" href="sim__interface_8h.html#a8e3a4e2e978cf4931a39317ee5e9f762"/>
               <topic label="le_sim_StartClient" href="sim__interface_8h.html#a2cbe74a5bea163889082eb5e578606d0"/>
               <topic label="le_sim_StopClient" href="sim__interface_8h.html#ae7fc0246c6aaf8d4baa3a5ebe700f3fc"/>
-              <topic label="le_sim_Unblock" href="sim__interface_8h.html#a9d49c069735bef00d513f18be10323bf"/>
-              <topic label="le_sim_Unlock" href="sim__interface_8h.html#a536c71c08e6b1b5d6c717ae6a6f21dfb"/>
+              <topic label="le_sim_Unblock" href="sim__interface_8h.html#af8691999f72761dd36eb5c4334db1c45"/>
+              <topic label="le_sim_Unlock" href="sim__interface_8h.html#a05d93f5cbd322e578db729b4f9c595d9"/>
             </topic>
             <topic label="sms_interface.h" href="sms__interface_8h.html">
-              <topic label="le_sms_msg_RxMessageHandlerFunc_t" href="sms__interface_8h.html#acf7593a6078e1a74efa7cfe609316586"/>
-              <topic label="le_sms_msg_RxMessageHandlerRef_t" href="sms__interface_8h.html#a51fb3a3816a7eb50749fe98bbaa63b3a"/>
-              <topic label="le_sms_msg_AddRxMessageHandler" href="sms__interface_8h.html#a09010777e9b920ff50e901c5fdc5e7dd"/>
-              <topic label="le_sms_msg_Create" href="sms__interface_8h.html#a56f5c913912acfd28d1fdc7c996e0295"/>
-              <topic label="le_sms_msg_CreateRxMsgList" href="sms__interface_8h.html#a7ceb32b464883ba2c9573f5fb7b29113"/>
-              <topic label="le_sms_msg_Delete" href="sms__interface_8h.html#ad8412741c747ec366c3df403029c3b95"/>
-              <topic label="le_sms_msg_DeleteFromStorage" href="sms__interface_8h.html#adee6a8ba0f060ae12e0b3d951a07dd01"/>
-              <topic label="le_sms_msg_DeleteList" href="sms__interface_8h.html#ae811a178b7f1b42d0d417ab21259435c"/>
-              <topic label="le_sms_msg_GetBinary" href="sms__interface_8h.html#a28f8127bc599f65c4006131243265e4e"/>
-              <topic label="le_sms_msg_GetFirst" href="sms__interface_8h.html#a7b00a9995304275e4a307483db831aae"/>
-              <topic label="le_sms_msg_GetFormat" href="sms__interface_8h.html#a17d6b6939cd107f57b7f95e2b4699d0b"/>
-              <topic label="le_sms_msg_GetNext" href="sms__interface_8h.html#a5b6abace280b50c402b5716052b665a9"/>
-              <topic label="le_sms_msg_GetPDU" href="sms__interface_8h.html#a85a77bd7394febabb059aa868b9d600c"/>
-              <topic label="le_sms_msg_GetPDULen" href="sms__interface_8h.html#a32762ec20cb037e123bb19303d6d4212"/>
-              <topic label="le_sms_msg_GetSenderTel" href="sms__interface_8h.html#ac4399d82d05069b5780eb184371497ee"/>
-              <topic label="le_sms_msg_GetStatus" href="sms__interface_8h.html#a6fed5c39592ddf0b1a9cdf4d749e77ae"/>
-              <topic label="le_sms_msg_GetText" href="sms__interface_8h.html#aca3b65a120a4d83a3298ec7eeb42327e"/>
-              <topic label="le_sms_msg_GetTimeStamp" href="sms__interface_8h.html#a0b694927cfbcbcd9b36895599dc2d682"/>
-              <topic label="le_sms_msg_GetUserdataLen" href="sms__interface_8h.html#a55622fddf87b35405d1e48c0e90cb592"/>
-              <topic label="le_sms_msg_MarkRead" href="sms__interface_8h.html#a60f3ae08f75d9792b73ec77e855ce2e8"/>
-              <topic label="le_sms_msg_MarkUnread" href="sms__interface_8h.html#a1211b0b7c4eaeaf0935dc70f9efd1e20"/>
-              <topic label="le_sms_msg_RemoveRxMessageHandler" href="sms__interface_8h.html#aa6a23c731fc1c5ac426e03f4493a6bdc"/>
-              <topic label="le_sms_msg_Send" href="sms__interface_8h.html#afc8256b53cd7e528f7e0736b2e6e3faa"/>
-              <topic label="le_sms_msg_SetBinary" href="sms__interface_8h.html#a3cac8ea6334ec7843261a85f9b54e3fc"/>
-              <topic label="le_sms_msg_SetDestination" href="sms__interface_8h.html#a690f7e4d78afd8d3f6c2c6e045949a33"/>
-              <topic label="le_sms_msg_SetPDU" href="sms__interface_8h.html#a6f68f9cb1b42e3965acb5f2827b2fd60"/>
-              <topic label="le_sms_msg_SetText" href="sms__interface_8h.html#a5e994cd0b3b89a0f8d00bc241e87e1f2"/>
-              <topic label="le_sms_msg_StartClient" href="sms__interface_8h.html#a0bb1da2ff579935a07c71bbd306c565b"/>
-              <topic label="le_sms_msg_StopClient" href="sms__interface_8h.html#aa0ee22d031267b0d4be3ea1652065b31"/>
+              <topic label="le_sms_RxMessageHandlerFunc_t" href="sms__interface_8h.html#af9c99d5b0a4745bd624590cc077133f0"/>
+              <topic label="le_sms_RxMessageHandlerRef_t" href="sms__interface_8h.html#a77d2607cc541bf0369e69bb2d105d4bf"/>
+              <topic label="le_sms_AddRxMessageHandler" href="sms__interface_8h.html#a844d595f3ae8d170b2fff80d854abb8d"/>
+              <topic label="le_sms_Create" href="sms__interface_8h.html#a668abcbcff2f1f3c5cdf799315a81058"/>
+              <topic label="le_sms_CreateRxMsgList" href="sms__interface_8h.html#aee4328f9e417108fa16794cc135073d0"/>
+              <topic label="le_sms_Delete" href="sms__interface_8h.html#aca1691010c88995cb47225f2889910fa"/>
+              <topic label="le_sms_DeleteFromStorage" href="sms__interface_8h.html#aff755186b683b94ba2788b48e28284a3"/>
+              <topic label="le_sms_DeleteList" href="sms__interface_8h.html#a4027c05c4ee7552ab0e081caa315c8a2"/>
+              <topic label="le_sms_GetBinary" href="sms__interface_8h.html#a0de50069a9df99adac983385106d9c09"/>
+              <topic label="le_sms_GetFirst" href="sms__interface_8h.html#a934253dee33a6090656876cff853b2c6"/>
+              <topic label="le_sms_GetFormat" href="sms__interface_8h.html#a5c2b8ce7043b4732c7b0ede7c5d7118c"/>
+              <topic label="le_sms_GetNext" href="sms__interface_8h.html#ac3b6a30a6d4e4f21749b536184b836ec"/>
+              <topic label="le_sms_GetPDU" href="sms__interface_8h.html#ae4b284d427ab7ec637056a6208fdd89e"/>
+              <topic label="le_sms_GetPDULen" href="sms__interface_8h.html#abb89b302e564f3d55d604bb0c0dda022"/>
+              <topic label="le_sms_GetSenderTel" href="sms__interface_8h.html#a68bfd509a8a3fd4ae39bde7ac5c32d8d"/>
+              <topic label="le_sms_GetStatus" href="sms__interface_8h.html#ae1843c72eca77cd6da94cb686e5c2ae8"/>
+              <topic label="le_sms_GetText" href="sms__interface_8h.html#ac598dec158aed1e9fa134daf22c704db"/>
+              <topic label="le_sms_GetTimeStamp" href="sms__interface_8h.html#aca83e53998bd7105e14011af41ba6499"/>
+              <topic label="le_sms_GetUserdataLen" href="sms__interface_8h.html#a6165464dd3502b3c76b79b32206ba10f"/>
+              <topic label="le_sms_MarkRead" href="sms__interface_8h.html#a3dbd11952804520512fed270d183461d"/>
+              <topic label="le_sms_MarkUnread" href="sms__interface_8h.html#a6ef04e331af6563b79e77bb51b28bc55"/>
+              <topic label="le_sms_RemoveRxMessageHandler" href="sms__interface_8h.html#a2f474706ba6d7a40083fe1f50f530101"/>
+              <topic label="le_sms_Send" href="sms__interface_8h.html#ab7dee7d2c74cfcadd9ea0d5fe1786dfc"/>
+              <topic label="le_sms_SetBinary" href="sms__interface_8h.html#a2abf46b6d57c473bb06caf701a04183e"/>
+              <topic label="le_sms_SetDestination" href="sms__interface_8h.html#a145d3215f5601b88ef80b2674a9df226"/>
+              <topic label="le_sms_SetPDU" href="sms__interface_8h.html#ab7295e1cdf2adb865135d657ec8bde09"/>
+              <topic label="le_sms_SetText" href="sms__interface_8h.html#a34dc999430c46530d6c9067f800c5d72"/>
+              <topic label="le_sms_StartClient" href="sms__interface_8h.html#acd57bb9584494f02df930f04949f3af4"/>
+              <topic label="le_sms_StopClient" href="sms__interface_8h.html#a217f09d7825abe503d29b5b014bd3db4"/>
             </topic>
           </topic>
         </topic>
@@ -2518,9 +2512,6 @@
         <topic label="supervisor" href="dir_5465946825512818bf55e8db3d68ea1a.html">
           <topic label="c" href="dir_3ecf119a864abb5d4cf8725c5a1f6ef7.html">
             <topic label="le_sup_interface.h" href="le__sup__interface_8h_source.html"/>
-            <topic label="le_supervisor_defs.h" href="le__supervisor__defs_8h.html">
-              <topic label="LE_SUPERVISOR_API" href="le__supervisor__defs_8h.html#a8c7c3989118c3fd8a29e64a23049c81d"/>
-            </topic>
           </topic>
         </topic>
       </topic>
@@ -2528,18 +2519,18 @@
     <topic label="Globals" href="globals.html">
       <topic label="All" href="globals.html">
         <topic label="_" href="globals.html"/>
-        <topic label="c" href="globals_0x63.html"/>
-        <topic label="i" href="globals_0x69.html"/>
-        <topic label="l" href="globals_0x6c.html"/>
-        <topic label="n" href="globals_0x6e.html"/>
-        <topic label="p" href="globals_0x70.html"/>
-        <topic label="s" href="globals_0x73.html"/>
+        <topic label="c" href="globals_c.html"/>
+        <topic label="i" href="globals_i.html"/>
+        <topic label="l" href="globals_l.html"/>
+        <topic label="n" href="globals_n.html"/>
+        <topic label="p" href="globals_p.html"/>
+        <topic label="s" href="globals_s.html"/>
       </topic>
       <topic label="Functions" href="globals_func.html">
         <topic label="_" href="globals_func.html"/>
-        <topic label="l" href="globals_func_0x6c.html"/>
-        <topic label="p" href="globals_func_0x70.html"/>
-        <topic label="s" href="globals_func_0x73.html"/>
+        <topic label="l" href="globals_func_l.html"/>
+        <topic label="p" href="globals_func_p.html"/>
+        <topic label="s" href="globals_func_s.html"/>
       </topic>
       <topic label="Typedefs" href="globals_type.html"/>
       <topic label="Enumerations" href="globals_enum.html"/>
